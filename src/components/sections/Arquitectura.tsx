@@ -86,7 +86,7 @@ export function Arquitectura() {
                   src={edificio.imagen}
                   alt={edificio.nombre}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 md:group-hover:scale-105"
                   sizes={
                     index % 7 === 0
                       ? "(max-width: 768px) 100vw, 66vw"
@@ -96,7 +96,7 @@ export function Arquitectura() {
                   }
                 />
                 {/* Dark Gradient Overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 md:group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Floating Info */}
@@ -122,7 +122,7 @@ export function Arquitectura() {
                     {edificio.descripcion}
                   </p>
 
-                  <div className="flex items-center gap-2 text-limon-amarillo-400 font-bold text-sm uppercase tracking-wider group-hover:text-limon-amarillo-300">
+                  <div className="flex items-center gap-2 text-limon-amarillo-400 font-bold text-sm uppercase tracking-wider md:group-hover:text-limon-amarillo-300">
                     <span>Ver detalles</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </div>

@@ -104,7 +104,7 @@ export function HistoriaPatrimonio() {
                       e.stopPropagation();
                       setSelectedHito(hito);
                     }}
-                    className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 cursor-pointer hover:bg-white/30 z-20"
+                    className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-md p-3 rounded-full opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300 cursor-pointer md:hover:bg-white/30 z-20"
                   >
                     <ArrowUpRight className="w-5 h-5 text-white" />
                   </div>
@@ -119,7 +119,7 @@ export function HistoriaPatrimonio() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-display font-bold leading-tight mb-2 group-hover:text-limon-puerto-600 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-display font-bold leading-tight mb-2 md:group-hover:text-limon-puerto-600 transition-colors">
                     {hito.titulo}
                   </h3>
 

@@ -58,14 +58,14 @@ export function Gastronomia() {
       {/* Abstract Background Decor */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-limon-amarillo-400/5 rounded-full blur-[120px] -mr-48 -mt-48 pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 text-left">
         {/* Hero Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-20 text-left max-w-5xl"
+          className="mb-20 max-w-5xl"
         >
           <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight">
             {hero.title.includes(" ") ? (
@@ -158,7 +158,7 @@ export function Gastronomia() {
         {/* Dishes Grid (Bento Style) */}
         <div className="">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
-            <div className="max-w-2xl">
+            <div className="max-w-2xl text-left">
               <h3 className="text-4xl md:text-5xl font-display font-bold mb-4">
                 Platos que{" "}
                 <span className="text-limon-coral-500 underline decoration-limon-amarillo-400 underline-offset-8">
@@ -187,7 +187,7 @@ export function Gastronomia() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   onClick={() => setSelectedDish(dish)}
                   className={cn(
-                    "group relative bg-card border border-border rounded-sm overflow-hidden transition-all duration-300 hover:shadow-xl md:hover:-translate-y-1 flex flex-col cursor-pointer",
+                    "group relative bg-card border border-border rounded-sm overflow-hidden transition-[transform,shadow,border-color] duration-300 md:hover:shadow-xl md:hover:-translate-y-1 flex flex-col cursor-pointer",
                     isLarge
                       ? "md:col-span-12 lg:col-span-6"
                       : "md:col-span-6 lg:col-span-4"
@@ -229,7 +229,7 @@ export function Gastronomia() {
                     </div>
                   </div>
 
-                  <div className="p-8 flex-1 flex flex-col">
+                  <div className="p-8 flex-1 flex flex-col text-left">
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <h4 className="text-2xl font-display font-bold md:group-hover:text-limon-selva-600 dark:md:group-hover:text-limon-selva-400 transition-colors">
@@ -239,7 +239,7 @@ export function Gastronomia() {
                           {dish.subtitle}
                         </p>
                       </div>
-                      <ChefHat className="text-muted-foreground md:group-hover:rotate-12 transition-transform" />
+                      <ChefHat className="text-muted-foreground transition-transform md:group-hover:rotate-12" />
                     </div>
                     <p className="text-muted-foreground mb-4 font-body leading-relaxed flex-1">
                       {dish.description}
