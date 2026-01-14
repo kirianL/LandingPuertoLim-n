@@ -120,7 +120,7 @@ export const Naturaleza = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-white p-8 rounded-sm border border-zinc-200 shadow-sm transition-all md:hover:shadow-md md:hover:-translate-y-1"
+            className="bg-white p-8 rounded-sm border border-zinc-200 shadow-sm transition-shadow duration-300 md:hover:shadow-md"
           >
             <h3 className="text-2xl font-display font-bold text-zinc-900 mb-6">
               {seasons.title}
@@ -178,7 +178,7 @@ export const Naturaleza = () => {
                   return (
                     <li
                       key={idx}
-                      className="flex items-start gap-4 p-3 rounded-sm transition-all cursor-default md:hover:translate-x-2 md:hover:bg-white/10"
+                      className="flex items-start gap-4 p-3 rounded-sm transition-colors cursor-default md:hover:bg-white/10"
                     >
                       <Icon
                         className="text-limon-amarillo-400 mt-1 shrink-0"
@@ -299,9 +299,9 @@ export const Naturaleza = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  className="bg-white p-6 rounded-sm border border-zinc-100 shadow-sm transition-all text-center group cursor-pointer md:hover:-translate-y-2 md:hover:shadow-lg"
+                  className="bg-white p-6 rounded-sm border border-zinc-100 shadow-sm transition-shadow text-center group cursor-pointer md:hover:shadow-lg"
                 >
-                  <div className="inline-flex p-3 rounded-full bg-limon-selva-50 text-limon-selva-600 mb-4 transition-all duration-300 md:group-hover:bg-limon-selva-600 md:group-hover:text-white md:group-hover:scale-110">
+                  <div className="inline-flex p-3 rounded-full bg-limon-selva-50 text-limon-selva-600 mb-4 transition-[transform,background-color,color] duration-300 md:group-hover:bg-limon-selva-600 md:group-hover:text-white md:group-hover:scale-110">
                     <Icon size={28} />
                   </div>
                   <h4 className="font-bold text-zinc-900 mb-2 md:group-hover:text-limon-selva-700 transition-colors">
@@ -415,9 +415,9 @@ export const Naturaleza = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  className="bg-white rounded-sm border border-zinc-200 overflow-hidden shadow-sm group md:hover:shadow-xl md:hover:-translate-y-2 transition-all duration-300"
+                  className="bg-white rounded-sm border border-zinc-200 overflow-hidden shadow-sm group md:hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="relative h-64 overflow-hidden bg-zinc-100">
+                  <div className="relative h-64 overflow-hidden bg-zinc-100 text-left">
                     {dest.image ? (
                       <Image
                         src={dest.image}
@@ -496,7 +496,7 @@ export const Naturaleza = () => {
               {wildlife.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white/10 backdrop-blur-sm border border-white/10 p-6 rounded-sm transition-all md:hover:-translate-y-1 md:hover:bg-white/15"
+                  className="bg-white/10 backdrop-blur-sm border border-white/10 p-6 rounded-sm transition-colors md:hover:bg-white/15"
                 >
                   <h4 className="text-xl font-bold text-limon-amarillo-300 mb-2">
                     {item.title}
@@ -531,7 +531,7 @@ export const Naturaleza = () => {
               {ecoTours.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex gap-4 p-4 rounded-sm transition-all border border-transparent md:hover:translate-x-2 md:hover:bg-zinc-100"
+                  className="flex gap-4 p-4 rounded-sm transition-colors border border-transparent md:hover:bg-zinc-100"
                 >
                   <div className="mt-1 text-limon-selva-500">
                     <Leaf size={20} />
@@ -635,7 +635,7 @@ export const Naturaleza = () => {
                     <div
                       key={idx}
                       className={cn(
-                        "p-6 rounded-sm border transition-all duration-300 md:hover:scale-[1.02] group relative overflow-hidden",
+                        "p-6 rounded-sm border transition-[shadow,background-color,border-color] duration-300 group relative overflow-hidden",
                         idx === 0
                           ? "sm:col-span-2 bg-gradient-to-r from-limon-selva-900 to-limon-selva-800 border-limon-selva-700 shadow-md"
                           : "bg-limon-selva-900/40 border-limon-selva-800/60 md:hover:bg-limon-selva-800/60 md:hover:border-limon-selva-700"
@@ -714,7 +714,7 @@ export const Naturaleza = () => {
           <p className="text-xl text-zinc-600 mb-8 leading-relaxed">
             {outro.text}
           </p>
-          <button className="bg-limon-selva-600 hover:bg-limon-selva-700 text-white font-bold py-4 px-8 rounded-sm transition-all shadow-lg hover:shadow-xl transform md:hover:-translate-y-1">
+          <button className="bg-limon-selva-600 md:hover:bg-limon-selva-700 text-white font-bold py-4 px-8 rounded-sm transition-[background-color,shadow] shadow-lg md:hover:shadow-xl">
             {outro.cta}
           </button>
         </motion.div>

@@ -192,7 +192,7 @@ export const Cultura = () => {
                   src={calypso_legacy.image}
                   alt={calypso_legacy.title}
                   fill
-                  className="object-cover opacity-60 contrast-125 grayscale mix-blend-multiply"
+                  className="object-cover opacity-90 contrast-110"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>

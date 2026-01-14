@@ -187,7 +187,7 @@ export function Gastronomia() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   onClick={() => setSelectedDish(dish)}
                   className={cn(
-                    "group relative bg-card border border-border rounded-sm overflow-hidden transition-[transform,shadow,border-color] duration-300 md:hover:shadow-xl md:hover:-translate-y-1 flex flex-col cursor-pointer",
+                    "group relative bg-card border border-border rounded-sm overflow-hidden transition-shadow duration-300 md:hover:shadow-xl flex flex-col cursor-pointer",
                     isLarge
                       ? "md:col-span-12 lg:col-span-6"
                       : "md:col-span-6 lg:col-span-4"
@@ -288,7 +288,7 @@ export function Gastronomia() {
 
                   <button
                     onClick={() => setSelectedDish(null)}
-                    className="absolute top-4 right-4 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-md border border-white/20 transition-colors z-20"
+                    className="absolute top-4 right-4 bg-black/40 md:hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-md border border-white/20 transition-colors z-20"
                   >
                     <X size={24} />
                   </button>

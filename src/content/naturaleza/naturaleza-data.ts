@@ -21,11 +21,11 @@ import {
 export const intro = {
   title: "Naturaleza y Turismo Responsable",
   description:
-    "Puerto Limón es un destino extraordinario para quienes aman la naturaleza en su estado más puro. Su posición en la costa Caribe de Costa Rica hace de esta región un crisol de bosques tropicales, playas vírgenes, manglares, ríos, canales y vida silvestre diversa — todo accesible de forma responsable y respetuosa con el medio ambiente.",
+    "Puerto Limón es un destino extraordinario para quienes aman la naturaleza en su estado más puro. Su posición en la costa Caribe de Costa Rica hace de esta región un crisol de bosques tropicales, playas vírgenes, manglares, ríos, canales y vida silvestre diversa, todo accesible de forma responsable y respetuosa con el medio ambiente.",
   highlight:
     "Esta sección celebra los lugares más hermosos y las experiencias sostenibles que hacen de Limón un paraíso para el ecoturismo y la vida al aire libre.",
   context:
-    "Limón posee el mayor porcentaje de tierras protegidas del país, con una enorme biodiversidad en bosques tropicales, playas y montañas — lo que lo convierte en un destino ideal para ecoturismo responsable.",
+    "Limón posee el mayor porcentaje de tierras protegidas del país, con una enorme biodiversidad en bosques tropicales, playas y montañas, lo que lo convierte en un destino ideal para ecoturismo responsable.",
 };
 
 export const cahuita = {
