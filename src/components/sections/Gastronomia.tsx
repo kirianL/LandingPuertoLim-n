@@ -32,14 +32,18 @@ export function Gastronomia() {
     if (selectedDish) {
       const scrollbarWidth =
         window.innerWidth - document.documentElement.clientWidth;
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+
       document.body.style.overflow = "hidden";
       window.addEventListener("keydown", handleEsc);
     }
 
     return () => {
-      document.body.style.overflow = "unset";
-      document.body.style.paddingRight = "0px";
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
       window.removeEventListener("keydown", handleEsc);
     };
   }, [selectedDish]);
@@ -264,7 +268,7 @@ export function Gastronomia() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedDish(null)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-md z-[100] transition-all"
+              className="fixed inset-0 bg-black/60 backdrop-blur-md z-[100] touch-none"
             />
             {/* Modal Container */}
             <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 md:p-8 pointer-events-none">
@@ -316,7 +320,7 @@ export function Gastronomia() {
                 </div>
 
                 {/* Modal Body (Scrollable) */}
-                <div className="p-6 md:p-10 overflow-y-auto flex-1 custom-scrollbar text-left">
+                <div className="p-6 md:p-10 overflow-y-auto flex-1 custom-scrollbar text-left overscroll-contain">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* History Column */}
                     <div className="space-y-6">

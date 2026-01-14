@@ -20,14 +20,20 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
       // Calculate scrollbar width to prevent layout shift
       const scrollbarWidth =
         window.innerWidth - document.documentElement.clientWidth;
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+      // On small screens (mobile), scrollbarWidth is often 0 (overlay scrollbars)
+      // and we don't want to add padding if it's not needed.
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+
       document.body.style.overflow = "hidden";
       window.addEventListener("keydown", handleEsc);
     }
 
     return () => {
-      document.body.style.overflow = "unset";
-      document.body.style.paddingRight = "0px";
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
       window.removeEventListener("keydown", handleEsc);
     };
   }, [isOpen, onClose]);
@@ -44,13 +50,12 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-md z-[100] transition-all"
+            className="fixed inset-0 bg-black/60 backdrop-blur-md z-[100] touch-none"
           />
 
           {/* Modal Container */}
           <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 md:p-8 pointer-events-none">
             <motion.div
-              layoutId={`modal-${data.id}`}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -58,7 +63,7 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
               className="bg-zinc-900 w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col md:flex-row pointer-events-auto border border-white/5"
             >
               {/* Image Section (Left/Top) */}
-              <div className="w-full md:w-1/2 relative h-48 md:h-auto bg-zinc-900">
+              <div className="w-full md:w-1/2 relative h-48 md:h-auto overflow-hidden">
                 <Image
                   src={data.imagen}
                   alt={data.titulo}
@@ -86,7 +91,7 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
               </div>
 
               {/* Content Section (Right/Bottom) */}
-              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col overflow-y-auto overscroll-contain [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                 {/* Header */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
