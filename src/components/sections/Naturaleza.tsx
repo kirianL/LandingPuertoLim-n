@@ -133,7 +133,7 @@ export const Naturaleza = () => {
                   <div key={idx} className="flex gap-4 group">
                     <div
                       className={cn(
-                        "p-3 rounded-full h-fit transition-transform md:group-hover:scale-110",
+                        "p-3 rounded-full h-fit transition-colors",
                         idx === 0
                           ? "bg-orange-100 text-orange-600"
                           : "bg-limon-selva-100 text-limon-selva-600"
@@ -301,7 +301,7 @@ export const Naturaleza = () => {
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
                   className="bg-white p-6 rounded-sm border border-zinc-100 shadow-sm transition-shadow text-center group cursor-pointer md:hover:shadow-lg"
                 >
-                  <div className="inline-flex p-3 rounded-full bg-limon-selva-50 text-limon-selva-600 mb-4 transition-[transform,background-color,color] duration-300 md:group-hover:bg-limon-selva-600 md:group-hover:text-white md:group-hover:scale-110">
+                  <div className="inline-flex p-3 rounded-full bg-limon-selva-50 text-limon-selva-600 mb-4 transition-colors duration-300 md:group-hover:bg-limon-selva-600 md:group-hover:text-white">
                     <Icon size={28} />
                   </div>
                   <h4 className="font-bold text-zinc-900 mb-2 md:group-hover:text-limon-selva-700 transition-colors">
@@ -565,7 +565,7 @@ export const Naturaleza = () => {
             <div className="relative border-l-2 border-limon-concreto-200 ml-3 space-y-10 pl-8 py-2">
               {routes.options.map((route, idx) => (
                 <div key={idx} className="relative group">
-                  <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-white border-4 border-limon-puerto-500 transition-transform md:group-hover:scale-125"></div>
+                  <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-white border-4 border-limon-puerto-500 transition-colors md:group-hover:border-limon-puerto-600"></div>
                   <h4 className="text-lg font-bold text-zinc-900 mb-1 transition-colors md:group-hover:text-limon-puerto-800">
                     {route.name}
                   </h4>
