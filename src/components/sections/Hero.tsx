@@ -111,8 +111,8 @@ export function Hero() {
           {/* Footer Row: Stats & CTAs */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-10">
             {/* Elegant Horizontal Stats - Left Aligned */}
-            <div className="flex items-center gap-6 md:gap-8 w-full md:w-auto justify-center md:justify-start">
-              <div className="flex flex-col">
+            <div className="grid grid-cols-2 md:flex md:items-center gap-y-8 gap-x-6 md:gap-8 w-full md:w-auto justify-items-center md:justify-start">
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <span className="text-3xl font-bold font-display text-white leading-none">
                   1854
                 </span>
@@ -120,8 +120,10 @@ export function Hero() {
                   Fundación
                 </span>
               </div>
-              <div className="w-px h-8 bg-white/10" />
-              <div className="flex flex-col">
+
+              <div className="hidden md:block w-px h-8 bg-white/10" />
+
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <span className="text-3xl font-bold font-display text-white leading-none">
                   +50
                 </span>
@@ -129,9 +131,11 @@ export function Hero() {
                   Patrimonio
                 </span>
               </div>
-              <div className="w-px h-8 bg-white/10" />
-              <div className="flex flex-col">
-                <div className="text-3xl font-bold font-display text-white leading-none min-w-[140px] text-left tabular-nums">
+
+              <div className="hidden md:block w-px h-8 bg-white/10" />
+
+              <div className="flex flex-col col-span-2 md:col-span-1 items-center md:items-start text-center md:text-left">
+                <div className="text-3xl font-bold font-display text-white leading-none md:min-w-[140px] tabular-nums">
                   <NumberTicker value={100621} />
                 </div>
                 <span className="text-[10px] text-white/50 uppercase tracking-widest mt-1">
