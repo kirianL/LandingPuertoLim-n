@@ -1,158 +1,155 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { LightRays } from "@/components/magicui/light-rays";
-import { Meteors } from "@/components/magicui/meteors";
-import { TextAnimate } from "@/components/magicui/text-animate";
-import { FadeIn } from "@/components/FadeIn";
-import { benefits } from "@/lib/data";
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { WeatherWidget } from "@/components/WeatherWidget";
+import NumberTicker from "@/components/magicui/number-ticker";
 
 export function Hero() {
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById("historia");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section
-      id="inicio"
-      className="relative min-h-[100svh] flex items-end md:items-center overflow-hidden bg-black"
-    >
-      {/* Background Image - Optimized for visibility */}
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20 pb-10">
+      {/* Background Image - Optimized with next/image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/Hospedaje.jpg"
-          alt="Brisas del Río - Vista panorámica de las cabañas y naturaleza"
+          src="/assets/hero/Hero-Limon.png"
+          alt="Puerto Limón Panorama"
           fill
-          className="object-cover object-[center_30%] md:object-center opacity-80"
           priority
-          quality={100}
+          sizes="100vw"
+          className="object-cover transition-opacity duration-1000"
         />
-        {/* Dynamic Orbs for depth */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-900/20 rounded-full blur-[120px] animate-pulse delay-700" />
-
-        {/* Multi-stage gradient for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent md:bg-gradient-to-r md:from-black/80 md:via-black/20 md:to-transparent" />
+        {/* Subtle vignette only at edges */}
+        <div className="absolute inset-0 bg-black/10 z-10" />
       </div>
 
-      {/* FX Layer */}
-      <LightRays className="z-10 opacity-20" />
-      <Meteors number={15} className="z-10 opacity-50" />
+      {/* Caribbean Vibes - Subtle Leaf Shadows/Texture */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 z-10">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay" />
+      </div>
 
-      {/* Content Container - Flex centered with better overflow protection */}
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-end md:justify-center pt-20 pb-8 md:pt-16 md:pb-12 [@media(max-height:750px)]:pt-14 [@media(max-height:750px)]:pb-6">
-        <div className="flex flex-col md:flex-row items-center md:items-center">
-          {/* Main Glass Card - Adaptive Height */}
-          <div className="w-full md:max-w-xl lg:max-w-2xl xl:max-w-3xl lg:translate-y-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30, backdropFilter: "blur(0px)" }}
-              animate={{ opacity: 1, y: 0, backdropFilter: "blur(24px)" }}
-              transition={{
-                duration: 1.2,
-                delay: 0.2,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="bg-black/40 border border-white/10 p-5 sm:p-6 md:p-7 lg:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden text-center md:text-left"
-            >
-              {/* Weather & Logo - Top Row on MD+ */}
-              <div className="mb-4 md:mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                {/* Logo with White Background for Presence */}
-                <div className="relative w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-white rounded-full flex items-center justify-center p-3 sm:p-4 shadow-[0_0_20px_rgba(255,255,255,0.2)] shrink-0 group-hover:scale-105 transition-transform duration-500">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="/images/LogoBrisasDelRio.png"
-                      alt="Logo Brisas del Río"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
+      {/* Glass Card Content - Mobile Centered */}
+      <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-8 flex flex-col justify-center items-center md:block min-h-[60vh] md:min-h-0">
+        <div className="w-full max-w-3xl bg-black/40 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 md:p-12 shadow-2xl mx-auto md:mx-0 overflow-hidden relative">
+          {/* Decorative blurred glow */}
+          <div className="absolute -top-20 -right-20 w-60 h-60 bg-limon-selva-500/20 blur-[80px] rounded-full pointer-events-none" />
+
+          {/* Header Row: Identity & Weather */}
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 mb-10 w-full relative z-20">
+            {/* Identity Block - Redesigned for Visibility */}
+            <div className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-3 pr-6 backdrop-blur-md">
+              {/* Symbols Container */}
+              <div className="flex items-center gap-3">
+                {/* Flag - Large */}
+                <div className="relative w-12 h-8 rounded-[4px] overflow-hidden shadow-lg ring-1 ring-white/10 hover:scale-105 transition-transform bg-black/20">
+                  <Image
+                    src="/assets/hero/bandera-limon.svg"
+                    alt="Bandera de Limón"
+                    fill
+                    priority
+                    className="object-cover"
+                  />
                 </div>
 
-                {/* Weather Widget */}
-                <div className="flex">
-                  <WeatherWidget />
+                {/* Divider */}
+                <div className="h-8 w-px bg-white/10" />
+
+                {/* Escudo - Large */}
+                <div className="relative w-8 h-10 drop-shadow-lg hover:scale-105 transition-transform">
+                  <Image
+                    src="/assets/hero/escudo-limon.png"
+                    alt="Escudo de Limón"
+                    fill
+                    priority
+                    className="object-contain"
+                  />
                 </div>
               </div>
 
-              {/* Animated Headline - SEO H1 */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 md:mb-3 leading-[1.05] tracking-tight [@media(max-height:750px)]:text-2xl [@media(max-height:750px)]:mb-1">
-                <TextAnimate animation="blurInUp" by="word">
-                  Naturaleza, Sabor y Descanso en Pococí
-                </TextAnimate>
-              </h1>
-
-              {/* Subtitle & Info - Compact & Centered */}
-              <FadeIn delay={0.5}>
-                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-4 md:mb-5 text-emerald-400 font-bold tracking-wider text-[10px] md:text-xs uppercase [@media(max-height:750px)]:mb-2">
-                  <span className="flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 border border-emerald-500/10 rounded-full">
-                    <MapPin size={10} />
-                    Jiménez, Costa Rica
-                  </span>
-                  <span className="w-1 h-1 bg-white/20 rounded-full hidden sm:block" />
-                  <span className="px-3 py-1 bg-white/5 rounded-full text-white/90">
-                    Restaurante & Cabañas
-                  </span>
-                </div>
-
-                <p className="text-sm md:text-base text-white/70 mb-6 md:mb-7 max-w-lg mx-auto md:mx-0 leading-relaxed [@media(max-height:750px)]:mb-4 [@media(max-height:750px)]:text-xs">
-                  Escápate a un refugio tropical único donde la montaña se une
-                  con el río. Disfruta de hospedaje acogedor y la mejor cocina
-                  criolla de la zona.
-                </p>
-              </FadeIn>
-
-              {/* Actions - Centered on mobile */}
-              <FadeIn delay={0.7}>
-                <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 mb-6 md:mb-8 [@media(max-height:750px)]:mb-4">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white px-8 h-12 md:h-13 text-sm font-bold shadow-xl shadow-primary/25 rounded-xl md:rounded-2xl group"
-                  >
-                    <Link href="#contacto" className="flex items-center gap-2">
-                      Reservar Mi Estancia
-                      <ArrowRight
-                        size={16}
-                        className="group-hover:translate-x-1 transition-transform"
-                      />
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="w-full sm:w-auto border-white/20 bg-white/5 hover:bg-white/10 text-white h-12 md:h-13 px-8 backdrop-blur-sm rounded-xl md:rounded-2xl text-sm"
-                  >
-                    <Link href="#hospedaje">Explorar Cabañas</Link>
-                  </Button>
-                </div>
-              </FadeIn>
-
-              {/* Benefits Mini-Grid - Centered on mobile */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 border-t border-white/5 pt-5 md:pt-6 [@media(max-height:750px)]:pt-3">
-                {benefits.map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-row md:flex-col items-center justify-center md:items-start gap-2 md:gap-1"
-                  >
-                    <div className="p-1.5 bg-primary/20 rounded-lg shrink-0">
-                      <benefit.icon className="w-4 h-4 text-primary" />
-                    </div>
-                    <div className="flex flex-col text-left md:text-left">
-                      <span className="text-[10px] md:text-xs font-bold text-white leading-tight">
-                        {benefit.title}
-                      </span>
-                      <span className="text-[8px] text-white/40 hidden lg:block uppercase tracking-tighter">
-                        {benefit.description.split(" ")[0]}
-                      </span>
-                    </div>
-                  </div>
-                ))}
+              {/* Text Label */}
+              <div className="flex flex-col">
+                <span className="text-[10px] text-white/50 uppercase tracking-widest leading-none mb-1">
+                  Provincia de
+                </span>
+                <span className="text-sm font-bold text-white tracking-wide uppercase">
+                  Limón, Costa Rica
+                </span>
               </div>
-            </motion.div>
+            </div>
+
+            {/* Weather Widget */}
+            <div className="scale-100 origin-center md:origin-right">
+              <WeatherWidget />
+            </div>
+          </div>
+
+          {/* Main Content Group */}
+          <div className="space-y-6 text-center md:text-left relative z-10">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[0.9] tracking-tight">
+              Naturaleza, Cultura <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#009400] via-[#009400] to-white">
+                y Sabor Caribeño
+              </span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mx-auto md:mx-0 font-light">
+              Historia viva, arquitectura patrimonial y la auténtica esencia del
+              Caribe. Descubre el corazón de Limón más allá de los clichés.
+            </p>
+          </div>
+
+          {/* Divider */}
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent my-10" />
+
+          {/* Footer Row: Stats & CTAs */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-10">
+            {/* Elegant Horizontal Stats - Left Aligned */}
+            <div className="flex items-center gap-6 md:gap-8 w-full md:w-auto justify-center md:justify-start">
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold font-display text-white leading-none">
+                  1854
+                </span>
+                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-1">
+                  Fundación
+                </span>
+              </div>
+              <div className="w-px h-8 bg-white/10" />
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold font-display text-white leading-none">
+                  +50
+                </span>
+                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-1">
+                  Patrimonio
+                </span>
+              </div>
+              <div className="w-px h-8 bg-white/10" />
+              <div className="flex flex-col">
+                <div className="text-3xl font-bold font-display text-white leading-none min-w-[140px] text-left tabular-nums">
+                  <NumberTicker value={100621} />
+                </div>
+                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-1">
+                  Población
+                </span>
+              </div>
+            </div>
+
+            {/* CTAs - Right Aligned (Single Button) */}
+            <div className="w-full md:w-auto">
+              <a
+                href="#historia"
+                className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-white text-limon-selva-900 hover:bg-limon-amarillo-300 rounded-xl font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-limon-amarillo-400/20 group"
+              >
+                Explorar Historia
+                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

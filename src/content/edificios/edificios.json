@@ -1,0 +1,269 @@
+[
+  {
+    "id": "correos-telegrafos",
+    "nombre": "Edificio de Correos y Telégrafos",
+    "año": 1911,
+    "estilo": "Ecléctico",
+    "descripcion": "Icónico edificio cuya fachada incorpora ornamentos de locomotoras y barcos, símbolos del ferrocarril y del comercio marítimo que impulsaron el desarrollo de Limón a inicios del siglo XX. Su composición simétrica y sus balcones reflejan la prosperidad y la importancia estratégica de la ciudad en esa época.",
+    "detalles": [
+      "Ornamentos alusivos al ferrocarril y al transporte marítimo",
+      "Balcones con detalles en hierro forjado",
+      "Simetría arquitectónica característica del estilo ecléctico",
+      "Edificio reconocido como patrimonio histórico-arquitectónico"
+    ],
+    "patrimonio": "1981",
+    "estado": "Edificio histórico activo",
+    "ubicacion": {
+      "direccion": "Av. 2, entre calles 1 y 3, Puerto Limón",
+      "lat": 9.991789483423373,
+      "lng": -83.02887770695054
+    },
+    "imagen": "/assets/edificios/correos.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "casa-episcopal",
+    "nombre": "Casa Episcopal",
+    "año": 1940,
+    "estilo": "Neocolonial",
+    "descripcion": "Desde 1994 alberga la sede de la Diócesis de Limón, reflejando la presencia y el papel de la Iglesia Católica en el desarrollo social y cultural de la provincia. Su arquitectura neocolonial destaca por la reinterpretación de elementos tradicionales en un contexto caribeño.",
+    "detalles": [
+      "Arquitectura neocolonial con elementos tradicionales",
+      "Sede de la Diócesis de Limón desde 1994",
+      "Edificio de valor histórico y arquitectónico",
+      "Uso institucional continuo"
+    ],
+    "patrimonio": "2013",
+    "estado": "Edificio institucional activo",
+    "ubicacion": {
+      "direccion": "Calle 3, Av. 2, Puerto Limón",
+      "lat": 9.992660122934568,
+      "lng": -83.03076323852713
+    },
+    "imagen": "/assets/edificios/casa-episcopal.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "casa-cultura",
+    "nombre": "Casa de la Cultura",
+    "año": 1938,
+    "estilo": "Art Déco",
+    "descripcion": "Originalmente funcionó como mercado de carnes y, durante los años 60, albergó el bar El Oasis. En 1985 fue transformada en Casa de la Cultura, consolidándose como un punto fundamental para la vida artística y comunitaria de Limón.",
+    "detalles": [
+      "Arquitectura Art Déco característica de la época",
+      "Funcionamiento del bar El Oasis en los años 60",
+      "Conversión oficial en Casa de la Cultura en 1985",
+      "Sede de actividades culturales, teatrales, musicales y expresiones afrocaribeñas"
+    ],
+    "patrimonio": "1985",
+    "estado": "Centro Cultural Activo",
+    "ubicacion": {
+      "direccion": "Calle 2, Av. 2, Puerto Limón",
+      "lat": 9.993475811250052,
+      "lng": -83.02846665867543
+    },
+    "imagen": "/assets/edificios/casa-cultura.png",
+    "imagenAntes": "/assets/edificios/casa-cultura-antes.jpg"
+  },
+  {
+    "id": "black-star-line",
+    "nombre": "Black Star Line / Liberty Hall",
+    "año": 1922,
+    "estilo": "Arquitectura caribeña tradicional",
+    "descripcion": "Fue sede de la UNIA (Universal Negro Improvement Association), organización fundada por Marcus Garvey, y funcionó como punto clave de encuentro para la comunidad afrocaribeña de Limón durante la primera mitad del siglo XX. Tras el incendio que afectó gravemente al edificio en 2016, el sitio permanece como un referente histórico que recuerda los procesos de organización, conciencia social y búsqueda de derechos.",
+    "detalles": [
+      "Actividad principal entre las décadas de 1920 y 1940",
+      "Espacio de reuniones, discursos y educación comunitaria",
+      "Vinculado al movimiento panafricanista en el Caribe",
+      "Incendio ocurrido en 2016",
+      "Referente de la memoria histórica afrodescendiente"
+    ],
+    "patrimonio": "2000",
+    "estado": "Espacio de memoria",
+    "ubicacion": {
+      "direccion": "Calle 1, Av. 3, Puerto Limón",
+      "lat": 10.00088,
+      "lng": -83.03378
+    },
+    "imagen": "/assets/edificios/black-star-line.png",
+    "imagenAntes": "/assets/edificios/black-star-line-antes.jpg"
+  },
+  {
+    "id": "palacio-municipal",
+    "nombre": "Palacio Municipal",
+    "año": 1942,
+    "estilo": "Neoclásico",
+    "descripcion": "Edificio institucional de planta en forma de U que incorpora elementos del estilo neoclásico. En su entrada principal se ubica una estatua de Pablo Presbere, líder indígena bribri y símbolo de la resistencia de los pueblos originarios frente al dominio colonial.",
+    "detalles": [
+      "Arquitectura neoclásica con planta en forma de U",
+      "Estatua de Pablo Presbere en la entrada principal",
+      "Sede del gobierno municipal de Limón",
+      "Edificio de valor histórico e institucional"
+    ],
+    "patrimonio": "2002",
+    "estado": "Edificio gubernamental activo",
+    "ubicacion": {
+      "direccion": "Costado norte del Parque Vargas",
+      "lat": 9.99313400806893,
+      "lng": -83.02545448358426
+    },
+    "imagen": "/assets/edificios/palacio-municipal.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "parque-vargas",
+    "nombre": "Parque Vargas y Quiosco",
+    "año": 1895,
+    "estilo": "Victoriano",
+    "descripcion": "Espacio público emblemático de Puerto Limón, reconocido por su quiosco de estilo victoriano y su ubicación privilegiada frente al mar Caribe. Históricamente ha sido punto de encuentro social y escenario de la vida cotidiana, cultural y festiva de la ciudad.",
+    "detalles": [
+      "Quiosco victoriano restaurado",
+      "Presencia de árboles centenarios y vegetación tropical",
+      "Escenario de actos cívicos, eventos y celebraciones comunitarias",
+      "Vista directa al mar Caribe"
+    ],
+    "patrimonio": "Patrimonio Cultural",
+    "estado": "Espacio público activo",
+    "ubicacion": {
+      "direccion": "Frente al mar Caribe, Limón Centro",
+      "lat": 9.992771465457897,
+      "lng": -83.02511698911988
+    },
+    "imagen": "/assets/edificios/parque-vargas.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "autoridad-portuaria",
+    "nombre": "Autoridad Portuaria",
+    "año": 1930,
+    "estilo": "Afrocaribeño funcional",
+    "descripcion": "Edificio construido en la década de 1930 con diseño de César Rivaflecha para la Autoridad Portuaria, el Gobierno Provincial y oficinas oficiales. Su influencia arquitectónica afrocaribeña —en vigas de madera, ventilación natural y balcones— refleja la identidad urbana del centro de Limón en el auge portuario del siglo XX. Fue sede de la Autoridad Portuaria y oficinas gubernamentales hasta 1986.",
+    "detalles": [
+      "Construido en la década de 1930 según diseño arquitectónico local",
+      "Influencia afrocaribeña en estructura y materiales",
+      "Oficinas de la Autoridad Portuaria y el Gobierno Provincial",
+      "Patio interior con balcones característicos",
+      "Declarado patrimonio histórico y arquitectónico en 1995"
+    ],
+    "patrimonio": "1995",
+    "estado": "Edificio histórico activo",
+    "ubicacion": {
+      "direccion": "Calle 4, Av. 3, Limón",
+      "lat": 9.993356587693215,
+      "lng": -83.02529640601976
+    },
+    "imagen": "/assets/edificios/autoridad-portuaria.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "casa-domino",
+    "nombre": "Casa del Dominó",
+    "año": 1960,
+    "estilo": "Espacio social tradicional",
+    "descripcion": "Espacio de reunión comunitaria que data de los años 60, cuando los trabajadores del ferrocarril y de las plantaciones jugaban dominó entre encuentros sociales y conversaciones cotidianas. El dominó se convirtió en un símbolo de identidad limonense y una práctica social que perdura hasta hoy. En 2017 se restauró la infraestructura para conservar este legado cultural.",
+    "detalles": [
+      "Construida en los años 60 como lugar de reunión popular",
+      "Centro tradicional de juegos de dominó y socialización",
+      "Representa la vida comunitaria de la clase trabajadora afrocaribeña",
+      "Restaurada para preservar el legado cultural"
+    ],
+    "patrimonio": "Patrimonio cultural vivo",
+    "estado": "Patrimonio cultural vivo",
+    "ubicacion": {
+      "direccion": "Barrio tradicional cercano al centro histórico",
+      "lat": 9.995659547902513,
+      "lng": -83.03083478722502
+    },
+    "imagen": "/assets/edificios/casa-domino.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "escuela-tomas-guardia",
+    "nombre": "Escuela General Tomás Guardia",
+    "año": 1940,
+    "estilo": "Racionalista escolar",
+    "descripcion": "Centro educativo fundado a finales del siglo XIX, con un edificio representativo de la arquitectura escolar de mediados del siglo XX. Nombrado en honor al presidente Tomás Guardia Gutiérrez, quien impulsó la creación de la primera institución educativa formal en Limón. Su construcción actual data de la década de 1940 con expansiones posteriores, manteniendo su función educativa hasta hoy.",
+    "detalles": [
+      "Fundación de la escuela original en 1877",
+      "Edificio actual construido entre 1940 y 1948",
+      "Estilo racionalista típico de la arquitectura escolar de la época",
+      "Declarado patrimonio histórico y arquitectónico en 1989"
+    ],
+    "patrimonio": "1989",
+    "estado": "Institución educativa histórica",
+    "ubicacion": {
+      "direccion": "Calle 5, Av. 2, Limón",
+      "lat": 9.992533318790958,
+      "lng": -83.02996368907671
+    },
+    "imagen": "/assets/edificios/escuela-tomas-guardia.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "pension-costa-rica",
+    "nombre": "Pensión Costa Rica",
+    "año": 1905,
+    "estilo": "Ecléctico / Neoclásico",
+    "descripcion": "Edificación construida en 1905, con diseño atribuido a César Rivaflecha Zavala (y posiblemente influencias de Quinto Vaglio Bianchi) que combina elementos eclécticos con influencias neoclásicas y antillanas. Su fachada simétrica y detalles ornamentales reflejan el eclecticismo arquitectónico de principios del siglo XX en Limón. Ha pertenecido a diversas familias y actualmente es un inmueble reconocido por su valor patrimonial.",
+    "detalles": [
+      "Construido en 1905",
+      "Influencias eclécticas y neoclásicas con elementos decorativos de época",
+      "Patio central típico de la arquitectura urbana tradicional",
+      "Valor histórico por su antigüedad y continuidad urbana"
+    ],
+    "patrimonio": "Patrimonio",
+    "estado": "Edificio histórico",
+    "ubicacion": {
+      "direccion": "Centro Histórico",
+      "lat": 9.992783227889277,
+      "lng": -83.02669084064912
+    },
+    "imagen": "/assets/edificios/pension-costa-rica.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "estadio-big-boy",
+    "nombre": "Estadio de Béisbol Big Boy",
+    "año": 1897,
+    "estilo": "Funcional deportivo",
+    "descripcion": "Espacio deportivo emblemático de Limón con origen a finales del siglo XIX cuando el béisbol se estableció como deporte gracias a los trabajadores del ferrocarril y la industria bananera. Remodelado en la década de 1940 y posteriormente bautizado como Big Boy Baseball Stadium en homenaje al jugador Bancroft “Big Boy” Scott, este estadio se ha convertido en un centro de identidad y tradición deportiva local.",
+    "detalles": [
+      "Béisbol jugado en el área desde finales del siglo XIX",
+      "Terreno donado por United Fruit Company a la ciudad en 1897",
+      "Remodelado en los años 40 con nuevas gradas y vallas",
+      "Nombrado en honor a Bancroft Scott (“Big Boy”)",
+      "Declarado patrimonio histórico y arquitectónico en 2002"
+    ],
+    "patrimonio": "2002",
+    "estado": "Patrimonio cultural y social",
+    "ubicacion": {
+      "direccion": "Barrio Roosevelt, Limón",
+      "lat": 9.990850886948833,
+      "lng": -83.03090044489694
+    },
+    "imagen": "/assets/edificios/estadio-big-boy.png",
+    "imagenAntes": null
+  },
+  {
+    "id": "casa-misionera-bautista",
+    "nombre": "Casa Misionera Bautista",
+    "año": 1890,
+    "estilo": "Victoriano caribeño",
+    "descripcion": "Edificio construido a fines del siglo XIX para servir como sede y residencia de misioneros bautistas que trabajaron con la comunidad afrocaribeña. Su diseño con corredores y balcones refleja la adaptación al clima tropical y la influencia arquitectónica de los inmigrantes antillanos.",
+    "detalles": [
+      "Construida a finales del siglo XIX",
+      "Función residencial y administrativa para misioneros",
+      "Influencia arquitectónica victoriana caribeña",
+      "Representa la presencia religiosa en la comunidad afrocaribeña"
+    ],
+    "patrimonio": "Patrimonio",
+    "estado": "Patrimonio histórico activo",
+    "ubicacion": {
+      "direccion": "Calle 4, Av. 2, Limón",
+      "lat": 9.995607626826576,
+      "lng": -83.03120084753571
+    },
+    "imagen": "/assets/edificios/casa-misionera-bautista.png",
+    "imagenAntes": null
+  }
+]

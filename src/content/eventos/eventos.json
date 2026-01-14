@@ -1,0 +1,79 @@
+{
+  "carnaval": {
+    "id": "carnaval-limon",
+    "nombre": "Carnaval de Limón",
+    "fechas": "Semana alrededor del 12 de octubre",
+    "descripcion": "La celebración más importante de Limón desde 1949. Una semana de comparsas, música, baile y color que celebra la identidad afrocaribeña costarricense.",
+    "edicionActual": "75ª edición en 2024",
+    "añoInicio": 1949,
+    "elementos": [
+      "Gran Parade (desfile principal)",
+      "Comparsas con disfraces elaborados",
+      "Ferias gastronómicas y artesanales",
+      "Conciertos de calipso, reggae y soca",
+      "Eventos en Casa de la Cultura",
+      "Torneos de dominó",
+      "Coronación de reinas"
+    ],
+    "significado": "Celebración de la cultura afrocaribeña, el Día de las Culturas (antes Día de la Raza) y el orgullo limonense.",
+    "queEsperar": [
+      "Música en vivo durante toda la semana",
+      "Comparsas coloridas con coreografías",
+      "Gastronomía caribeña en cada esquina",
+      "Ambiente festivo y familiar",
+      "Encuentro de generaciones celebrando su identidad"
+    ],
+    "imagen": "/assets/eventos/carnaval.jpg"
+  },
+  "diaPersonaNegra": {
+    "id": "dia-persona-negra",
+    "nombre": "Día de la Persona Negra y Cultura Afrocostarricense",
+    "fechas": "31 de agosto",
+    "descripcion": "Día nacional que reconoce las contribuciones de la población afrodescendiente a la identidad y cultura costarricense.",
+    "añoInicio": 2015,
+    "elementos": [
+      "Actos culturales",
+      "Exposiciones históricas",
+      "Conferencias y charlas",
+      "Presentaciones artísticas",
+      "Reconocimiento a líderes comunitarios"
+    ],
+    "significado": "Reconocimiento oficial de la herencia afrocaribeña como parte fundamental del patrimonio cultural de Costa Rica.",
+    "queEsperar": [
+      "Eventos educativos y culturales",
+      "Homenajes a figuras históricas afrocostarricenses",
+      "Celebraciones comunitarias en Limón"
+    ],
+    "imagen": "/assets/eventos/dia-persona-negra.jpg"
+  },
+  "festivalCalipso": {
+    "id": "festival-calipso",
+    "nombre": "Festival de Calipso",
+    "fechas": "Variable (generalmente agosto)",
+    "descripcion": "Celebración de la música calipso, género emblemático de la identidad afrocaribeña limonense. Homenaje a artistas como Walter Ferguson.",
+    "añoInicio": null,
+    "elementos": [
+      "Conciertos de calipso tradicional",
+      "Presentaciones de artistas locales",
+      "Talleres de música caribeña",
+      "Homenajes a músicos históricos"
+    ],
+    "significado": "Preservación y celebración del calipso como patrimonio musical inmaterial de Limón.",
+    "queEsperar": [
+      "Ritmos calipso auténticos",
+      "Artistas veteranos y nueva generación",
+      "Ambiente familiar y educativo"
+    ],
+    "imagen": "/assets/eventos/festival-calipso.jpg"
+  },
+  "otrosEventos": [
+    {
+      "nombre": "Festival del Cacao y Chocolate",
+      "descripcion": "Celebración del cacao, producto histórico de la región, con talleres, degustaciones y tours a fincas."
+    },
+    {
+      "nombre": "Festivales de Surf (Puerto Viejo)",
+      "descripcion": "Competencias de surf que atraen talento local e internacional."
+    }
+  ]
+}

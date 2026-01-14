@@ -1,0 +1,160 @@
+[
+  {
+    "id": "isla-quiribri",
+    "nombre": "Isla Quiribrí (Isla Uvita)",
+    "tipo": ["Naturaleza", "Historia", "Fauna"],
+    "descripcion": "Pequeña isla frente a Puerto Limón donde desembarcó Cristóbal Colón en 1502. Nombre 'Quiribrí' recuperado en 1986, honrando a los pueblos indígenas originarios. Declarada monumento nacional en 1985.",
+    "queVer": [
+      "Restos del faro histórico",
+      "Vestigios de muelle",
+      "Arrecife coralino",
+      "Aves marinas"
+    ],
+    "queHacer": [
+      "Snorkel en aguas cristalinas",
+      "Senderos cortos de exploración",
+      "Observación de fauna marina",
+      "Fotografía histórica y natural"
+    ],
+    "mejorTemporada": "Diciembre a Abril (aguas más calmadas)",
+    "consejosResponsables": [
+      "No tocar ni pisar corales",
+      "Llevar tu basura de regreso",
+      "Usar protector solar reef-safe",
+      "Respetar áreas restringidas históricas"
+    ],
+    "patrimonio": "Monumento Nacional (1985)",
+    "imagen": "/assets/naturaleza/isla-quiribri.jpg"
+  },
+  {
+    "id": "cahuita",
+    "nombre": "Parque Nacional Cahuita",
+    "tipo": ["Naturaleza", "Playa", "Fauna", "Comunidad"],
+    "descripcion": "Arrecife coralino vivo, sendero costero paradisíaco y modelo de turismo comunitario. Pago por donación voluntaria, reinvertida en conservación local.",
+    "queVer": [
+      "Arrecife coralino con 35 especies de coral",
+      "Playa Blanca con arena dorada",
+      "Monos, perezosos, mapaches",
+      "Más de 120 especies de aves"
+    ],
+    "queHacer": [
+      "Snorkel guiado en el arrecife",
+      "Caminata por sendero costero (8 km)",
+      "Observación de vida silvestre",
+      "Apoyo a guías locales"
+    ],
+    "mejorTemporada": "Febrero a Abril, Septiembre a Octubre",
+    "consejosResponsables": [
+      "Contratar guías locales certificados",
+      "No alimentar animales silvestres",
+      "Protector solar biodegradable",
+      "Donación consciente para conservación"
+    ],
+    "patrimonio": null,
+    "imagen": "/assets/naturaleza/cahuita.jpg"
+  },
+  {
+    "id": "tortuguero",
+    "nombre": "Parque Nacional Tortuguero",
+    "tipo": ["Naturaleza", "Fauna", "Aventura"],
+    "descripcion": "El 'Amazonas costarricense'. Red de canales navegables, hogar de tortugas verdes (anidación julio-octubre), caimanes, manatíes y jaguares. Acceso solo por lancha o avioneta.",
+    "queVer": [
+      "Anidación de tortugas verdes (jul-oct)",
+      "Canales naturales con vegetación exuberante",
+      "Caimanes, manatíes, garzas",
+      "Más de 400 especies de árboles"
+    ],
+    "queHacer": [
+      "Tours nocturnos de tortugas (temporada)",
+      "Paseo en canoa por canales",
+      "Observación de fauna desde lancha",
+      "Visita al pueblo de Tortuguero"
+    ],
+    "mejorTemporada": "Julio a Octubre (tortugas), todo el año (canales)",
+    "consejosResponsables": [
+      "Tours de tortugas solo con guías autorizados",
+      "No usar flash fotográfico cerca de tortugas",
+      "Mantener distancia de fauna silvestre",
+      "Apoyar economía local del pueblo"
+    ],
+    "patrimonio": "Parque Nacional (1975)",
+    "imagen": "/assets/naturaleza/tortuguero.jpg"
+  },
+  {
+    "id": "playa-bonita",
+    "nombre": "Playa Bonita",
+    "tipo": ["Playa", "Surf"],
+    "descripcion": "Playa de oleaje fuerte, popular entre surfistas. Arena oscura volcánica, ambiente relajado y gastronomía caribeña local.",
+    "queVer": [
+      "Oleaje potente para surf",
+      "Atardeceres sobre el Caribe",
+      "Ambiente local auténtico"
+    ],
+    "queHacer": [
+      "Surf (nivel intermedio-avanzado)",
+      "Caminatas por la playa",
+      "Probar cocina caribeña en sodas locales"
+    ],
+    "mejorTemporada": "Todo el año (surf: dic-mar, jun-ago)",
+    "consejosResponsables": [
+      "Respetar corrientes fuertes",
+      "No nadar si no eres surfista experimentado",
+      "Apoyar negocios familiares locales"
+    ],
+    "patrimonio": null,
+    "imagen": "/assets/naturaleza/playa-bonita.jpg"
+  },
+  {
+    "id": "gandoca-manzanillo",
+    "nombre": "Refugio de Vida Silvestre Gandoca-Manzanillo",
+    "tipo": ["Naturaleza", "Playa", "Fauna"],
+    "descripcion": "Combinación única de manglar, bosque tropical, arrecife coralino y playas vírgenes. Refugio de manatíes y tortugas.",
+    "queVer": [
+      "Manglares con biodiversidad única",
+      "Playas vírgenes de Manzanillo",
+      "Delfines en la costa",
+      "Arrecife coralino prístino"
+    ],
+    "queHacer": [
+      "Kayak en manglares",
+      "Snorkel en Punta Mona",
+      "Senderismo costero",
+      "Avistamiento de delfines"
+    ],
+    "mejorTemporada": "Febrero a Abril, Septiembre a Octubre",
+    "consejosResponsables": [
+      "Tours guiados para proteger ecosistemas sensibles",
+      "No perturbar manatíes ni delfines",
+      "Llevar equipo reutilizable (botellas, bolsas)",
+      "Respetar zonas de anidación"
+    ],
+    "patrimonio": "Refugio de Vida Silvestre",
+    "imagen": "/assets/naturaleza/gandoca-manzanillo.jpg"
+  },
+  {
+    "id": "rio-pacuare",
+    "nombre": "Río Pacuare",
+    "tipo": ["Aventura"],
+    "descripcion": "Uno de los mejores ríos del mundo para rafting. Rápidos clase III-IV rodeados de selva virgen, cascadas y cañones espectaculares.",
+    "queVer": [
+      "Cañones selváticos profundos",
+      "Cascadas desde la balsa",
+      "Fauna selvática desde el río",
+      "Comunidades indígenas Cabécar"
+    ],
+    "queHacer": [
+      "Rafting clase III-IV",
+      "Camping en el río (tours de varios días)",
+      "Observación de naturaleza extrema"
+    ],
+    "mejorTemporada": "Junio a Octubre (nivel de agua óptimo)",
+    "consejosResponsables": [
+      "Contratar operadores certificados",
+      "Respetar territorios indígenas",
+      "No dejar basura en el río",
+      "Seguir instrucciones de guías por seguridad"
+    ],
+    "patrimonio": null,
+    "imagen": "/assets/naturaleza/pacuare.jpg"
+  }
+]

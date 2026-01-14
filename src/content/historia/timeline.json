@@ -1,0 +1,89 @@
+{
+  "nacimiento": {
+    "id": "nacimiento-puerto",
+    "epoca": "Mediados s. XIX",
+    "titulo": "Nacimiento del puerto",
+    "año": "1854",
+    "descripcion": "Fundación de Puerto Limón como punto estratégico para la exportación de café. En 1870 se planifica como ciudad ordenada con trazado en cuadrícula.",
+    "detalles": [
+      "Exportación de café hacia mercados europeos",
+      "Ciudad planificada en 1870 con diseño en cuadrícula",
+      "Conexión estratégica entre el Valle Central y el Atlántico"
+    ],
+    "imagen": "/assets/Cronologia/1854-limon.png",
+    "cita": "Puerto Limón nace como ventana del café costarricense al mundo."
+  },
+  "ferrocarril": {
+    "id": "ferrocarril-atlantico",
+    "epoca": "Finales s. XIX",
+    "titulo": "Ferrocarril al Atlántico",
+    "año": "1890",
+    "descripcion": "Construcción del ferrocarril que transformó la región y atrajo migración afrocaribeña desde Jamaica y otras islas del Caribe.",
+    "detalles": [
+      "Migración de trabajadores jamaiquinos y antillanos",
+      "Transformación de la infraestructura regional",
+      "Creación de nuevas dinámicas culturales y económicas"
+    ],
+    "imagen": "/assets/Cronologia/1890-limon.png",
+    "cita": "El ferrocarril trajo no solo progreso, sino identidad afrocaribeña a Costa Rica."
+  },
+  "banano": {
+    "id": "banano-united-fruit",
+    "epoca": "Inicios s. XX",
+    "titulo": "Banano y United Fruit Company",
+    "año": "1900-1930",
+    "descripcion": "El auge bananero bajo la United Fruit Company definió el urbanismo limonense y consolidó su composición multiétnica.",
+    "detalles": [
+      "Desarrollo urbano planificado por la compañía bananera",
+      "Consolidación de comunidades afrodescendientes",
+      "Auge económico que atrajo población diversa"
+    ],
+    "imagen": "/assets/Cronologia/1906-limon.png",
+    "cita": "El banano construyó Limón, pero fueron las personas quienes le dieron su alma."
+  },
+  "exclusion": {
+    "id": "exclusion-resistencia",
+    "epoca": "Primera mitad s. XX",
+    "titulo": "Exclusión y resistencia",
+    "año": "1900-1949",
+    "descripcion": "Ante restricciones de movilidad, la comunidad afrocaribeña creó instituciones propias: escuelas en inglés, iglesias protestantes y organizaciones comunitarias.",
+    "detalles": [
+      "Escuelas en inglés para preservar la lengua y cultura",
+      "Iglesias protestantes como centros comunitarios",
+      "Organizaciones como UNIA (Marcus Garvey) y Black Star Line",
+      "Posterior integración manteniendo el legado cultural caribeño"
+    ],
+    "imagen": "/assets/Cronologia/1949-limon.jpg",
+    "cita": "La resistencia cultural se convirtió en identidad, la exclusión en orgullo limonense."
+  },
+  "sigloXX": {
+    "id": "siglo-xx-retos",
+    "epoca": "Segunda mitad s. XX",
+    "titulo": "Siglo XX y retos",
+    "año": "1950-2000",
+    "descripcion": "Períodos de prosperidad y desafíos, incluyendo el devastador terremoto de 1991 que marcó profundamente a la provincia.",
+    "detalles": [
+      "Fluctuaciones económicas ligadas al comercio y exportación",
+      "Terremoto de 1991 con impacto significativo en infraestructura",
+      "Resiliencia y reconstrucción comunitaria"
+    ],
+    "imagen": "/assets/Cronologia/1991-limon.png",
+    "cita": "Limón siempre se levanta, porque su fuerza está en su gente."
+  },
+  "limonHoy": {
+    "id": "limon-hoy",
+    "epoca": "Siglo XXI",
+    "titulo": "Limón hoy",
+    "año": "2000-presente",
+    "descripcion": "Crisol multicultural y orgullo limonense. Una provincia que celebra su diversidad, su historia y su identidad caribeña costarricense.",
+    "detalles": [
+      "Reconocimiento de la cultura afrocaribeña como patrimonio nacional",
+      "Celebraciones como el Carnaval de Limón (desde 1949)",
+      "Turismo cultural y natural responsable",
+      "Comunidad orgullosa de su historia y legado"
+    ],
+    "imagen": "/assets/Cronologia/2025-limon.png",
+    "cita": "Limón no se resume: se vive.",
+    "credito": "Xavier Sandí Castillo"
+  }
+}

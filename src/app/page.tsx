@@ -1,41 +1,66 @@
-import dynamic from "next/dynamic";
-import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
-import { Accommodation } from "@/components/sections/Accommodation";
-import { Restaurant } from "@/components/sections/Restaurant";
-import { MeetingRoom } from "@/components/sections/MeetingRoom";
-import { Contact } from "@/components/sections/Contact";
-import { Footer } from "@/components/sections/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
-
-const Team = dynamic(() =>
-  import("@/components/sections/Team").then((mod) => mod.Team)
-);
-const Testimonials = dynamic(() =>
-  import("@/components/sections/Testimonials").then((mod) => mod.Testimonials)
-);
-const FAQ = dynamic(() =>
-  import("@/components/sections/FAQ").then((mod) => mod.FAQ)
-);
+import { HistoriaPatrimonio } from "@/components/sections/HistoriaPatrimonio";
+import { Arquitectura } from "@/components/sections/Arquitectura";
+import { Cultura } from "@/components/sections/Cultura";
+import { Deportes } from "@/components/sections/Deportes";
+import { Naturaleza } from "@/components/sections/Naturaleza";
+import { Gastronomia } from "@/components/sections/Gastronomia";
+import { Dock } from "@/components/Dock";
+import RutaRecomendada from "@/components/sections/RutaRecomendada";
+import { Eventos } from "@/components/sections/Eventos";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Accommodation />
-        <Restaurant />
-        <Team />
-        <MeetingRoom />
-        <Testimonials />
-        <FAQ />
-        <Contact />
+      <Hero />
+      <main className="relative">
+        {/* Historia section */}
+        <HistoriaPatrimonio />
+
+        {/* Arquitectura section */}
+        <Arquitectura />
+
+        {/* Cultura section */}
+        <Cultura />
+
+        {/* Deportes section */}
+        <Deportes />
+
+        {/* Naturaleza section */}
+        <Naturaleza />
+
+        {/* Gastronomía section */}
+        <Gastronomia />
+
+        {/* Eventos section */}
+        <Eventos />
+
+        {/* Ruta section */}
+        <RutaRecomendada />
       </main>
-      <Footer />
-      <WhatsAppButton />
+
+      {/* Dock Navigation */}
+      <Dock />
+
+      {/* Simple Footer */}
+      <footer id="footer" className="bg-card border-t border-border py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-lg font-display italic text-limon-selva-700 dark:text-limon-selva-400 mb-2">
+            "Lo mejor de Limón es su gente"
+          </p>
+          <p className="text-sm text-muted-foreground">
+            © 2026{" "}
+            <a
+              href="https://kirian.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-limon-selva-600 transition-colors font-medium underline-offset-4 hover:underline"
+            >
+              Kirian.dev
+            </a>
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

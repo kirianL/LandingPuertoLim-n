@@ -4,58 +4,121 @@
 
 @layer base {
   :root {
+    /* Base system colors - Light Mode */
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 210 12% 16%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 210 12% 16%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 142 76% 36%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 24 95% 53%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 142 76% 36%;
+    --popover-foreground: 210 12% 16%;
+
+    /* Limón color palette - Verde Selva (jungle green) */
+    --limon-selva-50: 152 65% 95%;
+    --limon-selva-100: 152 60% 88%;
+    --limon-selva-200: 152 58% 76%;
+    --limon-selva-300: 152 56% 64%;
+    --limon-selva-400: 152 54% 48%;
+    --limon-selva-500: 152 62% 38%; /* Main verde selva profundo */
+    --limon-selva-600: 152 70% 32%;
+    --limon-selva-700: 152 75% 26%;
+    --limon-selva-800: 152 80% 20%;
+    --limon-selva-900: 152 85% 14%;
+    --limon-selva-950: 152 90% 10%;
+
+    /* Limón color palette - Azul Puerto (port/ocean blue) */
+    --limon-puerto-50: 200 80% 95%;
+    --limon-puerto-100: 200 75% 88%;
+    --limon-puerto-200: 200 70% 76%;
+    --limon-puerto-300: 200 65% 64%;
+    --limon-puerto-400: 200 60% 52%;
+    --limon-puerto-500: 200 68% 42%; /* Main azul puerto */
+    --limon-puerto-600: 200 72% 36%;
+    --limon-puerto-700: 200 76% 30%;
+    --limon-puerto-800: 200 80% 24%;
+    --limon-puerto-900: 200 84% 18%;
+    --limon-puerto-950: 200 88% 12%;
+
+    /* Limón color palette - Concreto (concrete/urban) */
+    --limon-concreto-50: 210 15% 96%;
+    --limon-concreto-100: 210 14% 90%;
+    --limon-concreto-200: 210 13% 80%;
+    --limon-concreto-300: 210 12% 68%;
+    --limon-concreto-400: 210 11% 56%;
+    --limon-concreto-500: 210 10% 44%; /* Main tono concreto */
+    --limon-concreto-600: 210 11% 36%;
+    --limon-concreto-700: 210 12% 28%;
+    --limon-concreto-800: 210 13% 20%;
+    --limon-concreto-900: 210 14% 14%;
+    --limon-concreto-950: 210 15% 8%;
+
+    /* Limón color palette - Coral (accent) */
+    --limon-coral-50: 10 100% 96%;
+    --limon-coral-100: 10 95% 90%;
+    --limon-coral-200: 10 92% 82%;
+    --limon-coral-300: 10 90% 72%;
+    --limon-coral-400: 10 88% 64%;
+    --limon-coral-500: 10 85% 58%; /* Main coral */
+    --limon-coral-600: 10 82% 52%;
+    --limon-coral-700: 10 78% 46%;
+    --limon-coral-800: 10 74% 38%;
+    --limon-coral-900: 10 70% 28%;
+    --limon-coral-950: 10 68% 18%;
+
+    /* Limón color palette - Amarillo Cálido (warm yellow) */
+    --limon-amarillo-50: 45 100% 96%;
+    --limon-amarillo-100: 45 95% 88%;
+    --limon-amarillo-200: 45 92% 78%;
+    --limon-amarillo-300: 45 90% 68%;
+    --limon-amarillo-400: 45 88% 58%;
+    --limon-amarillo-500: 45 86% 52%; /* Main amarillo cálido */
+    --limon-amarillo-600: 45 84% 46%;
+    --limon-amarillo-700: 45 82% 38%;
+    --limon-amarillo-800: 45 80% 30%;
+    --limon-amarillo-900: 45 78% 22%;
+    --limon-amarillo-950: 45 76% 14%;
+
+    /* Mapped colors for components */
+    --primary: var(--limon-selva-600);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--limon-concreto-100);
+    --secondary-foreground: var(--limon-concreto-900);
+    --muted: var(--limon-concreto-100);
+    --muted-foreground: var(--limon-concreto-600);
+    --accent: var(--limon-coral-500);
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: var(--limon-concreto-200);
+    --input: var(--limon-concreto-200);
+    --ring: var(--limon-puerto-500);
     --radius: 0.5rem;
-    --chart-1: 142 76% 36%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+
+    /* Font variables managed by Next.js in layout.tsx */
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 142 76% 36%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 24 95% 53%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 142 76% 36%;
-    --chart-1: 142 76% 36%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    /* Base system colors - Dark Mode with Limón identity */
+    --background: var(--limon-concreto-950);
+    --foreground: var(--limon-concreto-50);
+    --card: var(--limon-concreto-900);
+    --card-foreground: var(--limon-concreto-50);
+    --popover: var(--limon-concreto-900);
+    --popover-foreground: var(--limon-concreto-50);
+
+    /* Adjusted Limón colors for dark mode */
+    --primary: var(--limon-selva-400);
+    --primary-foreground: var(--limon-concreto-950);
+    --secondary: var(--limon-concreto-800);
+    --secondary-foreground: var(--limon-concreto-100);
+    --muted: var(--limon-concreto-800);
+    --muted-foreground: var(--limon-concreto-400);
+    --accent: var(--limon-coral-400);
+    --accent-foreground: var(--limon-concreto-950);
+    --destructive: 0 63% 31%;
+    --destructive-foreground: var(--limon-concreto-50);
+    --border: var(--limon-concreto-800);
+    --input: var(--limon-concreto-800);
+    --ring: var(--limon-puerto-400);
   }
 }
 
@@ -63,9 +126,59 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+
+  /* Editorial typography rhythm */
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose p {
+    @apply leading-relaxed;
+  }
+
+  .prose h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight;
+  }
+
+  .prose h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight;
+  }
+
+  .prose h3 {
+    @apply text-2xl md:text-3xl mb-4;
+  }
+
+  /* Editorial grid */
+  .editorial-grid {
+    @apply grid gap-editorial;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
@@ -73,6 +186,49 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--limon-selva-600) / 0.3);
+  border-radius: 10px;
+  border: 3px solid hsl(var(--background));
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--limon-selva-500));
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--limon-selva-600) / 0.3) transparent;
+}
+
+/* Custom Scrollbar Utility for Modals */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  display: block;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full;
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #27272a transparent;
+}
+
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -84,4 +240,10 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Focus styles for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }

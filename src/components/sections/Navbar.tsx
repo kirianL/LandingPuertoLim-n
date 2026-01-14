@@ -2,32 +2,30 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ThemeToggle } from "@/components/magicui/theme-toggle";
-import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Inicio", href: "#inicio" },
-  { name: "Hospedaje", href: "#hospedaje" },
-  { name: "Restaurante", href: "#restaurante" },
-  { name: "Sala", href: "#sala-reuniones" },
-  { name: "Contacto", href: "#contacto" },
+  { name: "Historia", href: "#historia" },
+  { name: "Patrimonio", href: "#arquitectura" },
+  { name: "Cultura", href: "#cultura" },
+  { name: "Deportes", href: "#deportes" },
+  { name: "Naturaleza", href: "#naturaleza" },
+  { name: "Gastronomía", href: "#gastronomia" },
+  { name: "Eventos", href: "#eventos" },
+  { name: "Mi Ruta", href: "#ruta" },
 ];
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("inicio");
-  const [isInHero, setIsInHero] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Show navbar after scrolling past hero
     const handleScroll = () => {
       const scrollPos = window.scrollY;
-      setIsScrolled(scrollPos > 20);
-
-      // Hide navbar when scrolled past Hero (roughly 80% of viewport height)
-      setIsInHero(scrollPos < window.innerHeight * 0.8);
+      setIsVisible(scrollPos > window.innerHeight * 0.3);
 
       // Detect active section
       const sections = navItems.map((item) => item.href.substring(1));
@@ -35,7 +33,7 @@ export function Navbar() {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          return rect.top <= 150 && rect.bottom >= 150;
         }
         return false;
       });
@@ -48,105 +46,46 @@ export function Navbar() {
   }, []);
 
   return (
-    <>
-      {/* Desktop Navbar - Centered Floating Pill */}
-      <nav
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 pointer-events-none transition-all duration-500",
-          !isInHero && "opacity-0 -translate-y-full"
-        )}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center pt-6">
-            {/* Floating Pill Container */}
-            <div
+    <nav
+      className={cn(
+        "hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-50 transition-all duration-500",
+        isVisible
+          ? "opacity-100 translate-x-0"
+          : "opacity-0 -translate-x-full pointer-events-none"
+      )}
+    >
+      <div className="flex flex-col gap-2 bg-background/80 backdrop-blur-xl border border-border/50 rounded-2xl p-3 shadow-2xl">
+        {/* Theme Toggle at top */}
+        <div className="pb-2 mb-2 border-b border-border/50 flex justify-center">
+          <ThemeToggle />
+        </div>
+
+        {/* Navigation Links */}
+        {navItems.map((item) => {
+          const isActive = activeSection === item.href.substring(1);
+          return (
+            <Link
+              key={item.name}
+              href={item.href}
               className={cn(
-                "hidden md:flex items-center gap-1 px-6 py-3 rounded-full pointer-events-auto transition-all duration-300",
-                "bg-background/80 backdrop-blur-xl border border-border/50 shadow-lg",
-                isScrolled && "shadow-xl"
+                "group relative px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 text-left",
+                isActive
+                  ? "text-primary-foreground bg-primary shadow-md"
+                  : "text-foreground/70 hover:text-foreground hover:bg-accent/50"
               )}
+              title={item.name}
             >
-              {/* Navigation Links */}
-              {navItems.map((item) => {
-                const isActive = activeSection === item.href.substring(1);
-                return (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={cn(
-                      "relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-200",
-                      isActive
-                        ? "text-primary-foreground bg-primary"
-                        : "text-foreground/70 hover:text-foreground hover:bg-accent/50"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
+              {/* Active indicator */}
+              {isActive && (
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary-foreground rounded-r-full -ml-3" />
+              )}
 
-              {/* Theme Toggle */}
-              <div className="ml-2 pl-4 border-l border-border/50">
-                <ThemeToggle />
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Mobile Navbar - Top Bar */}
-      <nav
-        className={cn(
-          "md:hidden fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm transition-all duration-500",
-          !isInHero && "opacity-0 -translate-y-full"
-        )}
-      >
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Spacer for centering */}
-            <div className="w-10"></div>
-
-            {/* Mobile Controls - Centered */}
-            <div className="flex items-center gap-2">
-              <ThemeToggle />
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-lg text-foreground hover:bg-accent transition-colors"
-                aria-label="Toggle menu"
-              >
-                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-
-            {/* Spacer for balance */}
-            <div className="w-10"></div>
-          </div>
-
-          {/* Mobile Menu Dropdown */}
-          {isMobileMenuOpen && (
-            <div className="py-4 border-t border-border">
-              {navItems.map((item) => {
-                const isActive = activeSection === item.href.substring(1);
-                return (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={cn(
-                      "block px-4 py-3 text-base font-medium rounded-lg transition-colors mb-1",
-                      isActive
-                        ? "text-primary bg-primary/10"
-                        : "text-foreground/80 hover:text-foreground hover:bg-accent/50"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
-            </div>
-          )}
-        </div>
-      </nav>
-    </>
+              {/* Text */}
+              <span className="block whitespace-nowrap">{item.name}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
   );
 }

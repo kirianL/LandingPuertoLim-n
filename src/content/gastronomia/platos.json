@@ -1,0 +1,131 @@
+[
+  {
+    "id": "rice-and-beans",
+    "nombre": "Rice and Beans",
+    "categoria": "Plato Principal",
+    "tipo": "Salado",
+    "descripcion": "El plato emblemático de Limón. Arroz cocinado en leche de coco con frijoles rojos, tomillo y chile panameño. Servido tradicionalmente con pollo caribeño o pescado, y tajadas de plátano maduro.",
+    "ingredientes": [
+      "Arroz",
+      "Frijoles rojos",
+      "Leche de coco",
+      "Tomillo",
+      "Chile panameño",
+      "Cebolla",
+      "Ajo"
+    ],
+    "origenCultural": "Herencia afrocaribeña jamaiquina, adaptado con ingredientes locales costarricenses.",
+    "dondeProbar": [
+      "Mercado Central (City Market)",
+      "Sodas familiares en Puerto Limón",
+      "Restaurantes en Cahuita y Puerto Viejo"
+    ],
+    "imagen": "/assets/gastronomia/rice-and-beans.jpg"
+  },
+  {
+    "id": "rondon",
+    "nombre": "Rondón (Run Down)",
+    "categoria": "Plato Principal",
+    "tipo": "Salado",
+    "descripcion": "Guiso caribeño en leche de coco con pescado o mariscos, tubérculos (yuca, ñame), plátano verde y especias. El nombre 'run down' viene de 'run down the coconut milk' (reducir la leche de coco).",
+    "ingredientes": [
+      "Leche de coco",
+      "Pescado fresco o mariscos",
+      "Yuca",
+      "Ñame",
+      "Plátano verde",
+      "Especias caribeñas"
+    ],
+    "origenCultural": "Tradición afrocaribeña con raíces en Jamaica y Panamá. Plato dominguero y de celebración.",
+    "dondeProbar": [
+      "Restaurantes familiares en Puerto Limón",
+      "Cahuita",
+      "Puerto Viejo de Talamanca"
+    ],
+    "imagen": "/assets/gastronomia/rondon.jpg"
+  },
+  {
+    "id": "pati",
+    "nombre": "Patí",
+    "categoria": "Snack/Entrada",
+    "tipo": "Picante",
+    "descripcion": "Empanada horneada de masa con achiote, rellena de carne especiada con curry y un toque picante. Perfecta como snack o entrada.",
+    "ingredientes": [
+      "Masa con achiote",
+      "Carne molida",
+      "Curry",
+      "Chile",
+      "Cebolla",
+      "Especias caribeñas"
+    ],
+    "origenCultural": "Herencia jamaiquina, popular en toda la costa caribeña costarricense.",
+    "dondeProbar": [
+      "Panaderías locales",
+      "Mercado Central",
+      "Sodas en Puerto Limón"
+    ],
+    "imagen": "/assets/gastronomia/pati.jpg"
+  },
+  {
+    "id": "pan-bon",
+    "nombre": "Pan Bon",
+    "categoria": "Postre/Pan Dulce",
+    "tipo": "Dulce",
+    "descripcion": "Pan dulce tradicional hecho con melaza, especias (jengibre, canela, nuez moscada) y frutos secos. Denso, húmedo y aromático, perfecto con café.",
+    "ingredientes": [
+      "Melaza",
+      "Jengibre",
+      "Canela",
+      "Nuez moscada",
+      "Frutos secos",
+      "Pasas"
+    ],
+    "origenCultural": "Tradición afrocaribeña, especialmente popular en Navidad y celebraciones.",
+    "dondeProbar": [
+      "Panaderías tradicionales",
+      "Mercado Central",
+      "Hogares limonenses (receta familiar)"
+    ],
+    "imagen": "/assets/gastronomia/pan-bon.jpg"
+  },
+  {
+    "id": "agua-de-sapo",
+    "nombre": "Agua de Sapo",
+    "categoria": "Bebida",
+    "tipo": "Dulce",
+    "descripcion": "Bebida refrescante hecha con jugo de jengibre, dulce de tapa (panela), limón y agua. Nombre curioso para una bebida deliciosa que refresca en el calor caribeño.",
+    "ingredientes": [
+      "Jengibre fresco",
+      "Dulce de tapa (panela)",
+      "Limón",
+      "Agua fría"
+    ],
+    "origenCultural": "Bebida tradicional de la costa caribeña, herencia campesina y afrocaribeña.",
+    "dondeProbar": [
+      "Sodas locales",
+      "Mercado Central",
+      "Hogares familiares"
+    ],
+    "imagen": "/assets/gastronomia/agua-de-sapo.jpg"
+  },
+  {
+    "id": "pan-de-coco",
+    "nombre": "Pan de Coco",
+    "categoria": "Postre/Pan Dulce",
+    "tipo": "Dulce",
+    "descripcion": "Pan dulce con coco rallado, suave y aromático. Tradición que acompaña el café de la tarde en Limón.",
+    "ingredientes": [
+      "Coco rallado",
+      "Harina",
+      "Azúcar",
+      "Leche de coco",
+      "Especias"
+    ],
+    "origenCultural": "Herencia afrocaribeña, adaptado con ingredientes locales.",
+    "dondeProbar": [
+      "Panaderías locales",
+      "Mercado Central"
+    ],
+    "imagen": "/assets/gastronomia/pan-de-coco.jpg"
+  }
+]
