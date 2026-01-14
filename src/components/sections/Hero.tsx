@@ -37,14 +37,24 @@ export function Hero() {
 
       {/* Glass Card Content - Mobile Centered */}
       <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-8 flex flex-col justify-center items-center md:block min-h-[60vh] md:min-h-0">
-        <div className="w-full max-w-3xl bg-black/40 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 md:p-12 shadow-2xl mx-auto md:mx-0 overflow-hidden relative">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="w-full max-w-3xl bg-black/40 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 md:p-12 shadow-2xl mx-auto md:mx-0 overflow-hidden relative"
+        >
           {/* Decorative blurred glow */}
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-limon-selva-500/20 blur-[80px] rounded-full pointer-events-none" />
 
           {/* Header Row: Identity & Weather */}
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 mb-10 w-full relative z-20">
             {/* Identity Block - Redesigned for Visibility */}
-            <div className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-3 pr-6 backdrop-blur-md">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-3 pr-6 backdrop-blur-md"
+            >
               {/* Symbols Container */}
               <div className="flex items-center gap-3">
                 {/* Flag - Large */}
@@ -82,36 +92,61 @@ export function Hero() {
                   Limón, Costa Rica
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* Weather Widget */}
-            <div className="scale-100 origin-center md:origin-right">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="scale-100 origin-center md:origin-right"
+            >
               <WeatherWidget />
-            </div>
+            </motion.div>
           </div>
 
           {/* Main Content Group */}
           <div className="space-y-6 text-center md:text-left relative z-10">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[0.9] tracking-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[0.9] tracking-tight"
+            >
               Naturaleza, Cultura <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#009400] via-[#009400] to-white">
                 y Sabor Caribeño
               </span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mx-auto md:mx-0 font-light">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mx-auto md:mx-0 font-light"
+            >
               Historia viva, arquitectura patrimonial y la auténtica esencia del
               Caribe. Descubre el corazón de Limón más allá de los clichés.
-            </p>
+            </motion.p>
           </div>
 
           {/* Divider */}
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent my-10" />
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent my-10"
+          />
 
           {/* Footer Row: Stats & CTAs */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-10">
             {/* Elegant Horizontal Stats - Left Aligned */}
-            <div className="grid grid-cols-2 md:flex md:items-center gap-y-8 gap-x-6 md:gap-8 w-full md:w-auto justify-items-center md:justify-start">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="grid grid-cols-2 md:flex md:items-center gap-y-8 gap-x-6 md:gap-8 w-full md:w-auto justify-items-center md:justify-start"
+            >
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <span className="text-3xl font-bold font-display text-white leading-none">
                   1854
@@ -142,10 +177,15 @@ export function Hero() {
                   Población
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* CTAs - Right Aligned (Single Button) */}
-            <div className="w-full md:w-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="w-full md:w-auto"
+            >
               <a
                 href="#historia"
                 className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-white text-limon-selva-900 hover:bg-limon-amarillo-300 rounded-xl font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-limon-amarillo-400/20 group"
@@ -153,9 +193,9 @@ export function Hero() {
                 Explorar Historia
                 <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
               </a>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

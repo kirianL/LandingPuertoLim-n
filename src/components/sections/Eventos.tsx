@@ -64,6 +64,7 @@ export const Eventos = () => {
             initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
             className="mb-16 max-w-4xl"
           >
             <h2 className="text-5xl md:text-8xl font-display font-bold mb-6 tracking-tighter text-zinc-900">
@@ -84,7 +85,8 @@ export const Eventos = () => {
                 initial={{ opacity: 1, scale: 1 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.1 }}
-                className="relative aspect-[16/9] rounded-sm overflow-hidden shadow-2xl bg-zinc-50"
+                transition={{ duration: 0.5 }}
+                className="relative aspect-[16/9] rounded-sm overflow-hidden shadow-2xl bg-zinc-50 group"
               >
                 <Image
                   src={personasRelax.images[0]}
@@ -94,6 +96,9 @@ export const Eventos = () => {
                   sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-black/10" />
+                <div className="absolute bottom-2 right-2 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
+                  Foto: Xavier Sandí Castillo
+                </div>
               </motion.div>
             </div>
             <div className="lg:col-span-4 space-y-6">
@@ -107,7 +112,7 @@ export const Eventos = () => {
                 {personasRelax.description}
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="relative aspect-square rounded-sm overflow-hidden border border-zinc-100 shadow-sm">
+                <div className="relative aspect-square rounded-sm overflow-hidden border border-zinc-100 shadow-sm group">
                   <Image
                     src={personasRelax.images[1]}
                     alt="Comunidad"
@@ -115,8 +120,11 @@ export const Eventos = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 20vw"
                   />
+                  <div className="absolute bottom-1 right-1 text-[8px] text-white/40 font-medium tracking-wide bg-black/10 px-1 rounded-sm">
+                    Foto: Xavier Sandí Castillo
+                  </div>
                 </div>
-                <div className="relative aspect-square rounded-sm overflow-hidden border border-zinc-100 shadow-sm">
+                <div className="relative aspect-square rounded-sm overflow-hidden border border-zinc-100 shadow-sm group">
                   <Image
                     src={personasRelax.images[3]}
                     alt="Encuentro"
@@ -124,6 +132,9 @@ export const Eventos = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 20vw"
                   />
+                  <div className="absolute bottom-1 right-1 text-[8px] text-white/40 font-medium tracking-wide bg-black/10 px-1 rounded-sm">
+                    Foto: Xavier Sandí Castillo
+                  </div>
                 </div>
               </div>
             </div>
@@ -146,6 +157,9 @@ export const Eventos = () => {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute bottom-32 right-4 text-[10px] text-white/30 font-medium tracking-wide">
+            Foto: Xavier Sandí Castillo
+          </div>
         </motion.div>
 
         <div className="absolute inset-0 flex items-center justify-center p-6">
@@ -153,6 +167,7 @@ export const Eventos = () => {
             initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
             className="text-center text-white max-w-4xl"
           >
             <span className="text-limon-amarillo-400 font-bold tracking-[0.5em] uppercase text-xs mb-6 block">
@@ -175,6 +190,7 @@ export const Eventos = () => {
               initial={{ opacity: 1, scale: 1 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.5 }}
               className="inline-flex p-4 bg-limon-amarillo-400 rounded-full mb-8 text-zinc-900"
             >
               <Music size={32} />
@@ -194,18 +210,21 @@ export const Eventos = () => {
                 initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-sm border border-zinc-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group"
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-white rounded-sm border border-zinc-100 overflow-hidden shadow-sm md:hover:shadow-xl transition-all duration-500 group"
               >
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 md:group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute bottom-2 right-2 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
+                    Foto: Xavier Sandí Castillo
+                  </div>
                 </div>
                 <div className="p-8">
                   <h4 className="text-2xl font-display font-bold text-zinc-900 mb-2">
@@ -244,7 +263,7 @@ export const Eventos = () => {
               {juventud.images.map((img, idx) => (
                 <div
                   key={idx}
-                  className="relative aspect-[3/4] w-full rounded-sm overflow-hidden shadow-lg border border-zinc-100 bg-zinc-50"
+                  className="relative aspect-[3/4] w-full rounded-sm overflow-hidden shadow-lg border border-zinc-100 bg-zinc-50 group"
                 >
                   <Image
                     src={img}
@@ -253,7 +272,10 @@ export const Eventos = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-black/0 md:hover:bg-black/20 transition-colors duration-300" />
+                  <div className="absolute bottom-2 right-2 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
+                    Foto: Xavier Sandí Castillo
+                  </div>
                 </div>
               ))}
             </div>
@@ -280,7 +302,8 @@ export const Eventos = () => {
                 initial={{ opacity: 1, x: 0 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
-                className="relative aspect-square rounded-sm overflow-hidden shadow-2xl z-20 bg-zinc-50"
+                transition={{ duration: 0.5 }}
+                className="relative aspect-square rounded-sm overflow-hidden shadow-2xl z-20 bg-zinc-50 group"
               >
                 <Image
                   src={trajes.impact.image}
@@ -289,11 +312,15 @@ export const Eventos = () => {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
+                <div className="absolute bottom-4 right-4 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
+                  Foto: Xavier Sandí Castillo
+                </div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 1, x: 0 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="lg:-ml-24 bg-white p-12 md:p-20 shadow-xl border border-zinc-100 relative z-10"
               >
                 <Quote
@@ -315,17 +342,17 @@ export const Eventos = () => {
                 initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
-                transition={{ delay: idx * 0.1 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group relative h-[500px] overflow-hidden rounded-sm bg-zinc-900"
               >
                 <Image
                   src={cat.image}
                   alt={cat.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 group-hover:opacity-40"
+                  className="object-cover transition-transform duration-700 md:group-hover:scale-105 md:group-hover:opacity-40"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent group-hover:from-zinc-900 group-hover:via-zinc-900/80 transition-all duration-500">
+                <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent md:group-hover:from-zinc-900 md:group-hover:via-zinc-900/80 transition-all duration-500">
                   <span className="text-limon-amarillo-400 text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
                     {cat.tag}
                   </span>
@@ -335,11 +362,14 @@ export const Eventos = () => {
                   <p className="text-white/90 text-sm font-medium mb-4 italic">
                     {cat.subtitle}
                   </p>
-                  <div className="overflow-hidden max-h-0 group-hover:max-h-48 transition-all duration-500 ease-in-out">
+                  <div className="overflow-hidden max-h-0 md:group-hover:max-h-48 transition-all duration-500 ease-in-out">
                     <p className="text-white/70 text-sm leading-relaxed border-t border-white/10 pt-4 mt-auto">
                       {cat.description}
                     </p>
                   </div>
+                </div>
+                <div className="absolute top-2 right-2 text-[8px] text-white/30 font-medium tracking-wide">
+                  Foto: Xavier Sandí Castillo
                 </div>
               </motion.div>
             ))}
@@ -351,7 +381,7 @@ export const Eventos = () => {
               src={trajes.movement.image}
               alt="Movimiento"
               fill
-              className="object-cover transition-transform duration-[2000ms] group-hover:scale-105"
+              className="object-cover transition-transform duration-[2000ms] md:group-hover:scale-105"
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -359,12 +389,16 @@ export const Eventos = () => {
                 initial={{ opacity: 1, scale: 1 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.5 }}
                 className="text-center text-white"
               >
                 <h4 className="text-4xl md:text-7xl font-display font-bold italic tracking-tighter">
                   “{trajes.movement.text}”
                 </h4>
               </motion.div>
+            </div>
+            <div className="absolute bottom-4 right-4 text-[10px] text-white/40 font-medium tracking-wide">
+              Foto: Xavier Sandí Castillo
             </div>
           </div>
 
@@ -388,7 +422,8 @@ export const Eventos = () => {
                 <motion.div
                   key={idx}
                   whileHover={{ y: -8 }}
-                  className="relative aspect-square rounded-sm overflow-hidden shadow-lg border border-zinc-100"
+                  transition={{ duration: 0.3 }}
+                  className="relative aspect-square rounded-sm overflow-hidden shadow-lg border border-zinc-100 group"
                 >
                   <Image
                     src={img}
@@ -397,6 +432,9 @@ export const Eventos = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
+                  <div className="absolute bottom-2 right-2 text-[8px] text-white/40 font-medium tracking-wide bg-black/10 px-1 rounded-sm">
+                    Foto: Xavier Sandí Castillo
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -410,6 +448,7 @@ export const Eventos = () => {
                   initial={{ opacity: 1, y: 0 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
+                  transition={{ duration: 0.5 }}
                   className="space-y-8"
                 >
                   <div className="h-0.5 w-16 bg-limon-amarillo-400" />
@@ -426,7 +465,8 @@ export const Eventos = () => {
                 initial={{ opacity: 1, scale: 1 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.1 }}
-                className="order-1 lg:order-2 relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl bg-zinc-50"
+                transition={{ duration: 0.5 }}
+                className="order-1 lg:order-2 relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl bg-zinc-50 group"
               >
                 <Image
                   src={trajes.closure.image}
@@ -435,6 +475,9 @@ export const Eventos = () => {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
+                <div className="absolute bottom-4 right-4 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
+                  Foto: Xavier Sandí Castillo
+                </div>
               </motion.div>
             </div>
           </div>
@@ -449,6 +492,7 @@ export const Eventos = () => {
             initial={{ opacity: 1, scale: 1 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
             className="group inline-flex p-4 border border-white/20 rounded-full mb-12 hover:bg-white hover:text-zinc-900 transition-all duration-300"
           >
             <Heart size={40} className="group-hover:fill-current" />

@@ -341,7 +341,7 @@ export const Naturaleza = () => {
                   src={(tortuguero as any).image}
                   alt={tortuguero.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover md:group-hover:scale-110 transition-transform duration-300"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -392,6 +392,7 @@ export const Naturaleza = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
           className="mb-24 flex flex-col items-center text-center max-w-4xl mx-auto px-4"
         >
           <Quote
@@ -418,7 +419,7 @@ export const Naturaleza = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
                   whileHover={{ y: -8 }}
                   className="bg-white rounded-sm border border-zinc-200 overflow-hidden shadow-sm group hover:shadow-xl transition-all duration-300"
                 >
@@ -428,7 +429,7 @@ export const Naturaleza = () => {
                         src={dest.image}
                         alt={dest.title}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="object-cover transition-transform duration-300 md:group-hover:scale-110"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     ) : (
@@ -437,10 +438,10 @@ export const Naturaleza = () => {
                       </div>
                     )}
                     {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                    <div className="absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors duration-300" />
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-display font-bold text-zinc-900 mb-2 group-hover:text-limon-selva-600 transition-colors">
+                    <h3 className="text-2xl font-display font-bold text-zinc-900 mb-2 md:group-hover:text-limon-selva-600 transition-colors">
                       {dest.title}
                     </h3>
                     <p className="text-sm font-medium text-limon-selva-600 mb-4">
@@ -455,12 +456,12 @@ export const Naturaleza = () => {
                           key={i}
                           className="flex items-center gap-2 text-xs text-zinc-500"
                         >
-                          <span className="w-1 h-1 bg-zinc-400 rounded-full group-hover:bg-limon-amarillo-400 transition-colors"></span>
+                          <span className="w-1 h-1 bg-zinc-400 rounded-full md:group-hover:bg-limon-amarillo-400 transition-colors"></span>
                           {act}
                         </li>
                       ))}
                     </ul>
-                    <p className="text-xs text-zinc-400 italic pt-4 border-t border-zinc-50 group-hover:border-zinc-100 transition-colors">
+                    <p className="text-xs text-zinc-400 italic pt-4 border-t border-zinc-50 md:group-hover:border-zinc-100 transition-colors">
                       "{dest.conclusion}"
                     </p>
                   </div>
@@ -475,6 +476,7 @@ export const Naturaleza = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
           className="mb-24 bg-zinc-900 rounded-sm p-8 md:p-12 text-white relative overflow-hidden group"
         >
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>

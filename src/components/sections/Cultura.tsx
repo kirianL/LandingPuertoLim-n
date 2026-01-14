@@ -53,6 +53,7 @@ export const Cultura = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="text-5xl md:text-7xl font-display font-bold mb-4 text-white tracking-tight"
           >
             Cultura y <br />
@@ -62,14 +63,14 @@ export const Cultura = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="h-1 w-20 bg-limon-amarillo-400 mb-8"
           />
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed font-body max-w-2xl"
           >
             "{intro.subtitle}" {intro.description}
@@ -83,6 +84,7 @@ export const Cultura = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="bg-zinc-900/50 backdrop-blur-sm rounded-sm border border-white/5 overflow-hidden group flex flex-col"
           >
             {/* Photo Template */}
@@ -91,7 +93,7 @@ export const Cultura = () => {
                 src={music.image}
                 alt={music.title}
                 fill
-                className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                className="object-cover opacity-80 md:group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent opacity-60"></div>
@@ -123,7 +125,7 @@ export const Cultura = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="bg-gradient-to-br from-limon-rojo-900/10 to-zinc-900/50 backdrop-blur-sm rounded-sm border border-white/5 overflow-hidden group flex flex-col"
           >
             {/* Photo Template */}
@@ -132,7 +134,7 @@ export const Cultura = () => {
                 src={carnival.image}
                 alt={carnival.title}
                 fill
-                className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                className="object-cover opacity-80 md:group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent opacity-60"></div>
@@ -172,6 +174,7 @@ export const Cultura = () => {
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="bg-gradient-to-r from-limon-selva-950 to-zinc-900 rounded-sm border border-limon-amarillo-500/20 overflow-hidden relative"
           >
             <div className="absolute top-0 right-0 p-8 opacity-10">
@@ -244,10 +247,10 @@ export const Cultura = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
                 className="bg-zinc-900 hover:bg-zinc-800 transition-colors p-4 md:p-6 rounded-sm border border-white/5 hover:border-limon-amarillo-500/30 group"
               >
-                <div className="text-limon-amarillo-400 font-display font-bold text-lg md:text-2xl mb-1 md:mb-2 group-hover:translate-x-1 transition-transform">
+                <div className="text-limon-amarillo-400 font-display font-bold text-lg md:text-2xl mb-1 md:mb-2 md:group-hover:translate-x-1 transition-transform">
                   "{item.phrase}"
                 </div>
                 <div className="text-white font-medium mb-1 text-sm md:text-base leading-snug">
@@ -269,7 +272,7 @@ export const Cultura = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 + idx * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.2 + idx * 0.1 }}
               className="flex gap-6 items-start"
             >
               <div className="bg-zinc-800 p-4 rounded-sm shrink-0 text-limon-selva-400">
@@ -318,6 +321,7 @@ export const Cultura = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               className="inline-flex items-center justify-center p-3 bg-limon-amarillo-400/10 rounded-full text-limon-amarillo-400 mb-6"
             >
               <Users size={24} />
@@ -347,6 +351,7 @@ export const Cultura = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="bg-zinc-800/50 h-80 rounded-sm border border-white/5 relative flex items-center justify-center overflow-hidden"
           >
             <Image
@@ -368,6 +373,7 @@ export const Cultura = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="p-8"
           >
             <h3 className="text-3xl font-display font-bold text-white mb-6 flex items-center gap-3">
@@ -392,6 +398,7 @@ export const Cultura = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="bg-zinc-900/50 rounded-sm border border-white/5 overflow-hidden flex flex-col"
           >
             {/* Theater Photo Template */}
@@ -400,7 +407,7 @@ export const Cultura = () => {
                 src={theater.image}
                 alt={theater.title}
                 fill
-                className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                className="object-cover opacity-80 md:group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent opacity-60"></div>
@@ -421,8 +428,8 @@ export const Cultura = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="bg-zinc-900/50 p-8 rounded-sm border border-white/5 lg:col-span-2"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-zinc-900/50 p-6 md:p-8 rounded-sm border border-white/5 lg:col-span-2"
           >
             <div className="flex items-center gap-4 mb-8">
               <Film className="text-limon-azul-400" size={32} />
@@ -431,53 +438,52 @@ export const Cultura = () => {
               </h4>
             </div>
             <p className="text-zinc-400 mb-8">{cinema.description}</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-6">
               {cinema.films.map((film, idx) => (
                 <div
                   key={idx}
-                  className="bg-zinc-950 rounded-sm border border-white/5 overflow-hidden flex"
+                  className="bg-zinc-950 rounded-sm border border-white/5 overflow-hidden flex flex-col sm:flex-row group"
                 >
-                  {/* Movie Poster */}
                   {/* Movie Poster - Compact Mobile Side-by-Side */}
-                  <div className="w-28 sm:w-40 shrink-0 bg-zinc-900 relative border-r border-white/5">
+                  <div className="w-full h-64 sm:w-40 sm:h-auto shrink-0 bg-zinc-900 relative border-b sm:border-b-0 sm:border-r border-white/5 overflow-hidden">
                     <Image
                       src={film.image}
                       alt={film.title}
                       fill
-                      className="object-cover opacity-90 transition-opacity hover:opacity-100"
-                      sizes="(max-width: 640px) 112px, 160px"
+                      className="object-cover opacity-90 transition-opacity hover:opacity-100 md:group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 640px) 100vw, 160px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-zinc-950/60"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent to-zinc-950/60"></div>
                   </div>
 
-                  <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center min-w-0">
-                    <div className="flex flex-col mb-1 sm:mb-2">
-                      <h5 className="text-white font-bold text-lg sm:text-xl font-display leading-tight truncate">
+                  <div className="p-6 flex-1 flex flex-col justify-center min-w-0">
+                    <div className="flex flex-col mb-3">
+                      <h5 className="text-white font-bold text-xl font-display leading-tight">
                         {film.title}
                       </h5>
-                      <p className="text-[10px] sm:text-xs text-limon-azul-300 uppercase tracking-widest font-medium truncate">
+                      <p className="text-xs text-limon-azul-300 uppercase tracking-widest font-medium">
                         {film.director}
                       </p>
                     </div>
 
-                    <p className="text-sm text-zinc-400 mb-3 sm:mb-5 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                    <p className="text-sm text-zinc-400 mb-5 leading-relaxed">
                       {film.desc}
                     </p>
 
                     {/* Awards - Minimalist & Compact */}
                     {film.awards && (
                       <div className="mt-auto pt-3 border-t border-white/5">
-                        <ul className="space-y-1">
+                        <ul className="space-y-1.5">
                           {film.awards.map((award, i) => (
                             <li
                               key={i}
-                              className="text-[10px] sm:text-[11px] text-zinc-400 font-medium tracking-wide flex items-start gap-1.5"
+                              className="text-[11px] text-zinc-400 font-medium tracking-wide flex items-start gap-2"
                             >
                               <Trophy
                                 size={12}
-                                className="text-limon-amarillo-500 shrink-0 mt-[1px]"
+                                className="text-limon-amarillo-500 shrink-0 mt-[2px]"
                               />
-                              <span className="leading-tight opacity-90 truncate">
+                              <span className="leading-tight opacity-95">
                                 {award}
                               </span>
                             </li>
@@ -496,7 +502,7 @@ export const Cultura = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-zinc-900/50 rounded-sm border border-white/5 lg:col-span-3 overflow-hidden"
           >
             <div className="flex flex-col">
@@ -537,7 +543,7 @@ export const Cultura = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
                 className="relative py-2 px-4 text-center"
               >
                 <div className="text-4xl md:text-5xl font-display font-bold text-limon-amarillo-300 mb-2 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]">

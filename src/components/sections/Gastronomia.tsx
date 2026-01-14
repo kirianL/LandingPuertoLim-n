@@ -64,7 +64,7 @@ export function Gastronomia() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="mb-20 text-left max-w-5xl"
         >
           <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight">
@@ -91,6 +91,7 @@ export function Gastronomia() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="space-y-8"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-limon-selva-100 dark:bg-limon-selva-900/40 text-limon-selva-700 dark:text-limon-selva-300 rounded-full text-sm font-bold tracking-wider uppercase">
@@ -105,7 +106,7 @@ export function Gastronomia() {
             </p>
 
             <div className="p-8 bg-card border border-border rounded-sm shadow-sm relative overflow-hidden group">
-              <div className="absolute top-4 right-4 text-limon-amarillo-400/20 group-hover:text-limon-amarillo-400/40 transition-colors">
+              <div className="absolute top-4 right-4 text-limon-amarillo-400/20 md:group-hover:text-limon-amarillo-400/40 transition-colors">
                 <ShoppingBag size={64} />
               </div>
               <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -121,7 +122,7 @@ export function Gastronomia() {
               </p>
               <div className="inline-flex items-center gap-2 text-sm font-bold text-limon-selva-600 dark:text-limon-selva-400">
                 <div className="shrink-0">
-                  <Info size={16} />
+                  <span className="w-4 h-4 rounded-full bg-limon-amarillo-400 block" />
                 </div>
                 {heritage.market.highlight}
               </div>
@@ -132,15 +133,16 @@ export function Gastronomia() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl group">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
               <Image
                 src="/assets/gastronomia/MercadoMunicipal.jpg"
                 alt="Antiguo Mercado Municipal de Limón"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                className="object-cover transition-transform duration-700 md:group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute bottom-8 left-8 right-8 z-20">
@@ -174,7 +176,6 @@ export function Gastronomia() {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             {dishes.map((dish: any, idx: number) => {
-              // Rice and Beans and Rondon are highlighted as large cards
               const isLarge =
                 dish.id === "rice-and-beans" || dish.id === "rondon";
               return (
@@ -183,10 +184,10 @@ export function Gastronomia() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
                   onClick={() => setSelectedDish(dish)}
                   className={cn(
-                    "group relative bg-card border border-border rounded-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col cursor-pointer",
+                    "group relative bg-card border border-border rounded-sm overflow-hidden transition-all duration-300 hover:shadow-xl md:hover:-translate-y-1 flex flex-col cursor-pointer",
                     isLarge
                       ? "md:col-span-12 lg:col-span-6"
                       : "md:col-span-6 lg:col-span-4"
@@ -202,7 +203,7 @@ export function Gastronomia() {
                       src={dish.image}
                       alt={dish.name}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover transition-transform duration-500 md:group-hover:scale-105"
                       sizes={
                         isLarge
                           ? "(max-width: 1024px) 100vw, 50vw"
@@ -221,9 +222,8 @@ export function Gastronomia() {
                       ))}
                     </div>
 
-                    {/* Reveal Button on hover */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div className="bg-white/20 backdrop-blur-xl p-4 rounded-full border border-white/30 transform scale-75 group-hover:scale-100 transition-transform">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition-opacity">
+                      <div className="bg-white/20 backdrop-blur-xl p-4 rounded-full border border-white/30 transform scale-75 md:group-hover:scale-100 transition-transform">
                         <BookOpen size={32} className="text-white" />
                       </div>
                     </div>
@@ -232,24 +232,18 @@ export function Gastronomia() {
                   <div className="p-8 flex-1 flex flex-col">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h4 className="text-2xl font-display font-bold group-hover:text-limon-selva-600 dark:group-hover:text-limon-selva-400 transition-colors">
+                        <h4 className="text-2xl font-display font-bold md:group-hover:text-limon-selva-600 dark:md:group-hover:text-limon-selva-400 transition-colors">
                           {dish.name}
                         </h4>
                         <p className="text-limon-coral-500 text-sm font-medium">
                           {dish.subtitle}
                         </p>
                       </div>
-                      <ChefHat className="text-muted-foreground group-hover:rotate-12 transition-transform" />
+                      <ChefHat className="text-muted-foreground md:group-hover:rotate-12 transition-transform" />
                     </div>
                     <p className="text-muted-foreground mb-4 font-body leading-relaxed flex-1">
                       {dish.description}
                     </p>
-                    <div className="pt-4 border-t border-border/50 text-sm italic text-muted-foreground flex gap-2 items-start">
-                      <div className="mt-1 shrink-0">
-                        <Info size={14} />
-                      </div>
-                      {dish.details}
-                    </div>
                   </div>
                 </motion.div>
               );

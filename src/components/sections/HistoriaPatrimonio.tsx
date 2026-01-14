@@ -82,14 +82,14 @@ export function HistoriaPatrimonio() {
                     src={hito.imagen}
                     alt={hito.titulo}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 md:group-hover:scale-105"
                     sizes={
                       index % 2 === 0
                         ? "(max-width: 768px) 100vw, 55vw"
                         : "(max-width: 768px) 100vw, 40vw"
                     }
                   />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-black/10 md:group-hover:bg-black/0 transition-colors duration-500" />
 
                   {/* Large Year Display Overlay - Adjusted Size */}
                   <div className="absolute top-4 left-4 z-10">

@@ -147,11 +147,11 @@ export default function LimonMap() {
         center={[9.9932, -83.0281]} // Initial center backup
         zoom={16}
         scrollWheelZoom={false}
-        dragging={false}
-        touchZoom={false}
-        doubleClickZoom={false}
-        boxZoom={false}
-        keyboard={false}
+        dragging={true}
+        touchZoom={true}
+        doubleClickZoom={true}
+        boxZoom={true}
+        keyboard={true}
         className="h-full w-full outline-none"
         zoomControl={false}
       >
