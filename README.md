@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="public/assets/hero/Hero-Limon.png" width="100%" alt="Puerto Limón Banner" style="border-radius: 12px; filter: grayscale(20%);">
+  <img src="public/assets/hero/Hero-Limon.png" width="100%" alt="Puerto Limón Banner" style="border-radius: 12px; filter: grayscale(10%);">
   
   <br /><br />
 
   <h1>Limón · Realidad y Esencia</h1>
 
   <p align="center">
-    <strong>Una inmersión profunda en la historia, arquitectura y biodiversidad del Caribe costarricense.</strong>
+    <strong>Un registro documental exhaustivo de la historia, la arquitectura, la cultura y la biodiversidad de la provincia caribeña.</strong>
   </p>
 
   <p align="center">
@@ -19,125 +19,135 @@
 
 ---
 
-### Perfil del Proyecto
+### 📖 Perfil del Proyecto
 
-**Limón: Realidad y Esencia** es una plataforma digital que retrata la provincia de Limón desde una perspectiva auténtica. El objetivo es documentar la riqueza cultural y natural sin caer en estereotipos, exponiendo la realidad de su patrimonio y su gente.
-
-Esta plataforma sirve como un archivo vivo y una guía interactiva para entender la complejidad y belleza de la región caribeña de Costa Rica.
+**Limón: Realidad y Esencia** es una plataforma digital dedicada a retratar la provincia de Limón, Costa Rica, en toda su complejidad. Más que una página informativa, es un archivo visual y narrativo que busca desmantelar estereotipos y mostrar la identidad limonense desde adentro: su patrimonio, su lucha histórica, sus sabores ancestrales y su naturaleza indómita.
 
 ---
 
-### Inmersión por Secciones
+### 🏛️ Historia y Evolución (Cronología)
 
-#### 🏛️ Historia y Arquitectura Patrimonio
-
-Esta sección analiza el legado arquitectónico que define el paisaje urbano de Limón. Desde la influencia de la _United Fruit Company_ hasta los edificios de madera de estilo caribeño victoriano que resisten el paso del tiempo.
-
-- **Puntos Clave**: Black Star Line, Palacio Municipal, y la evolución del ferrocarril.
-- **Interactividad**: Mapas detallados y cronologías históricas.
+La página incluye un recorrido histórico detallado que abarca desde los cimientos de la provincia hasta la actualidad, resaltando los hitos que forjaron el espíritu del Caribe.
 
 <table align="center">
   <tr>
-    <td width="33%"><img src="public/assets/edificios/black-star-line.png" alt="Black Star Line" style="border-radius: 4px;"></td>
-    <td width="33%"><img src="public/assets/edificios/palacio-municipal.png" alt="Palacio Municipal" style="border-radius: 4px;"></td>
-    <td width="33%"><img src="public/assets/edificios/pension-costa-rica.png" alt="Pensión Costa Rica" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/Cronologia/1854-limon.png" alt="1854" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/Cronologia/1890-limon.png" alt="1890" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/Cronologia/2025-limon.png" alt="2025" style="border-radius: 4px;"></td>
   </tr>
   <tr align="center">
-    <td><small>Black Star Line</small></td>
-    <td><small>Palacio Municipal</small></td>
-    <td><small>Arquitectura Histórica</small></td>
-  </tr>
-</table>
-
-#### 🎨 Cultura, Comunidad y Eventos
-
-Un registro vibrante de la identidad afro-caribeña. La página captura la esencia de las celebraciones locales, la música Calipso y las historias de vida de los habitantes de la provincia.
-
-- **Vibras Locales**: Documentación fotográfica de eventos como el 31 de agosto.
-- **Legado**: Homenajes a figuras como Walter Ferguson y la vida cotidiana en los barrios.
-
-<table align="center">
-  <tr>
-    <td width="33%"><img src="public/assets/Eventos/31 de agosto/Trajes/morada.jpg" alt="Trajes Tradicionales" style="border-radius: 4px;"></td>
-    <td width="33%"><img src="public/assets/Eventos/31 de agosto/Personas Relax/chill.jpg" alt="Gente de Limón" style="border-radius: 4px;"></td>
-    <td width="33%"><img src="public/assets/cultura/ExpresionCultura.png" alt="Expresión Cultural" style="border-radius: 4px;"></td>
-  </tr>
-  <tr align="center">
-    <td><small>Color y Tradición</small></td>
-    <td><small>Esencia Local</small></td>
-    <td><small>Arte y Cultura</small></td>
-  </tr>
-</table>
-
-#### 🌿 Naturaleza y Biodiversidad Exuberante
-
-Exploración de los ecosistemas únicos que hacen de Limón un santuario natural. La sección se enfoca en la conservación y en mostrar la biodiversidad sin filtros.
-
-- **Destinos**: Canales de Tortuguero, Isla Uvita y el Refugio Gandoca-Manzanillo.
-- **Fauna y Flora**: Información sobre las especies endémicas y los esfuerzos de protección.
-
-<table align="center">
-  <tr>
-    <td width="50%"><img src="public/assets/naturaleza/CanalesTortuguero.jpg" alt="Tortuguero" style="border-radius: 4px;"></td>
-    <td width="50%"><img src="public/assets/naturaleza/IslaUvita.jpg" alt="Isla Uvita" style="border-radius: 4px;"></td>
-  </tr>
-  <tr align="center">
-    <td><small>Santuario de Tortuguero</small></td>
-    <td><small>Isla Uvita</small></td>
-  </tr>
-</table>
-
-#### 🍲 Sabor de Nuestra Tierra (Gastronomía)
-
-Un recorrido sensorial por los sabores que definen el Caribe. No es solo comida; es historia y herencia africana servida a la mesa.
-
-- **Platos Estrella**: Rice and Beans, Rondón, Pan Bon y Plantain Tart.
-- **Contexto**: Explicación de las raíces de los ingredientes y las técnicas tradicionales.
-
-<table align="center">
-  <tr>
-    <td width="50%"><img src="public/assets/gastronomia/RiceAndBeans.jpg" alt="Rice and Beans" style="border-radius: 4px;"></td>
-    <td width="50%"><img src="public/assets/gastronomia/PanDeNegro.png" alt="Pan de Negro" style="border-radius: 4px;"></td>
-  </tr>
-  <tr align="center">
-    <td><small>Sabor del Caribe</small></td>
-    <td><small>Herencia Culinaria</small></td>
+    <td><small>✧ Orígenes (1854)</small></td>
+    <td><small>✧ Auge Ferroviario (1890)</small></td>
+    <td><small>✧ Visión Actual (2025)</small></td>
   </tr>
 </table>
 
 ---
 
-### Especificaciones Técnicas
+### 🏢 Arquitectura Patrimonial
 
-| Tecnología        | Rol                                     |
-| :---------------- | :-------------------------------------- |
-| **Next.js 15+**   | Framework principal y SSR               |
-| **TypeScript**    | Robustez y tipado estático              |
-| **Tailwind CSS**  | Sistema de diseño minimalista           |
-| **Framer Motion** | Animaciones fluidas y editorial feeling |
-| **Lucide**        | Iconografía minimalista                 |
-| **React Leaflet** | Cartografía interactiva de la provincia |
+Exploración de los edificios icónicos que narran la historia del comercio y la vida social. Estilos que mezclan lo victoriano con lo caribeño, símbolos de una época de oro y transformación.
+
+<table align="center">
+  <tr>
+    <td width="25%"><img src="public/assets/edificios/black-star-line.png" alt="Black Star Line" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/edificios/palacio-municipal.png" alt="Palacio Municipal" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/edificios/pension-costa-rica.png" alt="Pensión" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/edificios/correos.png" alt="Correos" style="border-radius: 4px;"></td>
+  </tr>
+</table>
 
 ---
 
-### Instalación y Desarrollo
+### 🎭 Cultura, Eventos y Música
 
-1. **Clonar el repositorio**
+El corazón de Limón late al ritmo del calipso y sus tradiciones. Esta sección documenta la vida comunitaria, los trajes típicos y la música que define el alma del Caribe.
 
-   ```bash
-   git clone https://github.com/kirianL/LandingPuertoLim-n.git
-   ```
+<table align="center">
+  <tr>
+    <td width="25%"><img src="public/assets/Eventos/31 de agosto/Trajes/morada.jpg" alt="Trajes" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/Eventos/31 de agosto/Personas Relax/chill.jpg" alt="Gente" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/Eventos/31 de agosto/Musicos y cantantes/Musico1.jpg" alt="Música" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/cultura/ExpresionCultura.png" alt="Cultura" style="border-radius: 4px;"></td>
+  </tr>
+  <tr align="center">
+    <td><small>✧ Tradición</small></td>
+    <td><small>✧ Comunidad</small></td>
+    <td><small>✧ Calipso</small></td>
+    <td><small>✧ Identidad</small></td>
+  </tr>
+</table>
 
-2. **Configuración de entorno**
+---
 
-   ```bash
-   npm install
-   ```
+### 🌿 Naturaleza y Biodiversidad indómita
 
-3. **Ejecutar en desarrollo**
-   ```bash
-   npm run dev
-   ```
+Desde los humedales de Tortuguero hasta los arrecifes coralinos. Una sección dedicada a la riqueza natural y el compromiso con la conservación del ecosistema caribeño.
+
+<table align="center">
+  <tr>
+    <td width="33%"><img src="public/assets/naturaleza/CanalesTortuguero.jpg" alt="Tortuguero" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/naturaleza/IslaUvita.jpg" alt="Isla Uvita" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/naturaleza/VeraguaRainforestPark.jpg" alt="Rainforest" style="border-radius: 4px;"></td>
+  </tr>
+</table>
+
+---
+
+### 🍲 Gastronomía: Sabor y Herencia
+
+Un recorrido por la cocina de autoría africana que define el paladar limonense. Los sabores del coco, el chile panameño y las raíces ancestrales.
+
+<table align="center">
+  <tr>
+    <td width="25%"><img src="public/assets/gastronomia/RiceAndBeans.jpg" alt="Rice and Beans" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/gastronomia/Rondon.jpg" alt="Rondon" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/gastronomia/PanDeNegro.png" alt="Pan de Negro" style="border-radius: 4px;"></td>
+    <td width="25%"><img src="public/assets/gastronomia/Pati.png" alt="Pati" style="border-radius: 4px;"></td>
+  </tr>
+</table>
+
+---
+
+### 🏅 Deporte y Superación
+
+Limón es cuna de grandes atletas. Esta sección rinde homenaje al talento deportivo que ha puesto el nombre de la provincia en alto en múltiples disciplinas.
+
+<table align="center">
+  <tr>
+    <td width="33%"><img src="public/assets/Deporte/Atletismo.jpg" alt="Atletismo" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/Deporte/BaloncestoMasculino.jpg" alt="Baloncesto" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/Deporte/Cricket.jpg" alt="Cricket" style="border-radius: 4px;"></td>
+  </tr>
+</table>
+
+---
+
+### 🛠️ Stack Tecnológico
+
+Implementado con las herramientas más modernas para una experiencia editorial fluida y rápida:
+
+- **Next.js 15+** | Arquitectura SSR y App Router.
+- **TypeScript** | Escalabilidad y seguridad en el código.
+- **Tailwind CSS** | Estética minimalista y responsive.
+- **Framer Motion** | Animaciones de interfaz premium.
+- **Lucide** | Iconografía moderna.
+- **Leaflet** | Mapas interactivos de la provincia.
+
+---
+
+### 🚀 Instalación
+
+```bash
+# Clonar
+git clone https://github.com/kirianL/LandingPuertoLim-n.git
+
+# Instalar dependencias
+npm install
+
+# Correr servidor
+npm run dev
+```
 
 ---
 
