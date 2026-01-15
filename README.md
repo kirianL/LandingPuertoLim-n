@@ -1,122 +1,97 @@
 <div align="center">
-  <img src="public/assets/hero/Hero-Limon.png" width="100%" alt="Puerto Limón Banner" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+  <img src="public/assets/hero/Hero-Limon.png" width="100%" alt="Puerto Limón Banner" style="border-radius: 12px; filter: grayscale(20%);">
   
-  <br />
+  <br /><br />
 
-  <h1>🌴 Limón: Realidad, Cultura y Sabor 🌴</h1>
+  <h1>Limón · Realidad y Esencia</h1>
 
   <p align="center">
-    <strong>Una experiencia inmersiva a través de la historia, la arquitectura y la esencia del Caribe costarricense.</strong>
+    <strong>Una inmersión profunda en la historia, arquitectura y biodiversidad del Caribe costarricense.</strong>
   </p>
 
   <p align="center">
-    <img src="https://img.shields.io/badge/Status-Development-green?style=for-the-badge" alt="Status">
-    <img src="https://img.shields.io/badge/Framework-Next.js%2016-black?style=for-the-badge&logo=next.js" alt="Next.js">
-    <img src="https://img.shields.io/badge/Stack-React%2019%20%2B%20TS-blue?style=for-the-badge&logo=react" alt="React">
-    <img src="https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind">
+    <img src="https://img.shields.io/badge/status-development-black?style=flat-square" alt="Status">
+    <img src="https://img.shields.io/badge/next.js-15.0-black?style=flat-square&logo=next.js" alt="Next.js">
+    <img src="https://img.shields.io/badge/react-19.0-black?style=flat-square&logo=react" alt="React">
+    <img src="https://img.shields.io/badge/tailwind-3.4-black?style=flat-square&logo=tailwind-css" alt="Tailwind">
   </p>
 </div>
 
 ---
 
-## 📖 Sobre el Proyecto
+### Perfil del Proyecto
 
-**Limón: Realidad y Esencia** es una plataforma digital diseñada para redescubrir la provincia de Limón, Costa Rica, mostrándola tal cual es. Lejos de los clichés turísticos convencionales, este proyecto busca retratar la historia viva de la zona, resaltando su rica herencia afro-caribeña, su biodiversidad única y su arquitectura patrimonial.
-
-Con un enfoque **auténtico y profesional**, la página utiliza animaciones fluidas y un diseño visual impactante para guiar al usuario a través de un viaje sensorial por el Caribe.
+**Limón: Realidad y Esencia** es una plataforma digital que retrata la provincia de Limón desde una perspectiva auténtica. El objetivo es documentar la riqueza cultural y natural sin caer en estereotipos, exponiendo la realidad de su patrimonio y su gente.
 
 ---
 
-## ✨ Características Principales
+### Ejes Principales
 
-### 🏛️ Historia y Arquitectura
+#### ✧ Historia y Arquitectura
 
-Explora el legado arquitectónico de Limón, desde sus edificios históricos hasta la influencia de la época bananera que forjó la identidad de la ciudad.
+Análisis del legado arquitectónico y la transformación urbana influenciada por la época del ferrocarril y el enclave bananero.
 
-### 🎭 Cultura y Vida Local
+#### ✧ Cultura y Comunidad
 
-Sumérgete en el ritmo del calipso, las festividades tradicionales y la calidez de su gente. Conoce a figuras icónicas como Walter Ferguson.
+Un registro de la identidad afro-caribeña, desde el calipso de Walter Ferguson hasta las dinámicas sociales contemporáneas.
 
-### 🌿 Naturaleza Exuberante
+#### ✧ Biodiversidad
 
-Desde los canales de Tortuguero hasta los arrecifes de Cahuita. Una sección dedicada a la biodiversidad que hace de Limón un lugar único en el mundo.
+Exploración técnica y visual de los ecosistemas locales, desde canales hasta arrecifes, enfocada en la conservación.
 
-### 🍲 Gastronomía (El Sabor del Caribe)
+#### ✧ Gastronomía Auténtica
 
-Un recorrido visual por el Rice and Beans, el Rondón, el Pan Bon y otras delicias que definen la identidad culinaria limonense.
+Documentación del origen y evolución de los sabores icónicos de la región como el Rice and Beans y el Rondón.
 
 ---
 
-## 📸 Galería Visual
+### Galería Visual
 
 <table align="center">
   <tr>
-    <td width="33%"><img src="public/assets/cultura/ExpresionCultura.png" alt="Cultura" style="border-radius: 10px;"></td>
-    <td width="33%"><img src="public/assets/naturaleza/CanalesTortuguero.jpg" alt="Naturaleza" style="border-radius: 10px;"></td>
-    <td width="33%"><img src="public/assets/gastronomia/RiceAndBeans.jpg" alt="Gastronomía" style="border-radius: 10px;"></td>
-  </tr>
-  <tr align="center">
-    <td><b>Cultura Viva</b></td>
-    <td><b>Naturaleza Pura</b></td>
-    <td><b>Sabor Auténtico</b></td>
+    <td width="33%"><img src="public/assets/cultura/ExpresionCultura.png" alt="Cultura" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/naturaleza/CanalesTortuguero.jpg" alt="Naturaleza" style="border-radius: 4px;"></td>
+    <td width="33%"><img src="public/assets/gastronomia/RiceAndBeans.jpg" alt="Gastronomía" style="border-radius: 4px;"></td>
   </tr>
 </table>
 
 ---
 
-## 🛠️ Stack Tecnológico
+### Especificaciones Técnicas
 
-El proyecto está construido con herramientas de vanguardia para garantizar rendimiento y una experiencia de usuario excepcional:
-
-- **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
-- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
-- **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
-- **Animaciones:** [Framer Motion](https://www.framer.com/motion/)
-- **Componentes UI:** Shadcn/UI & Magic UI
-- **Mapas:** [React Leaflet](https://react-leaflet.js.org/)
-- **Iconos:** [Lucide React](https://lucide.dev/)
+| Tecnología        | Rol                  |
+| :---------------- | :------------------- |
+| **Next.js 16**    | Core Framework & SSR |
+| **TypeScript**    | Type Safety          |
+| **Tailwind CSS**  | Design System        |
+| **Framer Motion** | Interacciones        |
+| **Lucide**        | Iconografía          |
+| **Leaflet**       | Datos Geográficos    |
 
 ---
 
-## 🚀 Instalación y Desarrollo
+### Instalación
 
-Sigue estos pasos para ejecutar el proyecto localmente:
-
-1. **Clona el repositorio:**
+1. **Clonar el repositorio**
 
    ```bash
-   git clone https://github.com/tu-usuario/landing-puerto-limon.git
+   git clone https://github.com/kirianL/LandingPuertoLim-n.git
    ```
 
-2. **Instala las dependencias:**
+2. **Configuración de entorno**
 
    ```bash
    npm install
    ```
 
-3. **Inicia el servidor de desarrollo:**
-
+3. **Ejecutar en desarrollo**
    ```bash
    npm run dev
    ```
 
-4. **Abre en tu navegador:**
-   Visita `http://localhost:3000` para ver el resultado.
-
----
-
-## 🎨 Diseño y Estética
-
-El diseño se basa en una paleta de colores inspirada en Limón:
-
-- 🟢 **Verde Selva:** Representando la biodiversidad.
-- 🟡 **Amarillo Caribe:** Reflejando la energía y el sol.
-- 🔵 **Azul Profundo:** Inspirado en el Mar Caribe.
-- ⚫ **Modo Oscuro:** Para un toque moderno, profesional y envolvente.
-
 ---
 
 <div align="center">
-  <p>Hecho con ❤️ para Puerto Limón, Costa Rica</p>
-  <img src="public/assets/hero/bandera-limon.svg" width="50" alt="Bandera Limón">
+  <p>Limón, Costa Rica</p>
+  <img src="public/assets/hero/bandera-limon.svg" width="40" alt="Bandera Limón" style="opacity: 0.8;">
 </div>
