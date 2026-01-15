@@ -3,7 +3,7 @@
   
   <br />
 
-  <h1>🌴 Limón Editorial: Naturaleza, Cultura y Sabor 🌴</h1>
+  <h1>🌴 Limón: Realidad, Cultura y Sabor 🌴</h1>
 
   <p align="center">
     <strong>Una experiencia inmersiva a través de la historia, la arquitectura y la esencia del Caribe costarricense.</strong>
@@ -21,9 +21,9 @@
 
 ## 📖 Sobre el Proyecto
 
-**Limón Editorial** es una plataforma digital diseñada para redescubrir la provincia de Limón, Costa Rica. Lejos de los clichés turísticos convencionales, este proyecto busca narrar la historia viva de la zona, resaltando su rica herencia afro-caribeña, su biodiversidad única y su arquitectura patrimonial.
+**Limón: Realidad y Esencia** es una plataforma digital diseñada para redescubrir la provincia de Limón, Costa Rica, mostrándola tal cual es. Lejos de los clichés turísticos convencionales, este proyecto busca retratar la historia viva de la zona, resaltando su rica herencia afro-caribeña, su biodiversidad única y su arquitectura patrimonial.
 
-Con un enfoque **editorial y premium**, la página utiliza animaciones fluidas y un diseño visual impactante para guiar al usuario a través de un viaje sensorial por el Caribe.
+Con un enfoque **auténtico y profesional**, la página utiliza animaciones fluidas y un diseño visual impactante para guiar al usuario a través de un viaje sensorial por el Caribe.
 
 ---
 
@@ -112,7 +112,7 @@ El diseño se basa en una paleta de colores inspirada en Limón:
 - 🟢 **Verde Selva:** Representando la biodiversidad.
 - 🟡 **Amarillo Caribe:** Reflejando la energía y el sol.
 - 🔵 **Azul Profundo:** Inspirado en el Mar Caribe.
-- ⚫ **Modo Oscuro:** Para un toque editorial moderno y profesional.
+- ⚫ **Modo Oscuro:** Para un toque moderno, profesional y envolvente.
 
 ---
 
