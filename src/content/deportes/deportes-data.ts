@@ -28,66 +28,66 @@ export const disciplines = {
     // Row 1 & 2: Atletismo (2x2) + 4 small items
     {
       name: "Atletismo",
-      image: "/assets/Deporte/Atletismo.jpg",
+      image: "/assets/Deporte/Atletismo.webp",
       size: "large", // 2x2
     },
     {
       name: "Baloncesto Masculino",
-      image: "/assets/Deporte/BaloncestoMasculino.jpg",
+      image: "/assets/Deporte/BaloncestoMasculino.webp",
       size: "default", // 1x1
     },
     {
       name: "Baloncesto Femenino",
-      image: "/assets/Deporte/BaloncestoFemenino.jpg",
+      image: "/assets/Deporte/BaloncestoFemenino.webp",
       size: "default", // 1x1
     },
     {
       name: "Voleibol Masculino",
-      image: "/assets/Deporte/VoleibolMasculino.jpg",
+      image: "/assets/Deporte/VoleibolMasculino.webp",
       size: "default", // 1x1
     },
     {
       name: "Voleibol Femenino",
-      image: "/assets/Deporte/VoleibolFemenino.jpg",
+      image: "/assets/Deporte/VoleibolFemenino.webp",
       size: "default", // 1x1
     },
 
     // Row 3: Boxeo (2x1) + Judo (2x1)
     {
       name: "Boxeo",
-      image: "/assets/Deporte/Boxeo.jpg",
+      image: "/assets/Deporte/Boxeo.webp",
       size: "wide", // 2x1
     },
     {
       name: "Judo",
-      image: "/assets/Deporte/Judo.jpg",
+      image: "/assets/Deporte/Judo.webp",
       size: "wide", // 2x1
     },
 
     // Row 4: Ciclismo (2x1) + Taekwondo (1x1) + Rugby (1x1)
     {
       name: "Ciclismo",
-      image: "/assets/Deporte/Ciclismo.jpg",
+      image: "/assets/Deporte/Ciclismo.webp",
       size: "wide", // 2x1
     },
     {
       name: "Taekwondo",
-      image: "/assets/Deporte/Taekwondo.jpg",
+      image: "/assets/Deporte/Taekwondo.webp",
       size: "default", // 1x1
     },
-    { name: "Rugby", image: "/assets/Deporte/Rugby.jpg", size: "default" },
+    { name: "Rugby", image: "/assets/Deporte/Rugby.webp", size: "default" },
 
     // Row 5 & 6: Gimnasia (2x2) + Cricket, Ajedrez on side + Porrismo below
     {
       name: "Gimnasia Rítmica",
-      image: "/assets/Deporte/GimnasiaRitmica.jpg",
+      image: "/assets/Deporte/GimnasiaRitmica.webp",
       size: "large", // 2x2
     },
-    { name: "Cricket", image: "/assets/Deporte/Cricket.jpg", size: "default" },
-    { name: "Ajedrez", image: "/assets/Deporte/Ajedrez.jpg", size: "default" },
+    { name: "Cricket", image: "/assets/Deporte/Cricket.webp", size: "default" },
+    { name: "Ajedrez", image: "/assets/Deporte/Ajedrez.webp", size: "default" },
     {
       name: "Porrismo y Surf",
-      image: "/assets/Deporte/porrismo.jpg",
+      image: "/assets/Deporte/porrismo.webp",
       size: "wide", // 2x1 (Spans col 3-4 in Row 6)
     },
   ],
@@ -117,7 +117,7 @@ export const testimonials = [
     role: "Ciclista",
     quote:
       "Trato de generar un cambio dedicándole cada uno de mis entrenamientos a limpiar el nombre de Limón, porque la provincia que es mi hogar alberga una cantidad inmensa de deportistas capaces.",
-    image: "/assets/Deporte/Deportistas/Jimena.png",
+    image: "/assets/Deporte/Deportistas/Jimena.webp",
   },
   {
     name: "Gerald Sequeira",

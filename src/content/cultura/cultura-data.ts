@@ -10,7 +10,7 @@ export const music = {
   description:
     "La música es una extensión del carácter limonense. El calipso, el reggae y otros ritmos caribeños acompañan celebraciones, reuniones familiares y actividades comunitarias.",
   highlight: "En Limón, la música no se programa: simplemente sucede.",
-  image: "/assets/cultura/ExpresionCultura.png",
+  image: "/assets/cultura/ExpresionCultura.webp",
   credit: "Xavier Sandí Castillo",
   details:
     "El calipso limonense, heredado de la migración afrocaribeña del siglo XIX, es una forma de contar historias, hacer crítica social y celebrar la cotidianidad. Fue declarado patrimonio cultural inmaterial de Costa Rica.",
@@ -20,7 +20,7 @@ export const carnival = {
   title: "Carnaval de Limón: orgullo que se baila",
   description:
     "Celebrado en octubre alrededor del Día de las Culturas, es la mayor expresión cultural de la provincia. El carnaval no es solo una fiesta: es memoria, identidad y resistencia cultural.",
-  image: "/assets/cultura/Carnaval.png",
+  image: "/assets/cultura/Carnaval.webp",
   credit: "Xavier Sandí Castillo",
   features: [
     "Comparsas y desfiles",
@@ -92,7 +92,7 @@ export const social = [
 
 export const arts = {
   title: "Arte y Creatividad",
-  image: "/assets/cultura/arteLimon.png",
+  image: "/assets/cultura/arteLimon.webp",
   credit: "Xavier Sandí Castillo",
   items: [
     "Murales con símbolos afrocaribeños",
@@ -116,7 +116,7 @@ export const community = {
       context: "Expresión icónica de sorpresa, desacuerdo o énfasis",
     },
   ],
-  image: "/assets/cultura/Comunidad-vidacotidiana.png",
+  image: "/assets/cultura/Comunidad-vidacotidiana.webp",
   credit: "Xavier Sandí Castillo",
 };
 
@@ -124,7 +124,7 @@ export const theater = {
   title: "Teatro y Escena Comunitara",
   description:
     "El teatro y las artes escénicas en Limón son herramientas de reflexión social y cohesión. En espacios como la Casa de la Cultura, el teatro estudiantil y comunitario narra historias vinculadas a la identidad afrocaribeña y la memoria local.",
-  image: "/assets/cultura/teatro.png",
+  image: "/assets/cultura/teatro.webp",
   icon: "Drama",
 };
 
@@ -137,7 +137,7 @@ export const cinema = {
       title: "Dos Aguas (2015)",
       director: "Patricia Velásquez",
       desc: "Un retrato de la fraternidad y el entorno, donde Limón no es solo paisaje, sino protagonista.",
-      image: "/assets/cultura/DosAguas.png",
+      image: "/assets/cultura/DosAguas.webp",
       awards: [
         "Premio Centroamérica Concluye (Ícaro)",
         "Selección Oficial IFF Panamá",
@@ -147,7 +147,7 @@ export const cinema = {
       title: "Ceniza Negra (2019)",
       director: "Sofía Quirós Úbeda",
       desc: "Una mirada a la infancia y el duelo envuelta en la atmósfera sensorial del Caribe Sur.",
-      image: "/assets/cultura/CenizaNegra.png",
+      image: "/assets/cultura/CenizaNegra.webp",
       awards: [
         "Nominada Cámara de Oro (Cannes)",
         "Mejor Película (Semana Crítica El Cairo)",
@@ -190,7 +190,7 @@ export const calypso_legacy = {
   quote: "I no go nowhere, I stay right here in Cahuita.",
   impact:
     "Su obra rescató el calipso del olvido y le dio dignidad mundial, demostrando que la cultura más rica florece en la sencillez de lo cotidiano.",
-  image: "/assets/cultura/WalterFerguson.png",
+  image: "/assets/cultura/WalterFerguson.webp",
   icon: "Disc",
 };
 

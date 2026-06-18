@@ -457,7 +457,7 @@ export const Naturaleza = () => {
           transition={{ duration: 0.5 }}
           className="mb-24 bg-zinc-900 rounded-sm p-8 md:p-12 text-white relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.webp')] opacity-10"></div>
           <motion.div
             animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}

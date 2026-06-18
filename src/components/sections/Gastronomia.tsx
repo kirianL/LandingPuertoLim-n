@@ -128,7 +128,7 @@ export function Gastronomia() {
             <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl group">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
               <img
-                src="/assets/gastronomia/MercadoMunicipal.jpg"
+                src="/assets/gastronomia/MercadoMunicipal.webp"
                 alt="Antiguo Mercado Municipal de Limón"
                 className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
               />

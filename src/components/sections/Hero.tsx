@@ -10,7 +10,7 @@ export function Hero() {
       {/* Background Image with Dark Vignette Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/hero/Hero-Limon.png"
+          src="/assets/hero/Hero-Limon.webp"
           alt="Puerto Limón Panorama"
           className="w-full h-full object-cover transition-opacity duration-1000"
           loading="eager"
@@ -21,7 +21,7 @@ export function Hero() {
 
       {/* Subtle Noise Texture Overlay */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.03] z-10">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.webp')] mix-blend-overlay" />
       </div>
 
       {/* Main Content Layout Container */}
@@ -51,7 +51,7 @@ export function Hero() {
               {/* Escudo */}
               <div className="relative w-6 h-8">
                 <img
-                  src="/assets/hero/escudo-limon.png"
+                  src="/assets/hero/escudo-limon.webp"
                   alt="Escudo de Limón"
                   className="w-full h-full object-contain"
                 />

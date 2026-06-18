@@ -43,7 +43,7 @@ export const cahuita = {
   conclusion:
     "Cahuita es ideal para experimentar la naturaleza sin barreras: puedes ver animales y plantas en su ambiente natural, mientras aprendes de guías comprometidos con turismo responsable.",
   icon: TreePine,
-  image: "/assets/naturaleza/ParqueNacionalCahuita.jpeg",
+  image: "/assets/naturaleza/ParqueNacionalCahuita.webp",
 };
 
 export const tortuguero = {
@@ -60,7 +60,7 @@ export const tortuguero = {
   conclusion:
     "Los paseos por los canales permiten ver caimanes, tortugas, aves exóticas y fauna acuática en un entorno que parece sacado de un documental.",
   icon: Anchor,
-  image: "/assets/naturaleza/CanalesTortuguero.jpg",
+  image: "/assets/naturaleza/CanalesTortuguero.webp",
 };
 
 export const destinations = [
@@ -78,7 +78,7 @@ export const destinations = [
     conclusion:
       "Un pequeño oasis insular que combina la historia del encuentro de culturas con la belleza escénica del Caribe.",
     icon: Compass,
-    image: "/assets/naturaleza/IslaUvita.jpg",
+    image: "/assets/naturaleza/IslaUvita.webp",
   },
   {
     title: "Refugio Gandoca-Manzanillo",
@@ -94,7 +94,7 @@ export const destinations = [
     conclusion:
       "El lugar perfecto para quienes buscan desconexión total y contacto íntimo con la vida silvestre.",
     icon: Bird,
-    image: "/assets/naturaleza/RefugioGandoca.jpg",
+    image: "/assets/naturaleza/RefugioGandoca.webp",
   },
   {
     title: "Veragua Rainforest Park",
@@ -110,7 +110,7 @@ export const destinations = [
     conclusion:
       "Un centro de investigación y aventura inmerso en la selva tropical.",
     icon: TreePine,
-    image: "/assets/naturaleza/VeraguaRainforestPark.jpg",
+    image: "/assets/naturaleza/VeraguaRainforestPark.webp",
   },
   {
     title: "Playa Bonita",
@@ -125,7 +125,7 @@ export const destinations = [
     ],
     conclusion: "El escape perfecto a minutos del centro de la ciudad.",
     icon: Umbrella,
-    image: "/assets/naturaleza/PlayaBonita.jpg",
+    image: "/assets/naturaleza/PlayaBonita.webp",
   },
 ];
 

@@ -36,7 +36,7 @@ export const gastronomiaContent = {
         "Arroz y frijoles cocinados con leche de coco y condimentos caribeños. Patrimonio vivo de barrios como Cristóbal Colón y Los Corales.",
       details:
         "En el recetario oficial de cocina tradicional (MCJ/ICT) aparecen versiones presentadas por personas de barrios de Puerto Limón, lo que refuerza que es cocina viva y de ciudad.",
-      image: "/assets/gastronomia/RiceAndBeans.jpg",
+      image: "/assets/gastronomia/RiceAndBeans.webp",
       tags: ["Clásico", "Coco", "Patrimonio"],
       modalContent: {
         history:
@@ -66,7 +66,7 @@ export const gastronomiaContent = {
         "Sopa/guiso caribeño a base de leche de coco, con pescado o mariscos y tubérculos/verduras.",
       details:
         'Está documentado como manifestación cultural gastronómica. El dicho popular dice que el rondón "resucita a los muertos".',
-      image: "/assets/gastronomia/Rondon.jpg",
+      image: "/assets/gastronomia/Rondon.webp",
       tags: ["Sopa", "Mariscos", "Fortaleza"],
       modalContent: {
         history:
@@ -100,7 +100,7 @@ export const gastronomiaContent = {
         'Empanada especiada y picante. Directamente heredada del "pasty" jamaicano.',
       details:
         "Su relación con la cultura jamaiquina y su preservación como receta en la zona lo convierten en el símbolo callejero por excelencia.",
-      image: "/assets/gastronomia/Pati.png",
+      image: "/assets/gastronomia/Pati.webp",
       tags: ["Snack", "Picante", "Callejero"],
       modalContent: {
         history:
@@ -129,7 +129,7 @@ export const gastronomiaContent = {
       description: "Pan dulce-especiado oscuro de herencia afrocaribeña.",
       details:
         "Manifestación cultural registrada, reconocido ampliamente como uno de los sabores más buscados del Caribe.",
-      image: "/assets/gastronomia/PanDeNegro.png",
+      image: "/assets/gastronomia/PanDeNegro.webp",
       tags: ["Dulce", "Especias", "Tradición"],
       modalContent: {
         history:
@@ -158,7 +158,7 @@ export const gastronomiaContent = {
       description: "Refresco hecho con tapa de dulce, limón y jengibre.",
       details:
         "Documentado por el Sistema de Información Cultural y recetarios de la UCR. Elaborado con tapa de dulce, limón mandarina y jengibre puro.",
-      image: "/assets/gastronomia/Aguadesapo.jpg",
+      image: "/assets/gastronomia/Aguadesapo.webp",
       tags: ["Bebida", "Refrescante", "Tradición"],
       modalContent: {
         history:
@@ -185,7 +185,7 @@ export const gastronomiaContent = {
         "Empanadita de piña (el nombre viene del inglés 'Pineapple Tart').",
       details:
         "Hermana del Plantain Tart, es una de las variaciones más dulces y buscadas en las panaderías limonenses.",
-      image: "/assets/gastronomia/Pine Tart.png",
+      image: "/assets/gastronomia/Pine Tart.webp",
       tags: ["Postre", "Piña", "Herencia"],
       modalContent: {
         history:
@@ -212,7 +212,7 @@ export const gastronomiaContent = {
         "Empanadita de plátano maduro con herencia directa del nombre inglés.",
       details:
         "Registrada como manifestación cultural y presente en todos los materiales turísticos oficiales del Caribe.",
-      image: "/assets/gastronomia/Plantain Tart.png",
+      image: "/assets/gastronomia/Plantain Tart.webp",
       tags: ["Postre", "Plátano", "Herencia"],
       modalContent: {
         history:
@@ -239,7 +239,7 @@ export const gastronomiaContent = {
         "Postre de coco tradicional, vendido en locales y aceras limonenses.",
       details:
         "Se menciona junto al pan bon y patí como los productos que definen el aroma de las calles de Limón.",
-      image: "/assets/gastronomia/Cocada.png",
+      image: "/assets/gastronomia/Cocada.webp",
       tags: ["Coco", "Callejero", "Dulce"],
       modalContent: {
         history:

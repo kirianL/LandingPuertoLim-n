@@ -39,7 +39,7 @@ export function Accommodation() {
             <div className="space-y-4">
               <div className="relative h-80 rounded-lg overflow-hidden group">
                 <Image
-                  src="/images/Hospedaje.jpg"
+                  src="/images/Hospedaje.webp"
                   alt="Cabaña principal - Brisas del Río"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -49,7 +49,7 @@ export function Accommodation() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative h-40 rounded-lg overflow-hidden group">
                   <Image
-                    src="/images/Hospedaje2.jpg"
+                    src="/images/Hospedaje2.webp"
                     alt="Interior de cabaña"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -58,7 +58,7 @@ export function Accommodation() {
                 </div>
                 <div className="relative h-40 rounded-lg overflow-hidden group">
                   <Image
-                    src="/images/Hospedaje3.jpg"
+                    src="/images/Hospedaje3.webp"
                     alt="Vista exterior de cabañas"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"

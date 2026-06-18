@@ -24,7 +24,7 @@
       "Respetar áreas restringidas históricas"
     ],
     "patrimonio": "Monumento Nacional (1985)",
-    "imagen": "/assets/naturaleza/isla-quiribri.jpg"
+    "imagen": "/assets/naturaleza/isla-quiribri.webp"
   },
   {
     "id": "cahuita",
@@ -51,7 +51,7 @@
       "Donación consciente para conservación"
     ],
     "patrimonio": null,
-    "imagen": "/assets/naturaleza/cahuita.jpg"
+    "imagen": "/assets/naturaleza/cahuita.webp"
   },
   {
     "id": "tortuguero",
@@ -78,7 +78,7 @@
       "Apoyar economía local del pueblo"
     ],
     "patrimonio": "Parque Nacional (1975)",
-    "imagen": "/assets/naturaleza/tortuguero.jpg"
+    "imagen": "/assets/naturaleza/tortuguero.webp"
   },
   {
     "id": "playa-bonita",
@@ -102,7 +102,7 @@
       "Apoyar negocios familiares locales"
     ],
     "patrimonio": null,
-    "imagen": "/assets/naturaleza/playa-bonita.jpg"
+    "imagen": "/assets/naturaleza/playa-bonita.webp"
   },
   {
     "id": "gandoca-manzanillo",
@@ -129,7 +129,7 @@
       "Respetar zonas de anidación"
     ],
     "patrimonio": "Refugio de Vida Silvestre",
-    "imagen": "/assets/naturaleza/gandoca-manzanillo.jpg"
+    "imagen": "/assets/naturaleza/gandoca-manzanillo.webp"
   },
   {
     "id": "rio-pacuare",
@@ -155,6 +155,6 @@
       "Seguir instrucciones de guías por seguridad"
     ],
     "patrimonio": null,
-    "imagen": "/assets/naturaleza/pacuare.jpg"
+    "imagen": "/assets/naturaleza/pacuare.webp"
   }
 ]

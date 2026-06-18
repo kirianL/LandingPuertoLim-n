@@ -20,7 +20,7 @@
       "Sodas familiares en Puerto Limón",
       "Restaurantes en Cahuita y Puerto Viejo"
     ],
-    "imagen": "/assets/gastronomia/rice-and-beans.jpg"
+    "imagen": "/assets/gastronomia/rice-and-beans.webp"
   },
   {
     "id": "rondon",
@@ -42,7 +42,7 @@
       "Cahuita",
       "Puerto Viejo de Talamanca"
     ],
-    "imagen": "/assets/gastronomia/rondon.jpg"
+    "imagen": "/assets/gastronomia/rondon.webp"
   },
   {
     "id": "pati",
@@ -64,7 +64,7 @@
       "Mercado Central",
       "Sodas en Puerto Limón"
     ],
-    "imagen": "/assets/gastronomia/pati.jpg"
+    "imagen": "/assets/gastronomia/pati.webp"
   },
   {
     "id": "pan-bon",
@@ -86,7 +86,7 @@
       "Mercado Central",
       "Hogares limonenses (receta familiar)"
     ],
-    "imagen": "/assets/gastronomia/pan-bon.jpg"
+    "imagen": "/assets/gastronomia/pan-bon.webp"
   },
   {
     "id": "agua-de-sapo",
@@ -106,7 +106,7 @@
       "Mercado Central",
       "Hogares familiares"
     ],
-    "imagen": "/assets/gastronomia/agua-de-sapo.jpg"
+    "imagen": "/assets/gastronomia/agua-de-sapo.webp"
   },
   {
     "id": "pan-de-coco",
@@ -126,6 +126,6 @@
       "Panaderías locales",
       "Mercado Central"
     ],
-    "imagen": "/assets/gastronomia/pan-de-coco.jpg"
+    "imagen": "/assets/gastronomia/pan-de-coco.webp"
   }
 ]

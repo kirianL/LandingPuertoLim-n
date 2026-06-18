@@ -18,7 +18,7 @@
       "lat": 9.991789483423373,
       "lng": -83.02887770695054
     },
-    "imagen": "/assets/edificios/correos.png",
+    "imagen": "/assets/edificios/correos.webp",
     "imagenAntes": null
   },
   {
@@ -40,7 +40,7 @@
       "lat": 9.992660122934568,
       "lng": -83.03076323852713
     },
-    "imagen": "/assets/edificios/casa-episcopal.png",
+    "imagen": "/assets/edificios/casa-episcopal.webp",
     "imagenAntes": null
   },
   {
@@ -62,8 +62,8 @@
       "lat": 9.993475811250052,
       "lng": -83.02846665867543
     },
-    "imagen": "/assets/edificios/casa-cultura.png",
-    "imagenAntes": "/assets/edificios/casa-cultura-antes.jpg"
+    "imagen": "/assets/edificios/casa-cultura.webp",
+    "imagenAntes": "/assets/edificios/casa-cultura-antes.webp"
   },
   {
     "id": "black-star-line",
@@ -85,8 +85,8 @@
       "lat": 10.00088,
       "lng": -83.03378
     },
-    "imagen": "/assets/edificios/black-star-line.png",
-    "imagenAntes": "/assets/edificios/black-star-line-antes.jpg"
+    "imagen": "/assets/edificios/black-star-line.webp",
+    "imagenAntes": "/assets/edificios/black-star-line-antes.webp"
   },
   {
     "id": "palacio-municipal",
@@ -107,7 +107,7 @@
       "lat": 9.99313400806893,
       "lng": -83.02545448358426
     },
-    "imagen": "/assets/edificios/palacio-municipal.png",
+    "imagen": "/assets/edificios/palacio-municipal.webp",
     "imagenAntes": null
   },
   {
@@ -129,7 +129,7 @@
       "lat": 9.992771465457897,
       "lng": -83.02511698911988
     },
-    "imagen": "/assets/edificios/parque-vargas.png",
+    "imagen": "/assets/edificios/parque-vargas.webp",
     "imagenAntes": null
   },
   {
@@ -152,7 +152,7 @@
       "lat": 9.993356587693215,
       "lng": -83.02529640601976
     },
-    "imagen": "/assets/edificios/autoridad-portuaria.png",
+    "imagen": "/assets/edificios/autoridad-portuaria.webp",
     "imagenAntes": null
   },
   {
@@ -174,7 +174,7 @@
       "lat": 9.995659547902513,
       "lng": -83.03083478722502
     },
-    "imagen": "/assets/edificios/casa-domino.png",
+    "imagen": "/assets/edificios/casa-domino.webp",
     "imagenAntes": null
   },
   {
@@ -196,7 +196,7 @@
       "lat": 9.992533318790958,
       "lng": -83.02996368907671
     },
-    "imagen": "/assets/edificios/escuela-tomas-guardia.png",
+    "imagen": "/assets/edificios/escuela-tomas-guardia.webp",
     "imagenAntes": null
   },
   {
@@ -218,7 +218,7 @@
       "lat": 9.992783227889277,
       "lng": -83.02669084064912
     },
-    "imagen": "/assets/edificios/pension-costa-rica.png",
+    "imagen": "/assets/edificios/pension-costa-rica.webp",
     "imagenAntes": null
   },
   {
@@ -241,7 +241,7 @@
       "lat": 9.990850886948833,
       "lng": -83.03090044489694
     },
-    "imagen": "/assets/edificios/estadio-big-boy.png",
+    "imagen": "/assets/edificios/estadio-big-boy.webp",
     "imagenAntes": null
   },
   {
@@ -263,7 +263,7 @@
       "lat": 9.995607626826576,
       "lng": -83.03120084753571
     },
-    "imagen": "/assets/edificios/casa-misionera-bautista.png",
+    "imagen": "/assets/edificios/casa-misionera-bautista.webp",
     "imagenAntes": null
   }
 ]

@@ -37,7 +37,7 @@ export function Restaurant() {
           <FadeIn direction="left">
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl group border-8 border-background/50">
               <Image
-                src="/images/Restaurante.jpg"
+                src="/images/Restaurante.webp"
                 alt="Restaurante Brisas del Río"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

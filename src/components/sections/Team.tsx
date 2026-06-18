@@ -53,7 +53,7 @@ export function Team() {
             <div className="order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-muted/50 transition-transform duration-500 hover:scale-[1.02]">
                 <Image
-                  src="/images/Personal.jpg"
+                  src="/images/Personal.webp"
                   alt="Equipo de Brisas del Río"
                   width={800}
                   height={600}

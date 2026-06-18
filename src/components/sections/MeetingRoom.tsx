@@ -57,7 +57,7 @@ export function MeetingRoom() {
           {/* Image */}
           <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden">
             <Image
-              src="/images/SalaReuniones.jpg"
+              src="/images/SalaReuniones.webp"
               alt="Sala de Reuniones - Brisas del Río"
               fill
               className="object-cover"
