@@ -1,20 +1,15 @@
-"use client";
-
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
-const LimonMap = dynamic(() => import("./LimonMap"), { ssr: false });
+import LimonMap from "./LimonMap";
 import { MapPin } from "lucide-react";
 
 export default function RutaRecomendada() {
   return (
     <section
       id="ruta"
-      className="relative py-24 bg-zinc-950 overflow-hidden scroll-mt-24"
+      className="relative py-24 bg-[#fbfbfa] overflow-hidden scroll-mt-24"
     >
       {/* Background Decor */}
-      {/* Background Decor */}
-      {/* <div className="absolute inset-0 bg-[url('/assets/noise.svg')] opacity-[0.03] mix-blend-overlay pointer-events-none"></div> */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950 pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-zinc-50 via-white to-zinc-50 pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mb-12">
@@ -24,7 +19,7 @@ export default function RutaRecomendada() {
             viewport={{ once: true }}
             className="flex items-center gap-2 mb-4"
           >
-            <span className="bg-limon-amarillo-400 text-zinc-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+            <span className="bg-limon-selva-100 text-limon-selva-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
               Explora
             </span>
           </motion.div>
@@ -34,10 +29,10 @@ export default function RutaRecomendada() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-display font-bold mb-4 text-white tracking-tight"
+            className="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-800 tracking-tight"
           >
             Tu Ruta <br />
-            <span className="text-limon-amarillo-400">Recomendada</span>
+            <span className="text-limon-selva-600">Recomendada</span>
           </motion.h2>
 
           <motion.p
@@ -45,7 +40,7 @@ export default function RutaRecomendada() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-zinc-400 max-w-2xl leading-relaxed"
+            className="text-xl text-zinc-600 max-w-2xl leading-relaxed"
           >
             Un mapa interactivo con los 12 puntos esenciales del casco
             histórico. Haz clic en los marcadores para ver detalles y planear tu

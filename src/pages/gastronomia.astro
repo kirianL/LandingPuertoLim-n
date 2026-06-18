@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Gastronomia } from '../components/sections/Gastronomia';
+---
+
+<Layout 
+  title="Gastronomía y Sabor Caribeño - Puerto Limón" 
+  description="El inconfundible sabor del Caribe: descubre el origen e ingredientes tradicionales de recetas como el Rice and Beans, Pati, Pan Bon y Rondón."
+>
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">
+    <!-- Gastronomia Section Island -->
+    <Gastronomia client:load />
+  </main>
+</Layout>

@@ -1,11 +1,9 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Image from "next/image";
 import timelineData from "@/content/historia/timeline.json";
 import { ArrowUpRight } from "lucide-react";
 import { HistoryModal } from "./HistoryModal";
+import { TextReveal } from "@/components/TextReveal";
 
 export function HistoriaPatrimonio() {
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -18,7 +16,7 @@ export function HistoriaPatrimonio() {
       className="relative py-24 bg-background overflow-hidden scroll-mt-24"
     >
       {/* Background Texture/Text */}
-      <div className="absolute top-20 right-0 -mr-20 text-[15vw] font-display font-bold text-limon-concreto-100 dark:text-limon-concreto-900/50 leading-none select-none z-0 pointer-events-none opacity-50">
+      <div className="absolute top-20 right-0 -mr-20 text-[15vw] font-display font-bold text-limon-concreto-100 leading-none select-none z-0 pointer-events-none opacity-50">
         LIMÓN
       </div>
 
@@ -28,15 +26,9 @@ export function HistoriaPatrimonio() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mb-16">
-          <motion.h2
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 dark:text-white tracking-tight"
-          >
-            Cronología <br />
-            <span className="text-limon-puerto-600">Viva</span>
-          </motion.h2>
+          <h2 class="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
+            <TextReveal text="Cronología Viva" />
+          </h2>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,16 +70,10 @@ export function HistoriaPatrimonio() {
               >
                 {/* Image Container */}
                 <div className="relative w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-sm mb-4 bg-muted">
-                  <Image
+                  <img
                     src={hito.imagen}
                     alt={hito.titulo}
-                    fill
-                    className="object-cover transition-transform duration-700 md:group-hover:scale-105"
-                    sizes={
-                      index % 2 === 0
-                        ? "(max-width: 768px) 100vw, 55vw"
-                        : "(max-width: 768px) 100vw, 40vw"
-                    }
+                    className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/10 md:group-hover:bg-black/0 transition-colors duration-500" />
 
@@ -114,7 +100,7 @@ export function HistoriaPatrimonio() {
                 <div className="pr-4">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="h-px w-6 bg-limon-selva-500"></span>
-                    <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-limon-selva-600 dark:text-limon-selva-400">
+                    <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-limon-selva-600">
                       {hito.epoca}
                     </span>
                   </div>

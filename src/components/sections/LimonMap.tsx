@@ -1,6 +1,3 @@
-"use client";
-
-import dynamic from "next/dynamic";
 import { buildings } from "@/content/edificios/buildings";
 import { renderToString } from "react-dom/server";
 import {
@@ -19,28 +16,7 @@ import {
 import L from "leaflet";
 import { useEffect, useState, useMemo } from "react";
 import { useMap } from "react-leaflet";
-
-// Dynamically import map components to avoid SSR issues with Leaflet
-const Map = dynamic(
-  () => import("@/components/ui/map").then((mod) => mod.Map),
-  { ssr: false }
-);
-const MapMarker = dynamic(
-  () => import("@/components/ui/map").then((mod) => mod.MapMarker),
-  { ssr: false }
-);
-const MapPopup = dynamic(
-  () => import("@/components/ui/map").then((mod) => mod.MapPopup),
-  { ssr: false }
-);
-const MapTileLayer = dynamic(
-  () => import("@/components/ui/map").then((mod) => mod.MapTileLayer),
-  { ssr: false }
-);
-const MapZoomControl = dynamic(
-  () => import("@/components/ui/map").then((mod) => mod.MapZoomControl),
-  { ssr: false }
-);
+import { Map, MapMarker, MapPopup, MapTileLayer, MapZoomControl } from "@/components/ui/map";
 
 // Component to handle auto-fitting bounds
 const FitBounds = ({ points }: { points: [number, number][] }) => {

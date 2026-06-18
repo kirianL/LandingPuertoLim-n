@@ -1,8 +1,6 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { TextReveal } from "@/components/TextReveal";
 import { gastronomiaContent } from "@/content/gastronomia/gastronomia-data";
 import { cn } from "@/lib/utils";
 import {
@@ -68,16 +66,7 @@ export function Gastronomia() {
           className="mb-20 max-w-5xl"
         >
           <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight">
-            {hero.title.includes(" ") ? (
-              <>
-                {hero.title.split(" ").slice(0, 2).join(" ")} <br />
-                <span className="text-limon-coral-500">
-                  {hero.title.split(" ").slice(2).join(" ")}
-                </span>
-              </>
-            ) : (
-              hero.title
-            )}
+            <TextReveal text={hero.title} />
           </h2>
           <div className="h-1 w-20 bg-limon-amarillo-400 mb-8" />
           <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed font-body">
@@ -94,7 +83,7 @@ export function Gastronomia() {
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-limon-selva-100 dark:bg-limon-selva-900/40 text-limon-selva-700 dark:text-limon-selva-300 rounded-full text-sm font-bold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-limon-selva-100 text-limon-selva-700 rounded-full text-sm font-bold tracking-wider uppercase">
               <Waves className="w-4 h-4" />
               Manifesto Culinario
             </div>
@@ -120,7 +109,7 @@ export function Gastronomia() {
               <p className="text-muted-foreground mb-6">
                 {heritage.market.description}
               </p>
-              <div className="inline-flex items-center gap-2 text-sm font-bold text-limon-selva-600 dark:text-limon-selva-400">
+              <div className="inline-flex items-center gap-2 text-sm font-bold text-limon-selva-600">
                 <div className="shrink-0">
                   <span className="w-4 h-4 rounded-full bg-limon-amarillo-400 block" />
                 </div>
@@ -138,12 +127,10 @@ export function Gastronomia() {
           >
             <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl group">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-              <Image
+              <img
                 src="/assets/gastronomia/MercadoMunicipal.jpg"
                 alt="Antiguo Mercado Municipal de Limón"
-                fill
-                className="object-cover transition-transform duration-700 md:group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
               />
               <div className="absolute bottom-8 left-8 right-8 z-20">
                 <p className="text-white/90 italic font-body text-lg">
@@ -199,16 +186,10 @@ export function Gastronomia() {
                       isLarge ? "aspect-[16/10]" : "aspect-[4/3]"
                     )}
                   >
-                    <Image
+                    <img
                       src={dish.image}
                       alt={dish.name}
-                      fill
-                      className="object-cover transition-transform duration-500 md:group-hover:scale-105"
-                      sizes={
-                        isLarge
-                          ? "(max-width: 1024px) 100vw, 50vw"
-                          : "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      }
+                      className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute top-4 left-4 flex gap-2">
@@ -232,7 +213,7 @@ export function Gastronomia() {
                   <div className="p-8 flex-1 flex flex-col text-left">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h4 className="text-2xl font-display font-bold md:group-hover:text-limon-selva-600 dark:md:group-hover:text-limon-selva-400 transition-colors">
+                        <h4 className="text-2xl font-display font-bold md:group-hover:text-limon-selva-600 transition-colors">
                           {dish.name}
                         </h4>
                         <p className="text-limon-coral-500 text-sm font-medium">
@@ -275,14 +256,11 @@ export function Gastronomia() {
                 className="bg-card w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col pointer-events-auto border border-white/5"
               >
                 {/* Modal Header/Image */}
-                <div className="relative h-[250px] md:h-[350px] shrink-0">
-                  <Image
+                <div className="relative h-[180px] md:h-[350px] shrink-0">
+                  <img
                     src={selectedDish.image}
                     alt={selectedDish.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 896px) 100vw, 896px"
-                    priority
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -314,7 +292,7 @@ export function Gastronomia() {
                 </div>
 
                 {/* Modal Body (Scrollable) */}
-                <div className="p-6 md:p-10 overflow-y-auto flex-1 custom-scrollbar text-left overscroll-contain">
+                <div className="p-5 md:p-10 overflow-y-auto flex-1 custom-scrollbar text-left overscroll-contain">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* History Column */}
                     <div className="space-y-6">
@@ -333,7 +311,7 @@ export function Gastronomia() {
                     <div className="space-y-8">
                       {/* Ingredients */}
                       <div>
-                        <div className="flex items-center gap-3 text-limon-selva-600 dark:text-limon-selva-400 mb-4">
+                        <div className="flex items-center gap-3 text-limon-selva-600 mb-4">
                           <ShoppingBag size={20} />
                           <h4 className="text-xl font-bold uppercase tracking-wider">
                             Receta Sencilla

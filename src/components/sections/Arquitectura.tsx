@@ -1,10 +1,8 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Image from "next/image";
 import edificiosData from "@/content/edificios/edificios.json";
 import { Building2, MapPin, Calendar, ArrowUpRight } from "lucide-react";
+import { TextReveal } from "@/components/TextReveal";
 
 import { HistoryModal } from "./HistoryModal";
 
@@ -32,20 +30,14 @@ export function Arquitectura() {
   return (
     <section
       id="arquitectura"
-      className="relative py-24 bg-zinc-50 dark:bg-zinc-950/50 scroll-mt-24"
+      className="relative py-24 bg-zinc-50 scroll-mt-24"
     >
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <motion.h2
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 dark:text-white tracking-tight"
-          >
-            Arquitectura <br />
-            <span className="text-limon-selva-600">Emblemática</span>
-          </motion.h2>
+          <h2 class="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
+            <TextReveal text="Arquitectura Emblemática" />
+          </h2>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -81,19 +73,11 @@ export function Arquitectura() {
               onClick={() => setSelectedEdificio(edificio)}
             >
               {/* Card Content */}
-              <div className="absolute inset-0 bg-zink-900 block w-full h-full">
-                <Image
+              <div className="absolute inset-0 bg-zinc-900 block w-full h-full">
+                <img
                   src={edificio.imagen}
                   alt={edificio.nombre}
-                  fill
-                  className="object-cover transition-transform duration-700 md:group-hover:scale-105"
-                  sizes={
-                    index % 7 === 0
-                      ? "(max-width: 768px) 100vw, 66vw"
-                      : index % 7 >= 5
-                      ? "(max-width: 768px) 100vw, 50vw"
-                      : "(max-width: 768px) 100vw, 33vw"
-                  }
+                  className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
                 />
                 {/* Dark Gradient Overlay */}
                 <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 md:group-hover:opacity-100 transition-opacity" />

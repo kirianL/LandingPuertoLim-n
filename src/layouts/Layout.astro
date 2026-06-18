@@ -1,0 +1,109 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Dock from '../components/Dock.astro';
+import '../styles/globals.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title = "Puerto Limón - Historia Viva del Caribe Costarricense",
+  description = "Historia portuaria, identidad urbana, cultura afrocaribeña y turismo responsable. Una experiencia editorial contemporánea sobre Limón, Costa Rica.",
+  image = "/assets/hero/Hero-Limon.png",
+  canonicalUrl = "https://puertolimon.cr"
+} = Astro.props;
+
+const { pathname } = Astro.url;
+const isHome = pathname.replace(/\/$/, "") === "";
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <ClientRouter />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:locale" content="es_CR" />
+    <meta property="og:site_name" content="Puerto Limón" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Fonts: Google Fonts (Inter & Space Grotesk) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristDestination",
+        "name": "Puerto Limón",
+        "description": "Puerto Limón: historia viva, ciudad portuaria, cultura afrocaribeña auténtica y destino turístico con identidad propia.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Puerto Limón",
+          "addressRegion": "Limón",
+          "addressCountry": "CR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 10.0011,
+          "longitude": -83.0339
+        },
+        "url": "https://puertolimon.cr",
+        "touristType": ["Historia", "Cultura", "Naturaleza", "Playa"]
+      }
+    </script>
+  </head>
+  <body class={`min-h-screen bg-background text-foreground antialiased overflow-x-hidden font-sans ${isHome ? "" : "pt-24 md:pt-28"}`}>
+    <Dock />
+    
+    <main transition:animate="none">
+      <slot />
+    </main>
+
+    <!-- Simple Footer -->
+    <footer id="footer" class="bg-card border-t border-border py-12 mt-20 transition-colors duration-200">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-xl font-display italic text-limon-selva-700 mb-3">
+          "Lo mejor de Limón es su gente"
+        </p>
+        <p class="text-sm text-muted-foreground">
+          © 2026{" "}
+          <a
+            href="https://kirian.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-limon-selva-600 transition-colors font-medium underline-offset-4 hover:underline"
+          >
+            Kirian.dev
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

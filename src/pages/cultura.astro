@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Cultura } from '../components/sections/Cultura';
+---
+
+<Layout 
+  title="Cultura, Calypso y Vida Local - Puerto Limón" 
+  description="Sumérgete en la cultura afrocaribeña: la leyenda de Walter Ferguson, el dialecto Mekatelyu, el carnaval de Limón y las artes locales."
+>
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">
+    <!-- Cultura and Calypso Section Island -->
+    <Cultura client:load />
+  </main>
+</Layout>

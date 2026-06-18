@@ -1,7 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { TextReveal } from "@/components/TextReveal";
 import {
   intro,
   nationalGames,
@@ -36,15 +34,9 @@ export const Deportes = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="mb-20 text-left">
-          <motion.h2
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight"
-          >
-            Deportes en <br />
-            <span className="text-limon-azul-600">Limón</span>
-          </motion.h2>
+          <h2 class="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
+            <TextReveal text="Deportes en Limón" />
+          </h2>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -158,12 +150,10 @@ export const Deportes = () => {
                   className="break-inside-avoid relative group overflow-hidden rounded-sm shadow-sm border border-zinc-200 bg-zinc-100"
                 >
                   <div className="relative aspect-video">
-                    <Image
+                    <img
                       src={item.image}
                       alt={item.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>

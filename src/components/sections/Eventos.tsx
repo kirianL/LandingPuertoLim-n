@@ -1,7 +1,5 @@
-"use client";
-
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import { TextReveal } from "@/components/TextReveal";
 import { useRef } from "react";
 import {
   intro,
@@ -67,8 +65,8 @@ export const Eventos = () => {
             transition={{ duration: 0.5 }}
             className="mb-16 max-w-4xl"
           >
-            <h2 className="text-5xl md:text-8xl font-display font-bold mb-6 tracking-tighter text-zinc-900">
-              {intro.title}
+            <h2 class="text-5xl md:text-8xl font-display font-bold mb-6 tracking-tighter text-zinc-900">
+              <TextReveal text={intro.title} />
             </h2>
             <div className="h-1 w-24 bg-limon-amarillo-400 mb-12" />
             <p className="text-xl md:text-2xl text-limon-selva-800 font-bold mb-6 italic">
@@ -88,12 +86,10 @@ export const Eventos = () => {
                 transition={{ duration: 0.5 }}
                 className="relative aspect-[16/9] rounded-sm overflow-hidden shadow-2xl bg-zinc-50 group"
               >
-                <Image
+                <img
                   src={personasRelax.images[0]}
                   alt="Vida del evento en Limón"
-                  fill
-                  className="object-cover"
-                  sizes="100vw"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/10" />
                 <div className="absolute bottom-2 right-2 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
@@ -113,24 +109,20 @@ export const Eventos = () => {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square rounded-sm overflow-hidden border border-zinc-100 shadow-sm group">
-                  <Image
+                  <img
                     src={personasRelax.images[1]}
                     alt="Comunidad"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 20vw"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-1 right-1 text-[8px] text-white/40 font-medium tracking-wide bg-black/10 px-1 rounded-sm">
                     Foto: Xavier Sandí Castillo
                   </div>
                 </div>
                 <div className="relative aspect-square rounded-sm overflow-hidden border border-zinc-100 shadow-sm group">
-                  <Image
+                  <img
                     src={personasRelax.images[3]}
                     alt="Encuentro"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 20vw"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-1 right-1 text-[8px] text-white/40 font-medium tracking-wide bg-black/10 px-1 rounded-sm">
                     Foto: Xavier Sandí Castillo
@@ -148,13 +140,10 @@ export const Eventos = () => {
           style={{ y: parallaxY }}
           className="absolute inset-0 w-full h-[120%] -top-[10%]"
         >
-          <Image
+          <img
             src={personasRelax.images[2]}
             alt="Público en Limón"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="absolute bottom-32 right-4 text-[10px] text-white/30 font-medium tracking-wide">
@@ -214,12 +203,10 @@ export const Eventos = () => {
                 className="bg-white rounded-sm border border-zinc-100 overflow-hidden shadow-sm md:hover:shadow-xl transition-all duration-500 group"
               >
                 <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
+                  <img
                     src={item.image}
                     alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-700 md:group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity" />
                   <div className="absolute bottom-2 right-2 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
@@ -265,12 +252,10 @@ export const Eventos = () => {
                   key={idx}
                   className="relative aspect-[3/4] w-full rounded-sm overflow-hidden shadow-lg border border-zinc-100 bg-zinc-50 group"
                 >
-                  <Image
+                  <img
                     src={img}
                     alt="Juventud de Limón"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/0 md:hover:bg-black/20 transition-colors duration-300" />
                   <div className="absolute bottom-2 right-2 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
@@ -305,12 +290,10 @@ export const Eventos = () => {
                 transition={{ duration: 0.5 }}
                 className="relative aspect-square rounded-sm overflow-hidden shadow-2xl z-20 bg-zinc-50 group"
               >
-                <Image
+                <img
                   src={trajes.impact.image}
                   alt="Impacto Traje"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 right-4 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
                   Foto: Xavier Sandí Castillo
@@ -345,12 +328,10 @@ export const Eventos = () => {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group relative h-[500px] overflow-hidden rounded-sm bg-zinc-900"
               >
-                <Image
+                <img
                   src={cat.image}
                   alt={cat.title}
-                  fill
-                  className="object-cover transition-transform duration-700 md:group-hover:scale-105 md:group-hover:opacity-40"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105 md:group-hover:opacity-40"
                 />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent md:group-hover:from-zinc-900 md:group-hover:via-zinc-900/80 transition-all duration-500">
                   <span className="text-limon-amarillo-400 text-xs font-bold tracking-[0.2em] uppercase mb-2 block">
@@ -377,12 +358,10 @@ export const Eventos = () => {
 
           {/* Bloque 3: Movimiento */}
           <div className="mb-32 relative h-[60vh] rounded-sm overflow-hidden group">
-            <Image
+            <img
               src={trajes.movement.image}
               alt="Movimiento"
-              fill
-              className="object-cover transition-transform duration-[2000ms] md:group-hover:scale-105"
-              sizes="100vw"
+              className="w-full h-full object-cover transition-transform duration-[2000ms] md:group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
               <motion.div
@@ -425,12 +404,10 @@ export const Eventos = () => {
                   transition={{ duration: 0.3 }}
                   className="relative aspect-square rounded-sm overflow-hidden shadow-lg border border-zinc-100 group"
                 >
-                  <Image
+                  <img
                     src={img}
                     alt="Detalle Traje"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-2 right-2 text-[8px] text-white/40 font-medium tracking-wide bg-black/10 px-1 rounded-sm">
                     Foto: Xavier Sandí Castillo
@@ -468,12 +445,10 @@ export const Eventos = () => {
                 transition={{ duration: 0.5 }}
                 className="order-1 lg:order-2 relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl bg-zinc-50 group"
               >
-                <Image
+                <img
                   src={trajes.closure.image}
                   alt="Orgullo Limonense"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 right-4 text-[10px] text-white/50 font-medium tracking-wide bg-black/20 px-2 py-0.5 rounded-sm backdrop-blur-sm">
                   Foto: Xavier Sandí Castillo

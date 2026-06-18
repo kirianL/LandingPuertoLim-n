@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Deportes } from '../components/sections/Deportes';
+import { Eventos } from '../components/sections/Eventos';
+---
+
+<Layout 
+  title="Deportes y Eventos - Puerto Limón" 
+  description="Conoce el semillero de atletas limonenses, el surf en Salsa Brava y la vibrante agenda de los tradicionales carnavales de Limón."
+>
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">
+    <!-- Deportes Section Island -->
+    <Deportes client:load />
+    
+    <!-- Eventos Section Island -->
+    <Eventos client:load />
+  </main>
+</Layout>

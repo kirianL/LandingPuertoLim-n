@@ -1,7 +1,5 @@
-"use client";
-
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import { TextReveal } from "@/components/TextReveal";
 import { useState } from "react";
 import {
   intro,
@@ -48,7 +46,7 @@ export const Naturaleza = () => {
   return (
     <section
       id="naturaleza"
-      className="relative py-24 bg-zinc-50 dark:bg-zinc-950 overflow-hidden scroll-mt-24"
+      className="relative py-24 bg-zinc-50 overflow-hidden scroll-mt-24"
     >
       {/* Ambient Background - Animated */}
       <motion.div
@@ -82,18 +80,10 @@ export const Naturaleza = () => {
       <div className="container mx-auto px-4 relative z-10 text-left">
         {/* Header */}
         <div className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
-              Naturaleza y <br />
-              <span className="text-limon-selva-600">Turismo Responsable</span>
-            </h2>
-            <div className="h-1 w-20 bg-limon-amarillo-400 mb-8" />
-          </motion.div>
+          <h2 class="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
+            <TextReveal text="Naturaleza y Turismo Responsable" />
+          </h2>
+          <div className="h-1 w-20 bg-limon-amarillo-400 mb-8" />
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -246,12 +236,10 @@ export const Naturaleza = () => {
           >
             {(cahuita as any).image ? (
               <div className="aspect-[4/3] rounded-sm overflow-hidden relative shadow-lg">
-                <Image
+                <img
                   src={(cahuita as any).image}
                   alt={cahuita.title}
-                  fill
-                  className="object-cover md:group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="w-full h-full object-cover md:group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
@@ -299,7 +287,7 @@ export const Naturaleza = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  className="bg-white p-6 rounded-sm border border-zinc-100 shadow-sm transition-shadow text-center group cursor-pointer md:hover:shadow-lg"
+                  className="bg-white p-4 sm:p-6 rounded-sm border border-zinc-100 shadow-sm transition-shadow text-center group cursor-pointer md:hover:shadow-lg"
                 >
                   <div className="inline-flex p-3 rounded-full bg-limon-selva-50 text-limon-selva-600 mb-4 transition-colors duration-300 md:group-hover:bg-limon-selva-600 md:group-hover:text-white">
                     <Icon size={28} />
@@ -327,12 +315,10 @@ export const Naturaleza = () => {
           >
             {(tortuguero as any).image ? (
               <div className="aspect-[4/3] rounded-sm overflow-hidden relative shadow-lg">
-                <Image
+                <img
                   src={(tortuguero as any).image}
                   alt={tortuguero.title}
-                  fill
-                  className="object-cover md:group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="w-full h-full object-cover md:group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
@@ -419,12 +405,10 @@ export const Naturaleza = () => {
                 >
                   <div className="relative h-64 overflow-hidden bg-zinc-100 text-left">
                     {dest.image ? (
-                      <Image
+                      <img
                         src={dest.image}
                         alt={dest.title}
-                        fill
-                        className="object-cover transition-transform duration-500 md:group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-100 to-zinc-200">
@@ -606,7 +590,7 @@ export const Naturaleza = () => {
             />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-limon-puerto-900/30 rounded-full blur-[100px] pointer-events-none translate-y-1/2 -translate-x-1/3"></div>
 
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 p-8 md:p-16 text-left">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 p-6 md:p-16 text-left">
               {/* Left Column: Title & Context */}
               <div className="lg:col-span-5 flex flex-col justify-center">
                 <div className="inline-block p-3 bg-limon-selva-900 border border-limon-selva-800 rounded-sm w-fit mb-6 shadow-sm text-center">
@@ -678,7 +662,7 @@ export const Naturaleza = () => {
         </div>
 
         {/* Community Section */}
-        <div className="mb-24 bg-limon-amarillo-50 border border-limon-amarillo-100 p-8 md:p-12 rounded-sm flex flex-col md:flex-row items-center gap-8 transition-colors md:hover:border-limon-amarillo-300/60">
+        <div className="mb-24 bg-limon-amarillo-50 border border-limon-amarillo-100 p-6 md:p-12 rounded-sm flex flex-col md:flex-row items-center gap-8 transition-colors md:hover:border-limon-amarillo-300/60">
           <div className="md:w-1/3 flex justify-center">
             <div className="bg-limon-amarillo-100 p-6 rounded-full">
               <Users size={64} className="text-limon-amarillo-600" />

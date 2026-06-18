@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { HistoriaPatrimonio } from '../components/sections/HistoriaPatrimonio';
+import { Arquitectura } from '../components/sections/Arquitectura';
+import LimonMap from '../components/sections/LimonMap';
+---
+
+<Layout 
+  title="Historia y Patrimonio de Puerto Limón" 
+  description="Explora la rica cronología histórica, el patrimonio arquitectónico civil y la ruta caminable de los edificios patrimoniales del Caribe."
+>
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">
+    <!-- Cronología Section -->
+    <HistoriaPatrimonio client:load />
+
+    <!-- Arquitectura Bento Grid -->
+    <Arquitectura client:load />
+
+    <!-- Map of Monuments Section -->
+    <section class="mt-20 scroll-mt-24">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4 text-foreground">
+          Mapa de Monumentos Históricos
+        </h2>
+        <div class="h-1 w-20 bg-limon-amarillo-400 mb-6"></div>
+        <p class="text-lg text-muted-foreground leading-relaxed">
+          Navega interactivamente por el casco histórico de Puerto Limón. Haz clic en los marcadores 
+          para conocer el año de edificación, estilo arquitectónico y ubicación exacta.
+        </p>
+      </div>
+      
+      <!-- Interactive Leaflet Map Island -->
+      <LimonMap client:only="react" />
+    </section>
+  </main>
+</Layout>

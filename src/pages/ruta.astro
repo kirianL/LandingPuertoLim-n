@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RutaRecomendada from '../components/sections/RutaRecomendada';
+---
+
+<Layout 
+  title="Mi Ruta Recomendada - Puerto Limón" 
+  description="Planifica tu itinerario de viaje en Puerto Limón con nuestra guía interactiva del centro de la ciudad."
+>
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">
+    <!-- Map Route Section (Client-only React Hydration to bypass Leaflet window errors) -->
+    <RutaRecomendada client:only="react" />
+  </main>
+</Layout>

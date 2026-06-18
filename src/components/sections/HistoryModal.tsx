@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { X, MapPin, ExternalLink } from "lucide-react";
 
 interface HistoryModalProps {
@@ -64,13 +63,10 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
             >
               {/* Image Section (Left/Top) */}
               <div className="w-full md:w-1/2 relative h-48 md:h-auto overflow-hidden">
-                <Image
+                <img
                   src={data.imagen}
                   alt={data.titulo}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 448px"
-                  priority
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent md:bg-gradient-to-r" />
 
