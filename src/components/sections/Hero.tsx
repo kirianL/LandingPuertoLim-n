@@ -1,19 +1,33 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { WeatherWidget } from "@/components/WeatherWidget";
 import NumberTicker from "@/components/magicui/number-ticker";
 import { TextReveal } from "@/components/TextReveal";
+import { useRef } from "react";
 
 export function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-start overflow-hidden pt-24 pb-12">
+    <section ref={containerRef} className="relative min-h-[100dvh] flex items-center justify-start overflow-hidden pt-24 pb-12">
       {/* Background Image with Dark Vignette Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.img
+          style={{ y, scale }}
           src="/assets/hero/Hero-Limon.webp"
           alt="Puerto Limón Panorama"
-          className="w-full h-full object-cover transition-opacity duration-1000"
+          className="w-full h-full object-cover transition-opacity duration-1000 origin-center"
           loading="eager"
+          // @ts-ignore
+          fetchpriority="high"
+          decoding="sync"
         />
         {/* Sophisticated editorial overlay: dark gradient from bottom and left */}
         <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/95 via-black/75 to-black/30 z-10" />

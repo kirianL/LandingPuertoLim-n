@@ -35,7 +35,7 @@ export function Arquitectura() {
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <h2 class="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
             <TextReveal text="Arquitectura Emblemática" />
           </h2>
           <motion.div
@@ -67,7 +67,7 @@ export function Arquitectura() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-sm ${getGridClass(
+              className={`group relative overflow-hidden rounded-2xl border border-zinc-200/60 shadow-sm ${getGridClass(
                 index
               )} cursor-pointer`}
               onClick={() => setSelectedEdificio(edificio)}
@@ -121,15 +121,15 @@ export function Arquitectura() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-20 flex flex-col md:flex-row items-center justify-between bg-limon-selva-900 border border-limon-selva-800 p-8 md:p-12 rounded-[2rem] overflow-hidden relative"
+          className="mt-20 flex flex-col md:flex-row items-center justify-between bg-card border border-zinc-200/80 p-8 md:p-12 rounded-3xl shadow-sm relative overflow-hidden"
         >
-          {/* <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay"></div> */}
+          <div className="absolute left-0 top-0 bottom-0 w-2 bg-limon-selva-500 pointer-events-none" />
 
-          <div className="relative z-10 max-w-xl mb-8 md:mb-0 text-center md:text-left">
-            <h3 className="text-3xl font-display font-bold text-white mb-4">
+          <div className="relative z-10 max-w-xl mb-8 md:mb-0 text-center md:text-left pl-2">
+            <h3 className="text-3xl font-display font-bold text-zinc-900 mb-4">
               Explora el Casco Histórico
             </h3>
-            <p className="text-limon-selva-100/80 text-lg">
+            <p className="text-muted-foreground text-lg">
               Todos estos edificios están conectados por una ruta caminable de
               1.5km. Descubre la historia paso a paso.
             </p>
@@ -137,7 +137,7 @@ export function Arquitectura() {
 
           <a
             href="#footer"
-            className="relative z-10 flex items-center gap-3 bg-white text-limon-selva-900 px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-limon-amarillo-400 transition-colors shadow-xl"
+            className="relative z-10 flex items-center gap-3 bg-limon-selva-600 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-limon-selva-700 transition-all duration-300 shadow-sm md:hover:shadow-md md:hover:-translate-y-0.5"
           >
             <MapPin className="w-5 h-5" />
             <span>Ver Mapa de Ruta</span>

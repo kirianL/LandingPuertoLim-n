@@ -65,9 +65,9 @@ export function Gastronomia() {
           transition={{ duration: 0.5 }}
           className="mb-20 max-w-5xl"
         >
-          <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight">
             <TextReveal text={hero.title} />
-          </h2>
+          </h1>
           <div className="h-1 w-20 bg-limon-amarillo-400 mb-8" />
           <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed font-body">
             {hero.description}
@@ -94,7 +94,7 @@ export function Gastronomia() {
               {heritage.description}
             </p>
 
-            <div className="p-8 bg-card border border-border rounded-sm shadow-sm relative overflow-hidden group">
+            <div className="p-8 bg-card border border-zinc-200/60 rounded-2xl shadow-sm relative overflow-hidden group">
               <div className="absolute top-4 right-4 text-limon-amarillo-400/20 md:group-hover:text-limon-amarillo-400/40 transition-colors">
                 <ShoppingBag size={64} />
               </div>
@@ -125,7 +125,7 @@ export function Gastronomia() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl group">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-md group">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
               <img
                 src="/assets/gastronomia/MercadoMunicipal.webp"
@@ -174,7 +174,7 @@ export function Gastronomia() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   onClick={() => setSelectedDish(dish)}
                   className={cn(
-                    "group relative bg-card border border-border rounded-sm overflow-hidden transition-shadow duration-300 md:hover:shadow-xl flex flex-col cursor-pointer",
+                    "group relative bg-card border border-zinc-200/60 rounded-2xl overflow-hidden transition-all duration-300 md:hover:shadow-md md:hover:-translate-y-1 flex flex-col cursor-pointer",
                     isLarge
                       ? "md:col-span-12 lg:col-span-6"
                       : "md:col-span-6 lg:col-span-4"
@@ -253,7 +253,7 @@ export function Gastronomia() {
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-card w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col pointer-events-auto border border-white/5"
+                className="bg-card w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col pointer-events-auto border border-zinc-200/60"
               >
                 {/* Modal Header/Image */}
                 <div className="relative h-[180px] md:h-[350px] shrink-0">

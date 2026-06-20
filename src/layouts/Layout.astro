@@ -7,28 +7,31 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
-  canonicalUrl?: string;
 }
 
 const {
   title = "Puerto Limón - Historia Viva del Caribe Costarricense",
   description = "Historia portuaria, identidad urbana, cultura afrocaribeña y turismo responsable. Una experiencia editorial contemporánea sobre Limón, Costa Rica.",
-  image = "/assets/hero/Hero-Limon.webp",
-  canonicalUrl = "https://puertolimon.cr"
+  image = "/assets/hero/Hero-Limon.webp"
 } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, "https://puertolimon.cr").href;
 
 const { pathname } = Astro.url;
 const isHome = pathname.replace(/\/$/, "") === "";
 ---
 
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
   <head>
     <ClientRouter />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Preload Hero Image (LCP Optimization) -->
+    <link rel="preload" href="/assets/hero/Hero-Limon.webp" as="image" type="image/webp" />
     
     <!-- SEO Meta Tags -->
     <title>{title}</title>
@@ -87,18 +90,18 @@ const isHome = pathname.replace(/\/$/, "") === "";
     </main>
 
     <!-- Simple Footer -->
-    <footer id="footer" class="bg-card border-t border-border py-12 mt-20 transition-colors duration-200">
+    <footer id="footer" class="bg-[#fcfcfb] border-t border-zinc-200/60 py-12 mt-20 transition-colors duration-200">
       <div class="container mx-auto px-4 text-center">
-        <p class="text-xl font-display italic text-limon-selva-700 mb-3">
+        <p class="text-lg font-display italic text-limon-selva-700 mb-3">
           "Lo mejor de Limón es su gente"
         </p>
-        <p class="text-sm text-muted-foreground">
+        <p class="text-xs text-muted-foreground uppercase tracking-widest">
           © 2026{" "}
           <a
             href="https://kirian.dev"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-limon-selva-600 transition-colors font-medium underline-offset-4 hover:underline"
+            class="hover:text-limon-selva-600 transition-colors font-bold underline-offset-4 hover:underline"
           >
             Kirian.dev
           </a>

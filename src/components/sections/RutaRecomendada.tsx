@@ -24,7 +24,7 @@ export default function RutaRecomendada() {
             </span>
           </motion.div>
 
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -33,7 +33,7 @@ export default function RutaRecomendada() {
           >
             Tu Ruta <br />
             <span className="text-limon-selva-600">Recomendada</span>
-          </motion.h2>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}

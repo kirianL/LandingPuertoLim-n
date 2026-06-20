@@ -9,19 +9,19 @@ import { Hero } from '../components/sections/Hero';
 
   <!-- Intro Editorial Message -->
   <main class="relative z-10 -mt-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">
-    <section class="bg-card/75 dark:bg-zinc-900/75 backdrop-blur-2xl border border-border/80 rounded-[2.5rem] p-8 md:p-16 shadow-2xl relative overflow-hidden">
+    <section class="bg-white/80 backdrop-blur-xl border border-zinc-200/60 rounded-3xl p-8 md:p-16 shadow-lg relative overflow-hidden">
       <!-- Glow decoration -->
-      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-limon-amarillo-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-limon-amarillo-500/5 blur-[120px] rounded-full pointer-events-none"></div>
       
       <div class="max-w-3xl mx-auto text-center mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-limon-selva-600 dark:text-limon-selva-400 mb-3">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-limon-selva-600 mb-3">
           Bienvenidos a la provincia de la diversidad
         </h2>
-        <h3 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
-          Donde la Selva se une con el <span class="text-limon-puerto-500">Mar y el Calipso</span>
+        <h3 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-zinc-900 mb-6 leading-tight">
+          Donde la Selva se une con el <span class="text-limon-puerto-600">Mar y el Calipso</span>
         </h3>
-        <div class="h-1 w-24 bg-limon-amarillo-400 mx-auto mb-8"></div>
-        <p class="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
+        <div class="h-0.5 w-20 bg-limon-amarillo-400 mx-auto mb-8"></div>
+        <p class="text-lg md:text-xl text-zinc-500 font-light leading-relaxed">
           Limón es mucho más que playas paradisíacas. Es una tierra de encuentros culturales, 
           arquitectura colonial de madera única en Costa Rica, ritmos ancestrales traídos por las olas, 
           y una gastronomía rica en coco y especias que cuenta la historia de un pueblo resiliente y vibrante.
@@ -29,20 +29,20 @@ import { Hero } from '../components/sections/Hero';
       </div>
 
       <!-- Portal Grid / Navigation Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <!-- Page Card: Historia y Patrimonio -->
-        <div class="group relative bg-background/50 dark:bg-zinc-950/40 border border-border/60 hover:border-limon-puerto-500/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="group relative bg-[#fcfcfb]/50 hover:bg-white border border-zinc-200/60 hover:border-limon-puerto-400 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-limon-puerto-50 dark:bg-limon-puerto-950/50 text-limon-puerto-600 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <div class="w-10 h-10 rounded-xl bg-limon-puerto-50 text-limon-puerto-600 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h4 class="text-2xl font-display font-bold mb-3 group-hover:text-limon-puerto-600 transition-colors">
+            <h4 class="text-xl font-display font-bold text-zinc-900 mb-3 group-hover:text-limon-puerto-600 transition-colors">
               Historia y Patrimonio
             </h4>
-            <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p class="text-sm text-zinc-500 leading-relaxed mb-6">
               Viaja en el tiempo y descubre cómo se fundó Puerto Limón, sus hitos portuarios 
               y el legado de su arquitectura civil e histórica única.
             </p>
@@ -53,17 +53,17 @@ import { Hero } from '../components/sections/Hero';
         </div>
 
         <!-- Page Card: Cultura y Calipso -->
-        <div class="group relative bg-background/50 dark:bg-zinc-950/40 border border-border/60 hover:border-limon-amarillo-500/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="group relative bg-[#fcfcfb]/50 hover:bg-white border border-zinc-200/60 hover:border-limon-amarillo-400 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-limon-amarillo-50 dark:bg-limon-amarillo-950/50 text-limon-amarillo-600 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <div class="w-10 h-10 rounded-xl bg-limon-amarillo-50 text-limon-amarillo-600 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2Zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2ZM9 10l12-3" />
               </svg>
             </div>
-            <h4 class="text-2xl font-display font-bold mb-3 group-hover:text-limon-amarillo-500 transition-colors">
+            <h4 class="text-xl font-display font-bold text-zinc-900 mb-3 group-hover:text-limon-amarillo-600 transition-colors">
               Cultura y Calipso
             </h4>
-            <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p class="text-sm text-zinc-500 leading-relaxed mb-6">
               El latir musical de Walter Ferguson, el colorido del carnaval, las tradiciones orales 
               y el dialecto local Mekatelyu que le dan alma al Caribe.
             </p>
@@ -74,17 +74,17 @@ import { Hero } from '../components/sections/Hero';
         </div>
 
         <!-- Page Card: Naturaleza y Parques -->
-        <div class="group relative bg-background/50 dark:bg-zinc-950/40 border border-border/60 hover:border-limon-selva-500/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="group relative bg-[#fcfcfb]/50 hover:bg-white border border-zinc-200/60 hover:border-limon-selva-400 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-limon-selva-50 dark:bg-limon-selva-950/50 text-limon-selva-600 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <div class="w-10 h-10 rounded-xl bg-limon-selva-50 text-limon-selva-600 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3Z" />
               </svg>
             </div>
-            <h4 class="text-2xl font-display font-bold mb-3 group-hover:text-limon-selva-500 transition-colors">
+            <h4 class="text-xl font-display font-bold text-zinc-900 mb-3 group-hover:text-limon-selva-600 transition-colors">
               Naturaleza y Parques
             </h4>
-            <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p class="text-sm text-zinc-500 leading-relaxed mb-6">
               Adéntrate en los canales de Tortuguero, camina los senderos del Parque Nacional Cahuita 
               y maravíllate con la fauna silvestre terrestre y marina.
             </p>
@@ -95,17 +95,17 @@ import { Hero } from '../components/sections/Hero';
         </div>
 
         <!-- Page Card: Gastronomía -->
-        <div class="group relative bg-background/50 dark:bg-zinc-950/40 border border-border/60 hover:border-limon-coral-500/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="group relative bg-[#fcfcfb]/50 hover:bg-white border border-zinc-200/60 hover:border-limon-coral-400 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-limon-coral-50 dark:bg-limon-coral-950/50 text-limon-coral-600 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <div class="w-10 h-10 rounded-xl bg-limon-coral-50 text-limon-coral-600 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707" />
               </svg>
             </div>
-            <h4 class="text-2xl font-display font-bold mb-3 group-hover:text-limon-coral-500 transition-colors">
+            <h4 class="text-xl font-display font-bold text-zinc-900 mb-3 group-hover:text-limon-coral-600 transition-colors">
               Sabor y Gastronomía
             </h4>
-            <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p class="text-sm text-zinc-500 leading-relaxed mb-6">
               El inconfundible aroma del Rice and Beans con aceite de coco, el picante del chile panameño 
               en el Pati, y postres emblemáticos como el Pan Bon y el Rondón.
             </p>
@@ -116,17 +116,17 @@ import { Hero } from '../components/sections/Hero';
         </div>
 
         <!-- Page Card: Deportes y Eventos -->
-        <div class="group relative bg-background/50 dark:bg-zinc-950/40 border border-border/60 hover:border-limon-selva-500/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="group relative bg-[#fcfcfb]/50 hover:bg-white border border-zinc-200/60 hover:border-limon-selva-400 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-limon-selva-50 dark:bg-limon-selva-950/50 text-limon-selva-600 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <div class="w-10 h-10 rounded-xl bg-limon-selva-50 text-limon-selva-600 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-            <h4 class="text-2xl font-display font-bold mb-3 group-hover:text-limon-selva-500 transition-colors">
+            <h4 class="text-xl font-display font-bold text-zinc-900 mb-3 group-hover:text-limon-selva-600 transition-colors">
               Deportes y Eventos
             </h4>
-            <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p class="text-sm text-zinc-500 leading-relaxed mb-6">
               El semillero de atletas olímpicos y futbolistas destacados, el surf en Salsa Brava, 
               y el calendario de festividades y carnavales icónicos de octubre.
             </p>
@@ -137,17 +137,17 @@ import { Hero } from '../components/sections/Hero';
         </div>
 
         <!-- Page Card: Mi Ruta Recomendada -->
-        <div class="group relative bg-background/50 dark:bg-zinc-950/40 border border-border/60 hover:border-limon-puerto-500/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="group relative bg-[#fcfcfb]/50 hover:bg-white border border-zinc-200/60 hover:border-limon-puerto-400 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-limon-puerto-50 dark:bg-limon-puerto-950/50 text-limon-puerto-600 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <div class="w-10 h-10 rounded-xl bg-limon-puerto-50 text-limon-puerto-600 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
               </svg>
             </div>
-            <h4 class="text-2xl font-display font-bold mb-3 group-hover:text-limon-puerto-600 transition-colors">
+            <h4 class="text-xl font-display font-bold text-zinc-900 mb-3 group-hover:text-limon-puerto-600 transition-colors">
               Guía de Ruta
             </h4>
-            <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p class="text-sm text-zinc-500 leading-relaxed mb-6">
               Planifica tu viaje. Te recomendamos paradas clave en el casco urbano histórico, 
               y playas secretas para vivir la experiencia más auténtica.
             </p>

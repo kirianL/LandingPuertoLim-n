@@ -36,71 +36,71 @@ export const Cultura = () => {
   return (
     <section
       id="cultura"
-      className="relative py-24 bg-white overflow-hidden scroll-mt-24"
+      className="relative py-16 md:py-24 bg-background overflow-hidden scroll-mt-24"
     >
       {/* Background Ambience */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-limon-selva-100/40 rounded-full blur-[120px] mix-blend-multiply pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-limon-amarillo-100/30 rounded-full blur-[100px] mix-blend-multiply pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-limon-selva-100/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-limon-amarillo-100/20 rounded-full blur-[100px] mix-blend-multiply pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10 text-left">
         {/* Consistent Header */}
-        <div className="mb-20">
-          <h2 class="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-800 tracking-tight">
+        <div className="mb-16 md:mb-20">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
             <TextReveal text="Cultura y Vida Local" />
-          </h2>
+          </h1>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="h-1 w-20 bg-limon-selva-500 mb-8"
+            className="h-0.5 w-20 bg-limon-selva-500 mb-8"
           />
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl md:text-2xl text-zinc-600 font-light leading-relaxed font-body max-w-2xl"
+            className="text-lg md:text-xl text-zinc-500 font-light leading-relaxed font-body max-w-2xl"
           >
             "{intro.subtitle}" {intro.description}
           </motion.p>
         </div>
 
         {/* Music & Carnival Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {/* Music Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#fbfbfa] rounded-sm border border-zinc-200/80 overflow-hidden group flex flex-col"
+            className="bg-white rounded-2xl border border-zinc-200/60 overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col"
           >
             {/* Photo Template */}
-            <div className="h-64 w-full bg-zinc-100 relative overflow-hidden flex items-center justify-center border-b border-zinc-200/80 transition-colors">
+            <div className="h-64 w-full bg-zinc-100 relative overflow-hidden flex items-center justify-center border-b border-zinc-200/60 transition-colors">
               <img
                 src={music.image}
                 alt={music.title}
-                className="w-full h-full object-cover opacity-90 md:group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover opacity-95 md:group-hover:scale-102 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               {/* Credit */}
               {music.credit && (
-                <div className="absolute bottom-2 right-2 text-[10px] text-white/80 font-medium tracking-wide">
+                <div className="absolute bottom-3 right-3 text-[10px] text-white/95 font-medium tracking-wide">
                   Foto: {music.credit}
                 </div>
               )}
             </div>
 
-            <div className="p-8 md:p-12 flex-1 flex flex-col">
-              <h3 className="text-3xl font-display font-bold text-zinc-800 mb-4">
+            <div className="p-8 md:p-10 flex-1 flex flex-col">
+              <h3 className="text-2xl font-display font-bold text-zinc-900 mb-4">
                 {music.title}
               </h3>
-              <p className="text-zinc-600 mb-6 leading-relaxed flex-1">
+              <p className="text-sm text-zinc-500 mb-6 leading-relaxed flex-1">
                 {music.description}
               </p>
-              <div className="bg-limon-selva-50/50 p-6 rounded-sm border border-limon-selva-200/30">
-                <p className="text-limon-selva-800 font-display italic text-lg">
+              <div className="bg-limon-selva-50/30 p-6 rounded-xl border border-limon-selva-200/20">
+                <p className="text-limon-selva-850 font-display italic text-base md:text-lg">
                   "{music.highlight}"
                 </p>
               </div>
@@ -113,29 +113,29 @@ export const Cultura = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-[#fbfbfa] rounded-sm border border-zinc-200/80 overflow-hidden group flex flex-col"
+            className="bg-white rounded-2xl border border-zinc-200/60 overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col"
           >
             {/* Photo Template */}
-            <div className="h-64 w-full bg-zinc-100 relative overflow-hidden flex items-center justify-center border-b border-zinc-200/80 transition-colors">
+            <div className="h-64 w-full bg-zinc-100 relative overflow-hidden flex items-center justify-center border-b border-zinc-200/60 transition-colors">
               <img
                 src={carnival.image}
                 alt={carnival.title}
-                className="w-full h-full object-cover opacity-90 md:group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover opacity-95 md:group-hover:scale-102 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               {/* Credit */}
               {carnival.credit && (
-                <div className="absolute bottom-2 right-2 text-[10px] text-white/80 font-medium tracking-wide">
+                <div className="absolute bottom-3 right-3 text-[10px] text-white/95 font-medium tracking-wide">
                   Foto: {carnival.credit}
                 </div>
               )}
             </div>
 
-            <div className="p-8 md:p-12 flex-1 flex flex-col">
-              <h3 className="text-3xl font-display font-bold text-zinc-800 mb-4">
+            <div className="p-8 md:p-10 flex-1 flex flex-col">
+              <h3 className="text-2xl font-display font-bold text-zinc-900 mb-4">
                 {carnival.title}
               </h3>
-              <p className="text-zinc-600 mb-8 leading-relaxed flex-1">
+              <p className="text-sm text-zinc-500 mb-6 leading-relaxed flex-1">
                 {carnival.description}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -144,7 +144,7 @@ export const Cultura = () => {
                     key={idx}
                     className="flex items-center gap-2 text-zinc-700"
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-limon-rojo-500" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-limon-coral-500" />
                     <span className="text-sm font-medium">{feature}</span>
                   </div>
                 ))}
@@ -160,7 +160,7 @@ export const Cultura = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-r from-limon-selva-900 to-[#121c18] rounded-sm border border-limon-amarillo-500/20 overflow-hidden relative"
+            className="bg-gradient-to-r from-limon-selva-900 to-[#121c18] rounded-2xl border border-limon-amarillo-500/20 overflow-hidden relative shadow-lg"
           >
             <div className="absolute top-0 right-0 p-8 opacity-10">
               <Disc
@@ -182,10 +182,10 @@ export const Cultura = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 md:p-10 md:col-span-2 flex flex-col justify-center relative z-10">
+              <div className="p-8 md:p-10 md:col-span-2 flex flex-col justify-center relative z-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="h-1 w-12 bg-limon-amarillo-400"></div>
-                  <span className="text-limon-amarillo-400 font-bold uppercase tracking-widest text-sm">
+                  <div className="h-0.5 w-12 bg-limon-amarillo-400"></div>
+                  <span className="text-limon-amarillo-400 font-bold uppercase tracking-widest text-xs">
                     Leyenda Cultural
                   </span>
                 </div>
@@ -193,16 +193,16 @@ export const Cultura = () => {
                 <h3 className="text-3xl md:text-5xl font-display font-bold text-white mb-2">
                   {calypso_legacy.title}
                 </h3>
-                <p className="text-xl text-zinc-300 italic font-display mb-6 opacity-80">
+                <p className="text-lg text-zinc-300 italic font-display mb-6 opacity-80">
                   {calypso_legacy.subtitle}
                 </p>
 
-                <p className="text-zinc-400 text-lg leading-relaxed mb-8 max-w-2xl">
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8 max-w-2xl">
                   {calypso_legacy.description}
                 </p>
 
-                <div className="bg-black/30 p-6 rounded-sm border-l-4 border-limon-amarillo-400 backdrop-blur-sm">
-                  <p className="text-white font-display italic text-xl">
+                <div className="bg-black/30 p-6 rounded-xl border-l-4 border-limon-amarillo-400 backdrop-blur-sm">
+                  <p className="text-white font-display italic text-lg md:text-xl">
                     "{calypso_legacy.quote}"
                   </p>
                 </div>
@@ -214,11 +214,11 @@ export const Cultura = () => {
         {/* Language Section - Mekatelyu Dictionary */}
         <div className="mb-24">
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-display font-bold text-zinc-800 mb-4 flex items-center justify-center gap-3">
+            <h3 className="text-2xl md:text-3xl font-display font-bold text-zinc-900 mb-4 flex items-center justify-center gap-3">
               <MessageSquare className="text-limon-selva-600" />
               Speak like a Limonense
             </h3>
-            <p className="text-zinc-600 max-w-2xl mx-auto">
+            <p className="text-zinc-500 text-sm max-w-2xl mx-auto">
               {language.description}
             </p>
           </div>
@@ -231,15 +231,15 @@ export const Cultura = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="bg-[#fbfbfa] hover:bg-zinc-100/50 transition-colors p-4 md:p-6 rounded-sm border border-zinc-200 hover:border-limon-selva-300 group"
+                className="bg-white hover:bg-zinc-50/50 transition-all duration-300 p-6 rounded-2xl border border-zinc-200/60 hover:border-limon-selva-300 group shadow-sm hover:shadow-md"
               >
                 <div className="text-limon-selva-700 font-display font-bold text-lg md:text-2xl mb-1 md:mb-2 md:group-hover:translate-x-1 transition-transform">
                   "{item.phrase}"
                 </div>
-                <div className="text-zinc-800 font-medium mb-1 text-sm md:text-base leading-snug">
+                <div className="text-zinc-700 font-medium mb-1 text-sm md:text-base leading-snug">
                   {item.meaning}
                 </div>
-                <div className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider">
+                <div className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-wider">
                   {item.context}
                 </div>
               </motion.div>
@@ -256,20 +256,20 @@ export const Cultura = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 + idx * 0.1 }}
-              className="flex gap-6 items-start"
+              className="flex gap-6 items-start animate-fade-in-up"
             >
-              <div className="bg-limon-selva-50 p-4 rounded-sm shrink-0 text-limon-selva-600 border border-limon-selva-100/50">
+              <div className="bg-limon-selva-50 p-4 rounded-xl shrink-0 text-limon-selva-600 border border-limon-selva-100/50">
                 {(() => {
                   const items = { Grid3X3, Trophy };
                   const Icon = items[item.icon as keyof typeof items];
-                  return Icon ? <Icon size={32} /> : null;
+                  return Icon ? <Icon size={28} /> : null;
                 })()}
               </div>
               <div>
-                <h4 className="text-2xl font-display font-bold text-zinc-800 mb-2">
+                <h4 className="text-xl font-display font-bold text-zinc-900 mb-2">
                   {item.title}
                 </h4>
-                <p className="text-zinc-600 leading-relaxed">
+                <p className="text-sm text-zinc-500 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -280,7 +280,7 @@ export const Cultura = () => {
         {/* --- New Extended Content: Community, Arts, Media --- */}
 
         {/* Community Highlight */}
-        <div className="mb-24 relative rounded-sm overflow-hidden bg-limon-selva-950 border border-white/5">
+        <div className="mb-24 relative rounded-2xl overflow-hidden bg-limon-selva-950 border border-zinc-800 shadow-md">
           {/* Community Background */}
           <div className="absolute inset-0 bg-limon-selva-950">
             <img
@@ -288,7 +288,7 @@ export const Cultura = () => {
               alt={community.title}
               className="w-full h-full object-cover opacity-50"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-limon-selva-950 via-limon-selva-900/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-limon-selva-950 via-limon-selva-900/40 to-transparent"></div>
             {/* Credit */}
             {community.credit && (
               <div className="absolute bottom-3 right-4 text-[10px] text-white/40 font-medium tracking-wide z-10">
@@ -310,14 +310,14 @@ export const Cultura = () => {
             <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
               {community.title}
             </h3>
-            <p className="text-zinc-200 text-lg leading-relaxed mb-8">
+            <p className="text-zinc-200 text-sm md:text-base leading-relaxed mb-8">
               {community.description}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {community.highlights.map((h, idx) => (
                 <span
                   key={idx}
-                  className="px-4 py-2 bg-black/30 rounded-sm text-limon-amarillo-300 font-medium border border-white/10 backdrop-blur-md"
+                  className="px-4 py-2 bg-black/30 rounded-xl text-limon-amarillo-300 font-medium border border-white/10 backdrop-blur-md text-sm"
                 >
                   “{h.text}”
                 </span>
@@ -327,23 +327,23 @@ export const Cultura = () => {
         </div>
 
         {/* Visual Arts Section (New) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-zinc-100 h-80 rounded-sm border border-zinc-200/80 relative flex items-center justify-center overflow-hidden"
+            className="bg-zinc-100 h-80 rounded-2xl border border-zinc-200/60 relative flex items-center justify-center overflow-hidden shadow-sm"
           >
             <img
               src={arts.image}
               alt={arts.title}
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover opacity-95"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             {/* Credit */}
             {arts.credit && (
-              <div className="absolute bottom-2 right-3 text-[10px] text-white/85 font-medium tracking-wide">
+              <div className="absolute bottom-3 right-3 text-[10px] text-white/95 font-medium tracking-wide">
                 Foto: {arts.credit}
               </div>
             )}
@@ -353,15 +353,15 @@ export const Cultura = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="p-8"
+            className="p-4 md:p-8"
           >
-            <h3 className="text-3xl font-display font-bold text-zinc-800 mb-6 flex items-center gap-3">
-              <Palette className="text-limon-rojo-500" />
+            <h3 className="text-2xl md:text-3xl font-display font-bold text-zinc-900 mb-6 flex items-center gap-3">
+              <Palette className="text-limon-coral-500" />
               {arts.title || "Arte y Creatividad"}
             </h3>
             <ul className="grid grid-cols-1 gap-4">
               {(arts.items || []).map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3 text-zinc-700">
+                <li key={idx} className="flex items-center gap-3 text-zinc-650 text-sm md:text-base">
                   <div className="h-1.5 w-1.5 bg-limon-amarillo-500 rounded-full"></div>
                   {item}
                 </li>
@@ -378,23 +378,23 @@ export const Cultura = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#fbfbfa] rounded-sm border border-zinc-200/80 overflow-hidden flex flex-col"
+            className="bg-white rounded-2xl border border-zinc-200/60 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col"
           >
             {/* Theater Photo Template */}
-            <div className="h-48 w-full bg-zinc-100 relative overflow-hidden flex items-center justify-center border-b border-zinc-200/80 transition-colors">
+            <div className="h-48 w-full bg-zinc-100 relative overflow-hidden flex items-center justify-center border-b border-zinc-200/60 transition-colors">
               <img
                 src={theater.image}
                 alt={theater.title}
-                className="w-full h-full object-cover opacity-90 md:group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover opacity-95 md:group-hover:scale-102 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
 
             <div className="p-8">
-              <h4 className="text-2xl font-display font-bold text-zinc-800 mb-4">
+              <h4 className="text-xl font-display font-bold text-zinc-900 mb-4">
                 {theater.title}
               </h4>
-              <p className="text-zinc-600 leading-relaxed">
+              <p className="text-sm text-zinc-500 leading-relaxed">
                 {theater.description}
               </p>
             </div>
@@ -406,42 +406,42 @@ export const Cultura = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-[#fbfbfa] p-6 md:p-8 rounded-sm border border-zinc-200/80 lg:col-span-2"
+            className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/60 lg:col-span-2 shadow-sm"
           >
             <div className="flex items-center gap-4 mb-8">
-              <Film className="text-limon-azul-500" size={32} />
-              <h4 className="text-2xl font-display font-bold text-zinc-800">
+              <Film className="text-limon-puerto-500" size={32} />
+              <h4 className="text-xl font-display font-bold text-zinc-900">
                 {cinema.title}
               </h4>
             </div>
-            <p className="text-zinc-600 mb-8">{cinema.description}</p>
+            <p className="text-sm text-zinc-500 mb-8">{cinema.description}</p>
             <div className="grid grid-cols-1 gap-6">
               {cinema.films.map((film, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-sm border border-zinc-200/60 overflow-hidden flex flex-col sm:flex-row group shadow-sm"
+                  className="bg-[#fcfcfb] rounded-xl border border-zinc-200/60 overflow-hidden flex flex-col sm:flex-row group shadow-sm"
                 >
                   {/* Movie Poster - Compact Mobile Side-by-Side */}
                   <div className="w-full h-64 sm:w-40 sm:h-auto shrink-0 bg-zinc-100 relative border-b sm:border-b-0 sm:border-r border-zinc-200/60 overflow-hidden">
                     <img
                       src={film.image}
                       alt={film.title}
-                      className="w-full h-full object-cover opacity-95 transition-opacity hover:opacity-100 md:group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover opacity-95 transition-opacity hover:opacity-100 md:group-hover:scale-102 transition-transform duration-700"
                     />
-                    <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent to-black/10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent to-black/10"></div>
                   </div>
 
                   <div className="p-6 flex-1 flex flex-col justify-center min-w-0">
                     <div className="flex flex-col mb-3">
-                      <h5 className="text-zinc-800 font-bold text-xl font-display leading-tight">
+                      <h5 className="text-zinc-900 font-bold text-lg font-display leading-tight">
                         {film.title}
                       </h5>
-                      <p className="text-xs text-limon-azul-600 uppercase tracking-widest font-semibold">
+                      <p className="text-xs text-limon-puerto-600 uppercase tracking-widest font-semibold mt-1">
                         {film.director}
                       </p>
                     </div>
 
-                    <p className="text-sm text-zinc-600 mb-5 leading-relaxed">
+                    <p className="text-xs md:text-sm text-zinc-500 mb-5 leading-relaxed">
                       {film.desc}
                     </p>
 
@@ -452,11 +452,11 @@ export const Cultura = () => {
                           {film.awards.map((award, i) => (
                             <li
                               key={i}
-                              className="text-[11px] text-zinc-600 font-medium tracking-wide flex items-start gap-2"
+                              className="text-[11px] text-zinc-500 font-medium tracking-wide flex items-start gap-2"
                             >
                               <Trophy
                                 size={12}
-                                className="text-limon-amarillo-600 shrink-0 mt-[2px]"
+                                className="text-limon-amarillo-650 shrink-0 mt-[2px]"
                               />
                               <span className="leading-tight opacity-95">
                                 {award}
@@ -478,24 +478,24 @@ export const Cultura = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-[#fbfbfa] rounded-sm border border-zinc-200/80 lg:col-span-3 overflow-hidden"
+            className="bg-white rounded-2xl border border-zinc-200/60 lg:col-span-3 overflow-hidden shadow-sm"
           >
             <div className="flex flex-col">
               <div className="p-8 w-full">
-                <h4 className="text-2xl font-display font-bold text-zinc-800 mb-6">
+                <h4 className="text-xl font-display font-bold text-zinc-900 mb-6">
                   {media.title}
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                   {media.items.map((item, id) => (
                     <div key={id} className="flex gap-4">
-                      <div className="bg-limon-selva-50 h-10 w-10 shrink-0 flex items-center justify-center rounded-sm text-limon-selva-600 border border-limon-selva-100/50">
+                      <div className="bg-limon-selva-50 h-10 w-10 shrink-0 flex items-center justify-center rounded-xl text-limon-selva-600 border border-limon-selva-100/50">
                         <Radio size={18} />
                       </div>
                       <div>
-                        <h5 className="text-zinc-800 font-bold mb-1">
+                        <h5 className="text-zinc-900 font-bold mb-1 text-sm md:text-base">
                           {item.title}
                         </h5>
-                        <p className="text-sm text-zinc-600">{item.desc}</p>
+                        <p className="text-xs md:text-sm text-zinc-500">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -507,7 +507,7 @@ export const Cultura = () => {
 
         {/* Timeline Dates */}
         <div className="border-t border-zinc-200 pt-16">
-          <h3 className="text-center text-zinc-500 font-bold uppercase tracking-widest text-sm mb-12 flex items-center justify-center gap-2">
+          <h3 className="text-center text-zinc-400 font-bold uppercase tracking-widest text-xs mb-12 flex items-center justify-center gap-2">
             <Calendar size={16} />
             Fechas para no olvidar
           </h3>
@@ -524,7 +524,7 @@ export const Cultura = () => {
                 <div className="text-4xl md:text-5xl font-display font-bold text-limon-selva-600 mb-2 drop-shadow-[0_2px_5px_rgba(0,0,0,0.05)]">
                   {d.date}
                 </div>
-                <div className="text-zinc-800 font-bold text-sm md:text-lg tracking-wide uppercase">
+                <div className="text-zinc-900 font-bold text-xs md:text-sm tracking-wider uppercase">
                   {d.name}
                 </div>
               </motion.div>
@@ -534,7 +534,7 @@ export const Cultura = () => {
 
         {/* Outro */}
         <div className="mt-24 text-center">
-          <p className="text-2xl md:text-3xl font-display font-bold text-zinc-800 max-w-3xl mx-auto italic opacity-90">
+          <p className="text-xl md:text-2xl font-display font-bold text-zinc-900 max-w-3xl mx-auto italic opacity-90">
             "{outro.text}"
           </p>
         </div>

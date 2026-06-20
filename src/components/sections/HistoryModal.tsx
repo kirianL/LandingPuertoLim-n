@@ -20,8 +20,6 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
       const scrollbarWidth =
         window.innerWidth - document.documentElement.clientWidth;
 
-      // On small screens (mobile), scrollbarWidth is often 0 (overlay scrollbars)
-      // and we don't want to add padding if it's not needed.
       if (scrollbarWidth > 0) {
         document.body.style.paddingRight = `${scrollbarWidth}px`;
       }
@@ -49,7 +47,7 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-md z-[100] touch-none"
+            className="fixed inset-0 bg-black/40 backdrop-blur-md z-[100] touch-none"
           />
 
           {/* Modal Container */}
@@ -59,7 +57,7 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-zinc-900 w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col md:flex-row pointer-events-auto border border-white/5"
+              className="bg-card w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col md:flex-row pointer-events-auto border border-zinc-200/60"
             >
               {/* Image Section (Left/Top) */}
               <div className="w-full md:w-1/2 relative h-48 md:h-auto overflow-hidden">
@@ -68,18 +66,18 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
                   alt={data.titulo}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent md:bg-gradient-to-r" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent md:bg-gradient-to-r" />
 
                 {/* Close Button Mobile */}
                 <button
                   onClick={onClose}
-                  className="absolute top-4 right-4 p-2 bg-black/50 backdrop-blur-md rounded-full text-white md:hidden"
+                  className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-white text-zinc-800 rounded-full backdrop-blur-md shadow-sm md:hidden border border-zinc-200/60 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
                 {data.credito && (
                   <div className="absolute bottom-4 left-4 md:left-auto md:right-4 z-20">
-                    <p className="text-[10px] text-white/50 font-medium tracking-wider uppercase">
+                    <p className="text-[10px] text-zinc-500/80 font-medium tracking-wider uppercase">
                       Foto: {data.credito}
                     </p>
                   </div>
@@ -87,35 +85,35 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
               </div>
 
               {/* Content Section (Right/Bottom) */}
-              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col overflow-y-auto overscroll-contain [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col overflow-y-auto overscroll-contain custom-scrollbar">
                 {/* Header */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-white/90 text-sm font-medium tracking-wide px-3 py-1 bg-white/5 rounded-full border border-white/10 backdrop-blur-md shadow-sm">
+                    <span className="text-zinc-800 text-xs font-semibold tracking-wider uppercase px-3 py-1 bg-zinc-100 rounded-full border border-zinc-200/60 shadow-sm">
                       {data.año}
                     </span>
-                    {/* Close Buttom Desktop */}
+                    {/* Close Button Desktop */}
                     <button
                       onClick={onClose}
-                      className="p-2 bg-white/5 hover:bg-white/10 rounded-full text-white hidden md:block transition-colors"
+                      className="p-2 bg-zinc-50 hover:bg-zinc-100 rounded-full text-zinc-700 hidden md:block transition-colors border border-zinc-200/60"
                     >
                       <X className="w-5 h-5" />
                     </button>
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-2 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-zinc-900 mb-2 leading-tight">
                     {data.titulo}
                   </h2>
-                  <p className="text-white/60 italic font-medium">
+                  <p className="text-zinc-600 italic text-sm font-medium">
                     "{data.cita}"
                   </p>
                 </div>
 
                 {/* Description */}
-                <div className="space-y-6 text-white/80 leading-relaxed text-sm md:text-base">
-                  <p>{data.descripcion}</p>
+                <div className="space-y-6 text-zinc-700 leading-relaxed text-sm md:text-base">
+                  <p className="font-body text-zinc-600">{data.descripcion}</p>
 
                   <div className="space-y-3">
-                    <h4 className="text-white font-bold uppercase tracking-wider text-xs border-b border-white/10 pb-2">
+                    <h4 className="text-zinc-900 font-bold uppercase tracking-wider text-xs border-b border-zinc-200/60 pb-2">
                       Detalles Históricos
                     </h4>
                     <ul className="space-y-2">
@@ -123,9 +121,9 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
                         data.detalles.map((detalle: string, idx: number) => (
                           <li
                             key={idx}
-                            className="flex items-start gap-2 text-sm"
+                            className="flex items-start gap-2 text-sm text-zinc-600"
                           >
-                            <span className="text-limon-selva-400 mt-1.5">
+                            <span className="text-limon-selva-500 mt-1">
                               •
                             </span>
                             <span>{detalle}</span>
@@ -136,23 +134,23 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
 
                   {/* Location Section */}
                   {data.ubicacion && (
-                    <div className="pt-4 border-t border-white/10 mt-auto">
-                      <div className="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-colors group">
-                        <div className="bg-limon-selva-500/20 p-2.5 rounded-lg text-limon-selva-400 group-hover:text-limon-selva-300 transition-colors">
+                    <div className="pt-4 border-t border-zinc-200/60 mt-auto">
+                      <div className="flex items-start gap-3 bg-zinc-50 p-4 rounded-2xl border border-zinc-200/60 hover:bg-zinc-100/80 transition-colors group">
+                        <div className="bg-limon-selva-100 p-2.5 rounded-xl text-limon-selva-700 group-hover:bg-limon-selva-200 transition-colors">
                           <MapPin className="w-5 h-5" />
                         </div>
-                        <div className="flex-1">
-                          <h5 className="text-white font-bold text-sm mb-0.5">
+                        <div className="flex-1 text-left">
+                          <h5 className="text-zinc-950 font-bold text-sm mb-0.5">
                             Ubicación Exacta
                           </h5>
-                          <p className="text-white/60 text-xs mb-2">
+                          <p className="text-zinc-600 text-xs mb-2">
                             {data.ubicacion.direccion}
                           </p>
                           <a
                             href={`https://www.google.com/maps/search/?api=1&query=${data.ubicacion.lat},${data.ubicacion.lng}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs font-bold text-limon-amarillo-400 hover:text-limon-amarillo-300 transition-colors uppercase tracking-wide"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-limon-puerto-600 hover:text-limon-puerto-800 transition-colors uppercase tracking-wide"
                           >
                             <span>Ver en Google Maps</span>
                             <ExternalLink className="w-3 h-3" />

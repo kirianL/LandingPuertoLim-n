@@ -118,7 +118,7 @@ export default function LimonMap() {
     );
 
   return (
-    <div className="h-[60vh] md:h-[70vh] w-full overflow-hidden rounded-3xl border border-white/10 shadow-2xl relative z-10">
+    <div className="h-[60vh] md:h-[70vh] w-full overflow-hidden rounded-3xl border border-zinc-200/60 shadow-md relative z-10">
       <Map
         center={[9.9932, -83.0281]} // Initial center backup
         zoom={16}

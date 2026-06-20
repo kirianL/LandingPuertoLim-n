@@ -26,9 +26,9 @@ export function HistoriaPatrimonio() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mb-16">
-          <h2 class="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
             <TextReveal text="Cronología Viva" />
-          </h2>
+          </h1>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -69,7 +69,7 @@ export function HistoriaPatrimonio() {
                 onMouseLeave={() => setActiveId(null)}
               >
                 {/* Image Container */}
-                <div className="relative w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-sm mb-4 bg-muted">
+                <div className="relative w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-muted border border-zinc-200/60 shadow-sm">
                   <img
                     src={hito.imagen}
                     alt={hito.titulo}

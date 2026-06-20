@@ -93,16 +93,16 @@
     /* Mapped colors for components */
     --primary: var(--limon-selva-600);
     --primary-foreground: 0 0% 100%;
-    --secondary: var(--limon-concreto-100);
+    --secondary: var(--limon-concreto-50);
     --secondary-foreground: var(--limon-concreto-900);
-    --muted: var(--limon-concreto-100);
+    --muted: var(--limon-concreto-50);
     --muted-foreground: var(--limon-concreto-600);
     --accent: var(--limon-coral-500);
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: var(--limon-concreto-200);
-    --input: var(--limon-concreto-200);
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
     --ring: var(--limon-puerto-500);
     --radius: 0.5rem;
   }
@@ -170,7 +170,7 @@
   }
 }
 
-html {
+html:not([data-astro-transitioning]) {
   scroll-behavior: smooth;
 }
 
@@ -209,11 +209,11 @@ html {
   background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-zinc-800 rounded-full;
+  @apply bg-zinc-300 rounded-full;
 }
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #27272a transparent;
+  scrollbar-color: #d4d4d8 transparent;
 }
 
 /* Accessibility */

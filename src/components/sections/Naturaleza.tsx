@@ -80,9 +80,9 @@ export const Naturaleza = () => {
       <div className="container mx-auto px-4 relative z-10 text-left">
         {/* Header */}
         <div className="mb-20">
-          <h2 class="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 text-zinc-900 tracking-tight">
             <TextReveal text="Naturaleza y Turismo Responsable" />
-          </h2>
+          </h1>
           <div className="h-1 w-20 bg-limon-amarillo-400 mb-8" />
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -94,7 +94,7 @@ export const Naturaleza = () => {
               {intro.description}
             </p>
             {/* Context Banner */}
-            <div className="inline-flex items-start gap-3 p-4 bg-limon-selva-50 border border-limon-selva-100 rounded-sm max-w-2xl transition-transform md:hover:scale-[1.01]">
+            <div className="inline-flex items-start gap-3 p-4 bg-limon-selva-50 border border-limon-selva-100 rounded-2xl max-w-2xl transition-transform md:hover:scale-[1.01]">
               <Info className="text-limon-selva-600 shrink-0 mt-1" size={20} />
               <p className="text-sm text-limon-selva-800 font-medium">
                 {intro.context}
@@ -110,7 +110,7 @@ export const Naturaleza = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-white p-8 rounded-sm border border-zinc-200 shadow-sm transition-shadow duration-300 md:hover:shadow-md"
+            className="bg-card p-8 rounded-2xl border border-zinc-200/60 shadow-sm transition-shadow duration-300 md:hover:shadow-md"
           >
             <h3 className="text-2xl font-display font-bold text-zinc-900 mb-6">
               {seasons.title}
@@ -149,34 +149,29 @@ export const Naturaleza = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-gradient-to-br from-limon-selva-900 to-zinc-900 p-8 rounded-sm text-white relative overflow-hidden shadow-lg transition-transform md:hover:scale-[1.01]"
+            className="bg-gradient-to-br from-zinc-50 to-zinc-100 p-8 rounded-2xl text-zinc-800 border border-zinc-200/60 relative overflow-hidden shadow-sm transition-all duration-300 md:hover:shadow-md"
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-              className="absolute top-0 right-0 w-64 h-64 bg-limon-verde-500/10 rounded-full blur-3xl origin-center"
-            />
             <div className="relative z-10">
-              <h3 className="text-2xl font-display font-bold mb-6 flex items-center gap-3">
-                <Smile className="text-limon-amarillo-400" />
+              <h3 className="text-2xl font-display font-bold mb-6 flex items-center gap-3 text-zinc-900">
+                <Smile className="text-limon-selva-600" />
                 {etiquette.title}
               </h3>
-              <p className="text-zinc-300 mb-8">{etiquette.intro}</p>
+              <p className="text-zinc-600 mb-8">{etiquette.intro}</p>
               <ul className="space-y-4">
                 {etiquette.items.map((item, idx) => {
                   const Icon = item.icon || Smile;
                   return (
                     <li
                       key={idx}
-                      className="flex items-start gap-4 p-3 rounded-sm transition-colors cursor-default md:hover:bg-white/10"
+                      className="flex items-start gap-4 p-3 rounded-2xl transition-colors cursor-default md:hover:bg-zinc-200/40"
                     >
                       <Icon
-                        className="text-limon-amarillo-400 mt-1 shrink-0"
+                        className="text-limon-selva-600 mt-1 shrink-0"
                         size={20}
                       />
                       <div>
-                        <p className="font-bold text-lg">{item.text}</p>
-                        <p className="text-sm text-zinc-400">{item.sub}</p>
+                        <p className="font-bold text-lg text-zinc-900">{item.text}</p>
+                        <p className="text-sm text-zinc-500">{item.sub}</p>
                       </div>
                     </li>
                   );
@@ -208,7 +203,7 @@ export const Naturaleza = () => {
               {cahuita.description}
             </p>
 
-            <div className="bg-white rounded-sm border border-zinc-200 p-6 shadow-sm md:hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-2xl border border-zinc-200/60 p-6 shadow-sm md:hover:shadow-md transition-shadow">
               <h4 className="font-bold text-zinc-900 mb-4 flex items-center gap-2">
                 <Binoculars size={18} className="text-limon-amarillo-600" />
                 Qué hacer
@@ -232,10 +227,10 @@ export const Naturaleza = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="order-1 lg:order-2 group relative md:hover:scale-[1.02] transition-transform duration-500"
+            className="order-1 lg:order-2 group relative transition-transform duration-500"
           >
             {(cahuita as any).image ? (
-              <div className="aspect-[4/3] rounded-sm overflow-hidden relative shadow-lg">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative shadow-sm border border-zinc-200/60">
                 <img
                   src={(cahuita as any).image}
                   alt={cahuita.title}
@@ -244,7 +239,7 @@ export const Naturaleza = () => {
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
             ) : (
-              <div className="aspect-[4/3] bg-zinc-200 rounded-sm flex items-center justify-center">
+              <div className="aspect-[4/3] bg-zinc-100 rounded-2xl flex items-center justify-center border border-zinc-200/60">
                 <TreePine size={64} className="text-zinc-400" />
               </div>
             )}
@@ -287,7 +282,7 @@ export const Naturaleza = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  className="bg-white p-4 sm:p-6 rounded-sm border border-zinc-100 shadow-sm transition-shadow text-center group cursor-pointer md:hover:shadow-lg"
+                  className="bg-white p-4 sm:p-6 rounded-2xl border border-zinc-200/60 shadow-sm transition-all duration-300 text-center group cursor-pointer md:hover:shadow-md md:hover:-translate-y-1"
                 >
                   <div className="inline-flex p-3 rounded-full bg-limon-selva-50 text-limon-selva-600 mb-4 transition-colors duration-300 md:group-hover:bg-limon-selva-600 md:group-hover:text-white">
                     <Icon size={28} />
@@ -295,7 +290,7 @@ export const Naturaleza = () => {
                   <h4 className="font-bold text-zinc-900 mb-2 md:group-hover:text-limon-selva-700 transition-colors">
                     {sys.name}
                   </h4>
-                  <p className="text-xs text-zinc-500 leading-relaxed">
+                  <p className="text-xs text-zinc-500 leading-relaxed font-body">
                     {sys.desc}
                   </p>
                 </motion.div>
@@ -314,7 +309,7 @@ export const Naturaleza = () => {
             className="relative group md:hover:scale-[1.02] transition-transform duration-500"
           >
             {(tortuguero as any).image ? (
-              <div className="aspect-[4/3] rounded-sm overflow-hidden relative shadow-lg">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative shadow-sm border border-zinc-200/60">
                 <img
                   src={(tortuguero as any).image}
                   alt={tortuguero.title}
@@ -323,7 +318,7 @@ export const Naturaleza = () => {
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
             ) : (
-              <div className="aspect-[4/3] bg-zinc-200 rounded-sm flex items-center justify-center">
+              <div className="aspect-[4/3] bg-zinc-100 rounded-2xl flex items-center justify-center border border-zinc-200/60">
                 <Waves size={64} className="text-zinc-400" />
               </div>
             )}
@@ -348,7 +343,7 @@ export const Naturaleza = () => {
               {tortuguero.description}
             </p>
 
-            <div className="bg-white rounded-sm border border-zinc-200 p-6 shadow-sm md:hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-2xl border border-zinc-200/60 p-6 shadow-sm md:hover:shadow-md transition-shadow">
               <h4 className="font-bold text-zinc-900 mb-4 flex items-center gap-2">
                 <Binoculars size={18} className="text-limon-amarillo-600" />
                 Qué hacer
@@ -401,7 +396,7 @@ export const Naturaleza = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  className="bg-white rounded-sm border border-zinc-200 overflow-hidden shadow-sm group md:hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-2xl border border-zinc-200/60 overflow-hidden shadow-sm group md:hover:shadow-md md:hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="relative h-64 overflow-hidden bg-zinc-100 text-left">
                     {dest.image ? (
@@ -455,24 +450,19 @@ export const Naturaleza = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-24 bg-zinc-900 rounded-sm p-8 md:p-12 text-white relative overflow-hidden"
+          className="mb-24 bg-card border border-zinc-200/80 rounded-3xl p-8 md:p-12 text-zinc-800 relative overflow-hidden shadow-sm"
         >
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.webp')] opacity-10"></div>
-          <motion.div
-            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-96 h-96 bg-limon-verde-500/10 rounded-full blur-3xl pointer-events-none"
-          />
+          <div className="absolute left-0 top-0 bottom-0 w-2 bg-limon-amarillo-400 pointer-events-none" />
 
           <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start">
             <div className="md:w-1/3 text-left">
-              <div className="inline-block p-3 bg-limon-amarillo-400 rounded-full text-zinc-900 mb-6">
+              <div className="inline-block p-3 bg-limon-amarillo-100 rounded-full text-limon-amarillo-800 mb-6">
                 <Binoculars size={32} />
               </div>
-              <h3 className="text-4xl font-display font-bold mb-4">
+              <h3 className="text-4xl font-display font-bold text-zinc-900 mb-4">
                 {wildlife.title}
               </h3>
-              <p className="text-zinc-300 leading-relaxed opacity-90">
+              <p className="text-zinc-600 leading-relaxed font-body">
                 {wildlife.description}
               </p>
             </div>
@@ -480,12 +470,12 @@ export const Naturaleza = () => {
               {wildlife.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white/10 backdrop-blur-sm border border-white/10 p-6 rounded-sm transition-colors md:hover:bg-white/15"
+                  className="bg-zinc-50 border border-zinc-200/60 p-6 rounded-2xl transition-all duration-300 md:hover:bg-zinc-100/80 md:hover:-translate-y-0.5"
                 >
-                  <h4 className="text-xl font-bold text-limon-amarillo-300 mb-2">
+                  <h4 className="text-xl font-bold text-limon-selva-700 mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-sm text-zinc-200 leading-relaxed">
+                  <p className="text-sm text-zinc-600 leading-relaxed font-body">
                     {item.desc}
                   </p>
                 </div>
@@ -515,7 +505,7 @@ export const Naturaleza = () => {
               {ecoTours.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex gap-4 p-4 rounded-sm transition-colors border border-transparent md:hover:bg-zinc-100"
+                  className="flex gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent md:hover:bg-zinc-50 md:hover:border-zinc-200/60"
                 >
                   <div className="mt-1 text-limon-selva-500">
                     <Leaf size={20} />
@@ -537,7 +527,7 @@ export const Naturaleza = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-zinc-50 border border-zinc-200 rounded-sm p-8 transition-shadow duration-300 md:hover:shadow-lg text-left"
+            className="bg-card border border-zinc-200/60 rounded-2xl p-8 transition-shadow duration-300 md:hover:shadow-md text-left"
           >
             <div className="flex items-center gap-3 mb-8">
               <Footprints className="text-limon-puerto-600" />
@@ -557,7 +547,7 @@ export const Naturaleza = () => {
                     {route.steps.map((step, sIdx) => (
                       <span
                         key={sIdx}
-                        className="text-xs font-medium bg-white border border-zinc-200 px-2 py-0.5 rounded-sm"
+                        className="text-xs font-medium bg-zinc-50 border border-zinc-200 px-2.5 py-1 rounded-full"
                       >
                         {step}
                       </span>
@@ -579,34 +569,27 @@ export const Naturaleza = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="relative rounded-sm overflow-hidden"
+            className="relative rounded-3xl overflow-hidden border border-zinc-200/80 bg-card shadow-sm"
           >
-            {/* Background - Deep Jungle Theme */}
-            <div className="absolute inset-0 bg-limon-selva-950"></div>
-            <motion.div
-              animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.3, 0.2] }}
-              transition={{ duration: 15, repeat: Infinity }}
-              className="absolute top-0 right-0 w-[600px] h-[600px] bg-limon-selva-800/20 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3"
-            />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-limon-puerto-900/30 rounded-full blur-[100px] pointer-events-none translate-y-1/2 -translate-x-1/3"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-2 bg-limon-selva-500 pointer-events-none" />
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 p-6 md:p-16 text-left">
               {/* Left Column: Title & Context */}
-              <div className="lg:col-span-5 flex flex-col justify-center">
-                <div className="inline-block p-3 bg-limon-selva-900 border border-limon-selva-800 rounded-sm w-fit mb-6 shadow-sm text-center">
+              <div className="lg:col-span-5 flex flex-col justify-center pl-2">
+                <div className="inline-block p-3 bg-limon-selva-50 border border-limon-selva-100 rounded-2xl w-fit mb-6 shadow-sm">
                   <Heart
-                    className="text-limon-amarillo-400 mx-auto"
+                    className="text-limon-selva-600 mx-auto"
                     size={32}
                   />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 leading-tight">
+                <h3 className="text-3xl md:text-4xl font-display font-bold text-zinc-900 mb-6 leading-tight">
                   {principles.title}
                 </h3>
-                <p className="text-lg text-limon-selva-100/90 leading-relaxed mb-8 font-light">
+                <p className="text-lg text-zinc-600 leading-relaxed mb-8 font-light font-body">
                   {principles.description}
                 </p>
-                <div className="p-6 bg-limon-selva-900/50 border border-limon-selva-800 rounded-sm backdrop-blur-sm">
-                  <p className="text-limon-amarillo-200 italic font-medium">
+                <div className="p-6 bg-limon-selva-50 border border-limon-selva-100/60 rounded-2xl">
+                  <p className="text-limon-selva-800 italic font-medium font-body">
                     "{principles.conclusion}"
                   </p>
                 </div>
@@ -619,10 +602,10 @@ export const Naturaleza = () => {
                     <div
                       key={idx}
                       className={cn(
-                        "p-6 rounded-sm border transition-[shadow,background-color,border-color] duration-300 group relative overflow-hidden",
+                        "p-6 rounded-2xl border transition-all duration-300 group relative overflow-hidden",
                         idx === 0
-                          ? "sm:col-span-2 bg-gradient-to-r from-limon-selva-900 to-limon-selva-800 border-limon-selva-700 shadow-md"
-                          : "bg-limon-selva-900/40 border-limon-selva-800/60 md:hover:bg-limon-selva-800/60 md:hover:border-limon-selva-700"
+                          ? "sm:col-span-2 bg-gradient-to-r from-limon-selva-50 to-limon-selva-100/30 border-limon-selva-200/60 shadow-sm"
+                          : "bg-zinc-50 border-zinc-200/60 md:hover:bg-zinc-100/80 md:hover:border-zinc-300"
                       )}
                     >
                       <div className="flex items-start gap-4 relative z-10">
@@ -630,8 +613,8 @@ export const Naturaleza = () => {
                           className={cn(
                             "mt-1 p-2 rounded-full shrink-0",
                             idx === 0
-                              ? "bg-limon-amarillo-400 text-limon-selva-950"
-                              : "bg-limon-selva-800 text-limon-selva-300 md:group-hover:bg-limon-selva-700 md:group-hover:text-limon-amarillo-200 transition-colors"
+                              ? "bg-limon-selva-600 text-white"
+                              : "bg-zinc-200 text-zinc-600 md:group-hover:bg-zinc-300 md:group-hover:text-zinc-800 transition-colors"
                           )}
                         >
                           {idx === 0 ? (
@@ -645,8 +628,8 @@ export const Naturaleza = () => {
                             className={cn(
                               "font-medium leading-relaxed text-left",
                               idx === 0
-                                ? "text-white text-lg"
-                                : "text-limon-selva-100 text-base"
+                                ? "text-limon-selva-900 text-lg font-bold"
+                                : "text-zinc-700 text-base"
                             )}
                           >
                             {item}
@@ -662,7 +645,7 @@ export const Naturaleza = () => {
         </div>
 
         {/* Community Section */}
-        <div className="mb-24 bg-limon-amarillo-50 border border-limon-amarillo-100 p-6 md:p-12 rounded-sm flex flex-col md:flex-row items-center gap-8 transition-colors md:hover:border-limon-amarillo-300/60">
+        <div className="mb-24 bg-limon-amarillo-50/50 border border-limon-amarillo-100 p-6 md:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-8 transition-colors md:hover:border-limon-amarillo-300/60">
           <div className="md:w-1/3 flex justify-center">
             <div className="bg-limon-amarillo-100 p-6 rounded-full">
               <Users size={64} className="text-limon-amarillo-600" />
@@ -698,7 +681,7 @@ export const Naturaleza = () => {
           <p className="text-xl text-zinc-600 mb-8 leading-relaxed">
             {outro.text}
           </p>
-          <button className="bg-limon-selva-600 md:hover:bg-limon-selva-700 text-white font-bold py-4 px-8 rounded-sm transition-[background-color,shadow] shadow-lg md:hover:shadow-xl">
+          <button className="bg-limon-selva-600 md:hover:bg-limon-selva-700 text-white font-bold py-4 px-8 rounded-full transition-[background-color,shadow] shadow-md md:hover:shadow-lg">
             {outro.cta}
           </button>
         </motion.div>
