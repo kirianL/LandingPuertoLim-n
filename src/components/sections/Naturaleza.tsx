@@ -46,7 +46,7 @@ export const Naturaleza = () => {
   return (
     <section
       id="naturaleza"
-      className="relative py-24 bg-zinc-50 overflow-hidden scroll-mt-24"
+      className="relative py-24 bg-background overflow-hidden scroll-mt-24"
     >
       {/* Ambient Background - Animated */}
       <motion.div
@@ -203,7 +203,8 @@ export const Naturaleza = () => {
               {cahuita.description}
             </p>
 
-            <div className="bg-white rounded-2xl border border-zinc-200/60 p-6 shadow-sm md:hover:shadow-md transition-shadow">
+            <div className="bg-card border border-zinc-200/80 rounded-3xl p-6 pl-8 shadow-sm relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-limon-selva-500 pointer-events-none" />
               <h4 className="font-bold text-zinc-900 mb-4 flex items-center gap-2">
                 <Binoculars size={18} className="text-limon-amarillo-600" />
                 Qué hacer
@@ -230,11 +231,13 @@ export const Naturaleza = () => {
             className="order-1 lg:order-2 group relative transition-transform duration-500"
           >
             {(cahuita as any).image ? (
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative shadow-sm border border-zinc-200/60">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative shadow-sm border border-zinc-200/60 bg-zinc-100">
                 <img
                   src={(cahuita as any).image}
                   alt={cahuita.title}
                   className="w-full h-full object-cover md:group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
@@ -309,11 +312,13 @@ export const Naturaleza = () => {
             className="relative group md:hover:scale-[1.02] transition-transform duration-500"
           >
             {(tortuguero as any).image ? (
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative shadow-sm border border-zinc-200/60">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative shadow-sm border border-zinc-200/60 bg-zinc-100">
                 <img
                   src={(tortuguero as any).image}
                   alt={tortuguero.title}
                   className="w-full h-full object-cover md:group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
@@ -343,7 +348,8 @@ export const Naturaleza = () => {
               {tortuguero.description}
             </p>
 
-            <div className="bg-white rounded-2xl border border-zinc-200/60 p-6 shadow-sm md:hover:shadow-md transition-shadow">
+            <div className="bg-card border border-zinc-200/80 rounded-3xl p-6 pl-8 shadow-sm relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-limon-puerto-500 pointer-events-none" />
               <h4 className="font-bold text-zinc-900 mb-4 flex items-center gap-2">
                 <Binoculars size={18} className="text-limon-amarillo-600" />
                 Qué hacer
@@ -404,6 +410,8 @@ export const Naturaleza = () => {
                         src={dest.image}
                         alt={dest.title}
                         className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-100 to-zinc-200">

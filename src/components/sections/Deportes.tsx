@@ -60,8 +60,9 @@ export const Deportes = () => {
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-[#fcfcfb] rounded-2xl border border-zinc-200/60 overflow-hidden p-8 md:p-10 relative shadow-sm"
+            className="bg-card rounded-3xl border border-zinc-200/80 overflow-hidden p-8 pl-10 md:p-12 md:pl-16 relative shadow-sm animate-fade-in"
           >
+            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-limon-amarillo-500 pointer-events-none" />
             {/* Decorative Background Icon */}
             <div className="absolute -right-10 -bottom-10 text-zinc-200/20 pointer-events-none">
               <Trophy size={300} />
@@ -148,11 +149,13 @@ export const Deportes = () => {
                   transition={{ delay: idx * 0.05 }}
                   className="break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm border border-zinc-200/60 bg-zinc-100"
                 >
-                  <div className="relative aspect-video">
+                  <div className="relative aspect-video bg-zinc-100">
                     <img
                       src={item.image}
                       alt={item.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
@@ -176,12 +179,13 @@ export const Deportes = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 bg-white rounded-2xl border border-zinc-200/60 shadow-sm hover:shadow-md transition-shadow h-full"
+            className="p-8 pl-10 bg-card rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden h-full"
           >
+            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-limon-puerto-500 pointer-events-none" />
             <h3 className="text-xl font-display font-bold text-zinc-900 mb-4">
               {youth.title}
             </h3>
-            <p className="text-sm text-zinc-500 leading-relaxed">{youth.description}</p>
+            <p className="text-sm text-zinc-500 leading-relaxed font-body">{youth.description}</p>
           </motion.div>
 
           <motion.div
@@ -189,12 +193,13 @@ export const Deportes = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 bg-white rounded-2xl border border-zinc-200/60 shadow-sm hover:shadow-md transition-shadow h-full"
+            className="p-8 pl-10 bg-card rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden h-full"
           >
+            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-limon-selva-500 pointer-events-none" />
             <h3 className="text-xl font-display font-bold text-zinc-900 mb-4">
               {infrastructure.title}
             </h3>
-            <p className="text-sm text-zinc-500 mb-4">{infrastructure.description}</p>
+            <p className="text-sm text-zinc-500 mb-4 font-body">{infrastructure.description}</p>
             <ul className="space-y-2">
               {infrastructure.items.map((item, idx) => (
                 <li

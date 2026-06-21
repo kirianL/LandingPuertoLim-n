@@ -83,10 +83,9 @@ export function Gastronomia() {
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-limon-selva-100 text-limon-selva-700 rounded-full text-sm font-bold tracking-wider uppercase">
-              <Waves className="w-4 h-4" />
+            <span className="text-xs font-bold tracking-widest text-limon-selva-600 uppercase block mb-2">
               Manifesto Culinario
-            </div>
+            </span>
             <h3 className="text-4xl font-display font-bold leading-tight">
               {heritage.title}
             </h3>
@@ -94,7 +93,8 @@ export function Gastronomia() {
               {heritage.description}
             </p>
 
-            <div className="p-8 bg-card border border-zinc-200/60 rounded-2xl shadow-sm relative overflow-hidden group">
+            <div className="p-8 pl-10 bg-card border border-zinc-200/80 rounded-3xl shadow-sm relative overflow-hidden group">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-limon-amarillo-500 pointer-events-none" />
               <div className="absolute top-4 right-4 text-limon-amarillo-400/20 md:group-hover:text-limon-amarillo-400/40 transition-colors">
                 <ShoppingBag size={64} />
               </div>
@@ -125,12 +125,14 @@ export function Gastronomia() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-md group">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-md group bg-zinc-100">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
               <img
                 src="/assets/gastronomia/MercadoMunicipal.webp"
                 alt="Antiguo Mercado Municipal de Limón"
                 className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute bottom-8 left-8 right-8 z-20">
                 <p className="text-white/90 italic font-body text-lg">
@@ -182,7 +184,7 @@ export function Gastronomia() {
                 >
                   <div
                     className={cn(
-                      "relative overflow-hidden shrink-0",
+                      "relative overflow-hidden shrink-0 bg-zinc-100",
                       isLarge ? "aspect-[16/10]" : "aspect-[4/3]"
                     )}
                   >
@@ -190,6 +192,8 @@ export function Gastronomia() {
                       src={dish.image}
                       alt={dish.name}
                       className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute top-4 left-4 flex gap-2">
@@ -253,14 +257,16 @@ export function Gastronomia() {
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-card w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col pointer-events-auto border border-zinc-200/60"
+                className="bg-card w-full max-w-4xl max-h-[92vh] md:max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col pointer-events-auto border border-zinc-200/60"
               >
                 {/* Modal Header/Image */}
-                <div className="relative h-[180px] md:h-[350px] shrink-0">
+                <div className="relative h-[140px] md:h-[350px] shrink-0 bg-zinc-100">
                   <img
                     src={selectedDish.image}
                     alt={selectedDish.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 

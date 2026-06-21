@@ -69,11 +69,13 @@ export function HistoriaPatrimonio() {
                 onMouseLeave={() => setActiveId(null)}
               >
                 {/* Image Container */}
-                <div className="relative w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-muted border border-zinc-200/60 shadow-sm">
+                <div className="relative w-full aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-zinc-100 border border-zinc-200/60 shadow-sm">
                   <img
                     src={hito.imagen}
                     alt={hito.titulo}
                     className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-black/10 md:group-hover:bg-black/0 transition-colors duration-500" />
 

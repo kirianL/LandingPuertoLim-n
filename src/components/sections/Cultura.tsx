@@ -82,6 +82,8 @@ export const Cultura = () => {
                 src={music.image}
                 alt={music.title}
                 className="w-full h-full object-cover opacity-95 md:group-hover:scale-102 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               {/* Credit */}
@@ -121,6 +123,8 @@ export const Cultura = () => {
                 src={carnival.image}
                 alt={carnival.title}
                 className="w-full h-full object-cover opacity-95 md:group-hover:scale-102 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               {/* Credit */}
@@ -177,6 +181,8 @@ export const Cultura = () => {
                   src={calypso_legacy.image}
                   alt={calypso_legacy.title}
                   className="w-full h-full object-cover opacity-90 contrast-110"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
               </div>
@@ -339,6 +345,8 @@ export const Cultura = () => {
               src={arts.image}
               alt={arts.title}
               className="w-full h-full object-cover opacity-95"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             {/* Credit */}
@@ -386,6 +394,8 @@ export const Cultura = () => {
                 src={theater.image}
                 alt={theater.title}
                 className="w-full h-full object-cover opacity-95 md:group-hover:scale-102 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
@@ -427,6 +437,8 @@ export const Cultura = () => {
                       src={film.image}
                       alt={film.title}
                       className="w-full h-full object-cover opacity-95 transition-opacity hover:opacity-100 md:group-hover:scale-102 transition-transform duration-700"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent to-black/10"></div>
                   </div>

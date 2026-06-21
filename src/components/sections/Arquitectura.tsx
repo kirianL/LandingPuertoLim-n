@@ -30,7 +30,7 @@ export function Arquitectura() {
   return (
     <section
       id="arquitectura"
-      className="relative py-24 bg-zinc-50 scroll-mt-24"
+      className="relative py-24 bg-background scroll-mt-24"
     >
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
@@ -78,6 +78,8 @@ export function Arquitectura() {
                   src={edificio.imagen}
                   alt={edificio.nombre}
                   className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
                 {/* Dark Gradient Overlay */}
                 <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 md:group-hover:opacity-100 transition-opacity" />

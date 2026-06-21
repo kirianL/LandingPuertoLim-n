@@ -57,14 +57,16 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-card w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col md:flex-row pointer-events-auto border border-zinc-200/60"
+              className="bg-card w-full max-w-4xl max-h-[92vh] md:max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col md:flex-row pointer-events-auto border border-zinc-200/60"
             >
               {/* Image Section (Left/Top) */}
-              <div className="w-full md:w-1/2 relative h-48 md:h-auto overflow-hidden">
+              <div className="w-full md:w-1/2 relative h-40 md:h-auto shrink-0 overflow-hidden bg-zinc-100">
                 <img
                   src={data.imagen}
                   alt={data.titulo}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent md:bg-gradient-to-r" />
 
@@ -85,7 +87,7 @@ export function HistoryModal({ isOpen, onClose, data }: HistoryModalProps) {
               </div>
 
               {/* Content Section (Right/Bottom) */}
-              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col overflow-y-auto overscroll-contain custom-scrollbar">
+              <div className="w-full md:w-1/2 p-5 md:p-10 flex flex-col overflow-y-auto overscroll-contain custom-scrollbar">
                 {/* Header */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">

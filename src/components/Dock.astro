@@ -48,7 +48,7 @@ const navigation = [
   id="main-header"
   class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out py-6 border-b border-transparent bg-transparent"
 >
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-12 lg:px-16">
     <div class="flex items-center justify-between h-12">
       <!-- Brand Logo/Link -->
       <a href="/" class="flex items-center gap-2 group relative z-50">
@@ -103,11 +103,11 @@ const navigation = [
   </div>
 </header>
 
-<!-- Notion-Style Mobile Navigation Drawer (Light Mode, Minimalist) -->
+<!-- Notion-Style Mobile Navigation Drawer (Light Mode, Minimalist, Dropdown from Top) -->
 <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/25 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0"></div>
 <nav
   id="mobile-drawer"
-  class="fixed top-0 right-0 bottom-0 w-72 bg-[#fbfbfa] border-l border-zinc-200 shadow-xl z-50 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-out hidden"
+  class="fixed top-0 left-0 right-0 w-full bg-[#ffffff] border-b border-zinc-200/80 shadow-lg z-50 overflow-y-auto transform -translate-y-full transition-transform duration-300 ease-out hidden pb-8"
 >
   <div class="p-5 flex flex-col h-full justify-between">
     <div class="space-y-6">
@@ -230,14 +230,14 @@ const navigation = [
         drawer?.classList.remove('hidden');
         backdrop?.classList.remove('hidden');
         setTimeout(() => {
-          drawer?.classList.remove('translate-x-full');
+          drawer?.classList.remove('-translate-y-full');
           backdrop?.classList.remove('opacity-0');
         }, 10);
         document.body.style.overflow = 'hidden';
       }
 
       function closeMenu() {
-        drawer?.classList.add('translate-x-full');
+        drawer?.classList.add('-translate-y-full');
         backdrop?.classList.add('opacity-0');
         setTimeout(() => {
           drawer?.classList.add('hidden');
@@ -249,6 +249,12 @@ const navigation = [
       toggleBtn.addEventListener('click', openMenu);
       closeBtn.addEventListener('click', closeMenu);
       backdrop.addEventListener('click', closeMenu);
+
+      // Close mobile drawer immediately when a link is clicked to give instant feedback
+      const drawerLinks = drawer.querySelectorAll('a');
+      drawerLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
     }
   }
 
